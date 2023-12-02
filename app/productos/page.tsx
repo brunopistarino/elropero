@@ -1,6 +1,8 @@
+import { Categories, Suppliers } from "@/lib/schema";
 import { Payment, columns } from "./columns";
 import { DataTable } from "./data-table";
 import { NewProduct } from "./new-product";
+import { db } from "@/lib/drizzle";
 
 async function getData(): Promise<Payment[]> {
   // Fetch data from your API here.
@@ -70,12 +72,14 @@ async function getData(): Promise<Payment[]> {
 
 export default async function Page() {
   const data = await getData();
+  const cateories = await db.select().from(Categories).orderBy(Categories.name);
+  const suppliers = await db.select().from(Suppliers).orderBy(Suppliers.name);
 
   return (
     <>
       <div className="flex justify-between">
         <h1 className="font-semibold text-3xl">Productos</h1>
-        <NewProduct />
+        <NewProduct categories={cateories} suppliers={suppliers} />
       </div>
       <DataTable columns={columns} data={data} />
     </>

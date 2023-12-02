@@ -27,6 +27,8 @@ export const Products = pgTable(
       .references(() => Suppliers.id)
       .notNull(),
     createdAt: timestamp("createdAt").defaultNow().notNull(),
+    soldAt: timestamp("soldAt"),
+    returnedAt: timestamp("returnedAt"),
   }
   // (products) => {
   //   return {

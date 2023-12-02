@@ -29,6 +29,13 @@
       "when": 1701471322222,
       "tag": "0003_easy_tattoo",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1701539735343,
+      "tag": "0004_sudden_vapor",
+      "breakpoints": true
     }
   ]
 }

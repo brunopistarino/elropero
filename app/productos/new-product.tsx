@@ -31,61 +31,43 @@ import {
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Check, ChevronsUpDown, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { useState } from "react";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-} from "@/components/ui/command";
-import { cn } from "@/lib/utils";
-
-const languages = [
-  { label: "English", value: "en" },
-  { label: "French", value: "fr" },
-  { label: "German", value: "de" },
-  { label: "Spanish", value: "es" },
-  { label: "Portuguese", value: "pt" },
-  { label: "Russian", value: "ru" },
-  { label: "Japanese", value: "ja" },
-  { label: "Korean", value: "ko" },
-  { label: "Chinese", value: "zh" },
-];
+import { Category, Supplier } from "@/lib/schema";
 
 const formSchema = z.object({
   categoryId: z
-    .string()
-    .min(2, {
+    .number()
+    .min(1, {
       message: "Username must be at least 2 characters.",
     })
     .max(50),
   description: z.string().email(),
   size: z.string(),
-  supplier: z.string(),
+  supplierId: z.number(),
   prize: z.number(),
 });
 
-export function NewProduct() {
+export function NewProduct({
+  categories,
+  suppliers,
+}: {
+  categories: Category[];
+  suppliers: Supplier[];
+}) {
   const [isOpen, setIsOpen] = useState(false);
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      categoryId: "",
+      categoryId: undefined,
       description: "",
       size: "",
-      supplier: "",
+      supplierId: undefined,
       prize: 0,
     },
   });
@@ -117,97 +99,34 @@ export function NewProduct() {
                 {/* This action cannot be undone. This will permanently delete your
             account and remove your data from our servers. */}
 
-                {/* Select cateory with search */}
-                <FormField
-                  control={form.control}
-                  name="categoryId"
-                  render={({ field }) => (
-                    <FormItem className="flex flex-col">
-                      <FormLabel>Language</FormLabel>
-                      <Popover>
-                        <PopoverTrigger asChild>
-                          <FormControl>
-                            <Button
-                              variant="outline"
-                              role="combobox"
-                              className={cn(
-                                "w-[200px] justify-between",
-                                !field.value && "text-muted-foreground"
-                              )}
-                            >
-                              {field.value
-                                ? languages.find(
-                                    (language) => language.value === field.value
-                                  )?.label
-                                : "Select language"}
-                              <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
-                            </Button>
-                          </FormControl>
-                        </PopoverTrigger>
-                        <PopoverContent className="w-[200px] p-0">
-                          <Command>
-                            <CommandInput placeholder="Search language..." />
-                            <CommandEmpty>No language found.</CommandEmpty>
-                            <CommandGroup>
-                              {languages.map((language) => (
-                                <CommandItem
-                                  value={language.label}
-                                  key={language.value}
-                                  onSelect={() => {
-                                    form.setValue("categoryId", language.value);
-                                  }}
-                                >
-                                  <Check
-                                    className={cn(
-                                      "mr-2 h-4 w-4",
-                                      language.value === field.value
-                                        ? "opacity-100"
-                                        : "opacity-0"
-                                    )}
-                                  />
-                                  {language.label}
-                                </CommandItem>
-                              ))}
-                            </CommandGroup>
-                          </Command>
-                        </PopoverContent>
-                      </Popover>
-                      <FormDescription>
-                        This is the language that will be used in the dashboard.
-                      </FormDescription>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                {/* Select cateory */}
                 <FormField
                   control={form.control}
                   name="categoryId"
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Categoría</FormLabel>
-                      <FormControl>
-                        {/* FALTA {...field} */}
-                        <Select>
+                      {/* FALTA {...field} */}
+                      <Select
+                        onValueChange={field.onChange}
+                        defaultValue={field.value?.toString()}
+                      >
+                        <FormControl>
                           <SelectTrigger>
-                            <SelectValue placeholder="Selecciones una categoría" />
+                            <SelectValue placeholder="Seleccione una categoría" />
                           </SelectTrigger>
-                          <SelectContent>
-                            <SelectGroup>
-                              <SelectLabel>Fruits</SelectLabel>
-                              <SelectItem value="apple">Apple</SelectItem>
-                              <SelectItem value="banana">Banana</SelectItem>
-                              <SelectItem value="blueberry">
-                                Blueberry
-                              </SelectItem>
-                              <SelectItem value="grapes">Grapes</SelectItem>
-                              <SelectItem value="pineapple">
-                                Pineapple
-                              </SelectItem>
-                            </SelectGroup>
-                          </SelectContent>
-                        </Select>
-                        {/* <Input placeholder="shadcn" {...field} /> */}
-                      </FormControl>
+                        </FormControl>
+                        <SelectContent>
+                          {categories.map((category) => (
+                            <SelectItem
+                              value={category.id.toString()}
+                              key={category.id}
+                            >
+                              {category.name}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
                       <FormMessage />
                     </FormItem>
                   )}
@@ -238,35 +157,34 @@ export function NewProduct() {
                     </FormItem>
                   )}
                 />
+                {/* Select supplier */}
                 <FormField
                   control={form.control}
-                  name="supplier"
+                  name="supplierId"
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Proveedora</FormLabel>
-                      <FormControl>
-                        {/* FALTA {...field} */}
-                        <Select>
+                      {/* FALTA {...field} */}
+                      <Select
+                        onValueChange={field.onChange}
+                        defaultValue={field.value?.toString()}
+                      >
+                        <FormControl>
                           <SelectTrigger>
                             <SelectValue placeholder="Seleccione una proveedora" />
                           </SelectTrigger>
-                          <SelectContent>
-                            <SelectGroup>
-                              <SelectLabel>Fruits</SelectLabel>
-                              <SelectItem value="apple">Apple</SelectItem>
-                              <SelectItem value="banana">Banana</SelectItem>
-                              <SelectItem value="blueberry">
-                                Blueberry
-                              </SelectItem>
-                              <SelectItem value="grapes">Grapes</SelectItem>
-                              <SelectItem value="pineapple">
-                                Pineapple
-                              </SelectItem>
-                            </SelectGroup>
-                          </SelectContent>
-                        </Select>
-                        {/* <Input placeholder="shadcn" {...field} /> */}
-                      </FormControl>
+                        </FormControl>
+                        <SelectContent>
+                          {suppliers.map((supplier) => (
+                            <SelectItem
+                              value={supplier.id.toString()}
+                              key={supplier.id}
+                            >
+                              {supplier.name}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
                       <FormMessage />
                     </FormItem>
                   )}
@@ -278,24 +196,33 @@ export function NewProduct() {
                     <FormItem>
                       <FormLabel>Precio</FormLabel>
                       <FormControl>
-                        <Input type="number" placeholder="" {...field} />
+                        <Input
+                          type="number"
+                          placeholder=""
+                          {...field}
+                          step={0.01}
+                        />
                       </FormControl>
+                      <div className="flex gap-2">
+                        <Input
+                          disabled
+                          value={`Ropero: $${new Intl.NumberFormat(
+                            "es-AR"
+                          ).format(field.value / 2)}`}
+                          className="font-semibold disabled:opacity-70"
+                        />
+                        <Input
+                          disabled
+                          value={`Proveedora: $${new Intl.NumberFormat(
+                            "es-AR"
+                          ).format(field.value / 2)}`}
+                          className="font-semibold disabled:opacity-70"
+                        />
+                      </div>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                <div className="flex gap-2">
-                  <Input
-                    disabled
-                    value={"Ropero: $5.000"}
-                    className="text-black font-semibold"
-                  ></Input>
-                  <Input
-                    disabled
-                    value={"Proveedora: $5.000"}
-                    className="text-black font-semibold"
-                  ></Input>
-                </div>
               </AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter>
