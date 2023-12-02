@@ -1,3 +1,11 @@
+export default function Page() {
+  return (
+    <div>
+      <h1>a</h1>
+    </div>
+  );
+}
+
 // // // import { sql } from "@vercel/postgres";
 // // // import prisma from "@/lib/prisma";
 
