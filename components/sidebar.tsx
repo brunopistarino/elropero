@@ -90,7 +90,7 @@ export default function Sidebar() {
           <div className="flex flex-col gap-1 px-4 ">
             {navItems.map((item, x) => (
               <div key={x} className="flex flex-col gap-2">
-                {item.subItems ? (
+                {/* {item.subItems ? (
                   <div
                     className="flex gap-3 pt-2 pr-3 pb-2 pl-3 hover:bg-muted/50 rounded-md cursor-pointer"
                     onClick={() => item.subItems && handleOpen(item.name)}
@@ -101,17 +101,17 @@ export default function Sidebar() {
                       {open === item.name ? <ChevronUp /> : <ChevronDown />}
                     </div>
                   </div>
-                ) : (
-                  <Link
-                    href={item.link}
-                    onClick={handleClose}
-                    className="flex gap-3 pt-2 pr-3 pb-2 pl-3 hover:bg-muted/50 rounded-md"
-                  >
-                    {item.icon}
-                    <p className="font-semibold">{item.name}</p>
-                  </Link>
-                )}
-                {item.subItems && open === item.name && (
+                ) : ( */}
+                <Link
+                  href={item.link}
+                  onClick={handleClose}
+                  className="flex gap-3 pt-2 pr-3 pb-2 pl-3 hover:bg-muted/50 rounded-md"
+                >
+                  {item.icon}
+                  <p className="font-semibold">{item.name}</p>
+                </Link>
+                {/* )} */}
+                {/* {item.subItems && open === item.name && (
                   <div className="flex flex-col gap-1 pb-1">
                     {item.subItems.map((subItem, y) => (
                       <>
@@ -132,7 +132,7 @@ export default function Sidebar() {
                       </>
                     ))}
                   </div>
-                )}
+                )} */}
               </div>
             ))}
           </div>
