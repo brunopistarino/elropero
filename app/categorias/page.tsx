@@ -5,6 +5,9 @@ import { columns } from "./columns";
 import { NewCategory } from "./new-category";
 import { Categories } from "@/lib/schema";
 import { db } from "@/lib/drizzle";
+import { Button } from "@/components/ui/button";
+import { Plus } from "lucide-react";
+import Link from "next/link";
 
 // import { useQuery } from "react-query";
 
@@ -38,6 +41,12 @@ export default async function Page() {
     <>
       <div className="flex justify-between">
         <p className="font-semibold text-3xl">Categorías</p>
+        <Link href="/categorias/crear">
+          <Button className="gap-1 px-3 font-semibold">
+            <Plus />
+            <p>Nueva categoría</p>
+          </Button>
+        </Link>
         <NewCategory />
       </div>
       <DataTable columns={columns} data={data} />

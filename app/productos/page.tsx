@@ -14,7 +14,7 @@ async function getData(): Promise<Payment[]> {
       category: "Remera",
       description: "Remera de algodón",
       size: "S",
-      proveedora: "Maria",
+      proveedora: "Mariaa",
       prize: 100,
     },
     {
