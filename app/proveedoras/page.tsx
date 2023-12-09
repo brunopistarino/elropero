@@ -59,7 +59,7 @@ export default async function Page() {
   return (
     <>
       <div className="flex justify-between">
-        <p className="font-semibold text-3xl">Clientes</p>
+        <p className="font-semibold text-3xl">Proveedoras</p>
         <NewCustomer />
       </div>
       <DataTable columns={columns} data={data} />

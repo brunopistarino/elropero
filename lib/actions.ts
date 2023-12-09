@@ -57,3 +57,15 @@ export async function updateCategory(id: number, formData: FormData) {
   revalidatePath("/test");
   redirect("/test");
 }
+
+export async function deleteCategory(id: number) {
+  try {
+    await db.delete(Categories).where(eq(Categories.id, id));
+    console.log("Category deleted");
+  } catch (err) {
+    console.error(err);
+    return { error: String(err) };
+  }
+
+  revalidatePath("/categorias");
+}

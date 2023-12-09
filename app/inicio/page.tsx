@@ -15,7 +15,7 @@ const formSchema = z.object({
   email: z.string().email(),
 });
 
-import { Package2 } from "lucide-react";
+import { Book, Package2, Shirt, User2 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -31,6 +31,7 @@ import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import Chart from "./chart";
 import MoneyChart from "./money-chart";
+import React from "react";
 
 export default function Page() {
   // 1. Define your form.
@@ -73,38 +74,24 @@ export default function Page() {
         {/* <img src="/chart.svg" alt="" /> */}
       </div>
       <div className="flex gap-4">
-        <Link
-          href="/"
-          className="bg-background p-5 border flex gap-3 rounded-lg w-full"
-        >
-          <div className="border p-3 rounded-md">
-            <Package2 />
-          </div>
-          <div>
-            <p className="font-semibold">Agregar un cliente</p>
-            <p className="text-muted-foreground">
-              Add yourself or import from CSV
-            </p>
-          </div>
-        </Link>
-        <div className="bg-background p-5 border flex gap-3 rounded-lg w-full">
-          <div className="border p-3 rounded-md">
-            <Package2 />
-          </div>
-          <div>
-            <p>Create your first member</p>
-            <p>Add yourself or import from CSV</p>
-          </div>
-        </div>
-        <div className="bg-background p-5 border flex gap-3 rounded-lg w-full">
-          <div className="border p-3 rounded-md">
-            <Package2 />
-          </div>
-          <div>
-            <p>Create your first member</p>
-            <p>Add yourself or import from CSV</p>
-          </div>
-        </div>
+        <SmallCard
+          icon={<Shirt />}
+          title="Agregar producto"
+          description="al listado de productos"
+          href="/productos/crear"
+        />
+        <SmallCard
+          icon={<User2 />}
+          title="Agregar proveedora"
+          description="al listado de preveedoras"
+          href="/proveedoras/crear"
+        />
+        <SmallCard
+          icon={<Book />}
+          title="Agregar categoría"
+          description="al listado de categorías"
+          href="/categorias/crear"
+        />
       </div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -145,5 +132,30 @@ export default function Page() {
       </Form>
       <Chart />
     </>
+  );
+}
+
+function SmallCard({
+  icon,
+  title,
+  description,
+  href,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  href: string;
+}) {
+  return (
+    <Link
+      className="bg-background p-5 border flex gap-3 rounded-lg w-full group"
+      href={href}
+    >
+      <div className="border p-3 rounded-md group-hover:bg-border">{icon}</div>
+      <div>
+        <p className="font-semibold">{title}</p>
+        <p className="text-muted-foreground">{description}</p>
+      </div>
+    </Link>
   );
 }

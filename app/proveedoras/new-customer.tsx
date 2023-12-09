@@ -64,14 +64,14 @@ export function NewCustomer() {
           onClick={() => setIsOpen(true)}
         >
           <Plus />
-          <p>Nuevo cliente</p>
+          <p>Nueva proveedora</p>
         </Button>
       </AlertDialogTrigger>
       <AlertDialogContent>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <AlertDialogHeader>
-              <AlertDialogTitle>Nuevo cliente</AlertDialogTitle>
+              <AlertDialogTitle>Nueva proveedora</AlertDialogTitle>
               <AlertDialogDescription className="space-y-8">
                 {/* This action cannot be undone. This will permanently delete your
             account and remove your data from our servers. */}

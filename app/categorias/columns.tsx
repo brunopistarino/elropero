@@ -8,6 +8,17 @@ import { DataTableRowActions } from "./data-table-row-actions";
 import { TooltipWrapper } from "@/components/tooltip-wrapper";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 
 export const columns: ColumnDef<Category>[] = [
   {
@@ -43,10 +54,32 @@ export const columns: ColumnDef<Category>[] = [
           </Link>
         </TooltipWrapper>
         <TooltipWrapper text="Eliminar categoría">
-          <Button variant="ghost" className="flex h-8 w-8 p-0">
-            <Trash size={16} />
-            <span className="sr-only">Eliminar categoría</span>
-          </Button>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <Button variant="ghost" className="flex h-8 w-8 p-0">
+                <Trash size={16} />
+                <span className="sr-only">Eliminar categoría</span>
+              </Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>
+                  Estas seguro de eliminar la categoría &quot;
+                  {row.getValue("name")}&quot;?
+                </AlertDialogTitle>
+                <AlertDialogDescription>
+                  Esta acción no se puede deshacer. Esto eliminará
+                  permanentemente la cetegoría y los productos asociados a esta
+                  quedarán sin.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Cancelar</AlertDialogCancel>
+                <Button variant="destructive">Eliminar</Button>
+                {/* <AlertDialogAction className="">Continue</AlertDialogAction> */}
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </TooltipWrapper>
       </div>
     ),

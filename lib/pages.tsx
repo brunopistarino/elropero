@@ -25,7 +25,7 @@ export function getPages() {
     {
       name: "Proveedoras",
       icon: <User2 />,
-      link: "/clientes",
+      link: "/proveedoras",
     },
     {
       name: "Productos",
