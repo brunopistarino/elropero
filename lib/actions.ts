@@ -38,24 +38,31 @@ export async function createCategory(newCategory: unknown) {
   }
 
   revalidatePath("/categorias");
+  redirect("/categorias");
 }
 
-export async function updateCategory(id: number, formData: FormData) {
+export async function updateCategory(id: number, updatedCategory: unknown) {
+  const result = categorySchema.safeParse(updatedCategory);
+  if (!result.success) {
+    let errorMesaage = "";
+    result.error.issues.forEach((issue) => {
+      errorMesaage += issue.message + "\n";
+    });
+    return { error: errorMesaage };
+  }
   try {
     await db
       .update(Categories)
       .set({
-        name: formData.get("name") as string,
+        name: result.data.name,
       })
       .where(eq(Categories.id, id));
-    console.log("Category updated");
   } catch (err) {
-    console.error(err);
-    return;
+    return { error: String(err) };
   }
 
-  revalidatePath("/test");
-  redirect("/test");
+  revalidatePath("/categorias");
+  redirect("/categorias");
 }
 
 export async function deleteCategory(id: number) {

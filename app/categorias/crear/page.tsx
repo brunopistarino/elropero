@@ -4,7 +4,6 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -16,10 +15,13 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { categorySchema, categorySchemaType } from "@/lib/zod-schemas";
 import Link from "next/link";
+import { createCategory } from "@/lib/actions";
+import { toast } from "sonner";
+import Breadcrumbs from "@/components/breadcrumbs";
 
 export default function Page() {
   const [isPending, setIsPending] = useState(false);
-  // 1. Define your form.
+  // 1. Define the form.
   const form = useForm<categorySchemaType>({
     resolver: zodResolver(categorySchema),
     defaultValues: {
@@ -27,28 +29,31 @@ export default function Page() {
     },
   });
 
-  // async function onSubmit(values: categorySchemaType) {
-  //   setIsPending(true);
-  //   const response = await createCategory(values);
-  //   if (response?.error) {
-  //     toast.error(response.error);
-  //     setIsPending(false);
-  //     return;
-  //   }
-  //   form.reset();
-  //   setIsPending(false);
-  //   setIsOpen(false);
-  // }
+  // 2. Define a submit handler.
+  async function onSubmit(values: categorySchemaType) {
+    setIsPending(true);
+    const response = await createCategory(values);
+    if (response?.error) {
+      toast.error(response.error);
+      setIsPending(false);
+      return;
+    }
+    toast.success("Categoría creada");
+    form.reset();
+    setIsPending(false);
+  }
+
   return (
     <>
       <div className="flex justify-between">
-        <p className="font-semibold text-3xl">Categorías / Nueva categoría</p>
+        {/* <p className="font-semibold text-3xl">Categorías / Nueva categoría</p> */}
+        <Breadcrumbs />
         {/* <NewCategory /> */}
       </div>
       <div className="md:rounded-md border-y md:border bg-background mx-[-16px] md:mx-auto max-w-lg p-6 w-full">
         <Form {...form}>
           {/* <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8"> */}
-          <form className="space-y-8">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             {/* This action cannot be undone. This will permanently delete your
             account and remove your data from our servers. */}
             <FormField
