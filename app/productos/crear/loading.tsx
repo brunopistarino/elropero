@@ -5,7 +5,7 @@ export default function Loading() {
   return (
     <>
       <Breadcrumbs />
-      <FormSkeleton height={194} />
+      <FormSkeleton height={578} />
     </>
   );
 }

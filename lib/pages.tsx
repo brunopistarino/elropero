@@ -20,7 +20,7 @@ export function getPages() {
     {
       name: "Saldos",
       icon: <WalletCards />,
-      link: "/test2",
+      link: "/saldos",
     },
     {
       name: "Proveedoras",
