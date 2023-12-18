@@ -4,7 +4,6 @@ import { eq } from "drizzle-orm";
 import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/breadcrumbs";
 import ModifyForm from "./modify-form";
-import { Suspense } from "react";
 
 export default async function Page({ params }: { params: { id: number } }) {
   const id = params.id;
