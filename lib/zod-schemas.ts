@@ -10,18 +10,23 @@ export const categorySchema = z.object({
 });
 
 export const productSchema = z.object({
-  name: z
+  description: z
     .string()
     .min(1, {
-      message: "Por favor escriba un nombre.",
+      message: "Por favor escriba una descripción.",
     })
     .max(255),
-  price: z.number().min(1, {
+  // price: z.number().min(1, {
+  //   message: "Por favor introduzca un precio.",
+  // }),
+  price: z.coerce.number().min(1, {
     message: "Por favor introduzca un precio.",
   }),
   size: z.string().max(255).optional(),
-  categoryId: z.number(),
-  supplierId: z.number(),
+  // categoryId: z.number(),
+  categoryId: z.coerce.number(),
+  // supplierId: z.number(),
+  supplierId: z.coerce.number(),
 });
 
 export type categorySchemaType = z.infer<typeof categorySchema>;

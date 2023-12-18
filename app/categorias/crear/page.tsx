@@ -18,6 +18,7 @@ import Link from "next/link";
 import { createCategory } from "@/lib/actions";
 import { toast } from "sonner";
 import Breadcrumbs from "@/components/breadcrumbs";
+import FormContainer from "@/components/form-container";
 
 export default function Page() {
   const [isPending, setIsPending] = useState(false);
@@ -46,11 +47,9 @@ export default function Page() {
   return (
     <>
       <div className="flex justify-between">
-        {/* <p className="font-semibold text-3xl">Categorías / Nueva categoría</p> */}
         <Breadcrumbs />
-        {/* <NewCategory /> */}
       </div>
-      <div className="md:rounded-md border-y md:border bg-background mx-[-16px] md:mx-auto max-w-lg p-6 w-full">
+      <FormContainer>
         <Form {...form}>
           {/* <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8"> */}
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -82,7 +81,7 @@ export default function Page() {
             </div>
           </form>
         </Form>
-      </div>
+      </FormContainer>
     </>
   );
 }

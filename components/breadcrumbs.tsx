@@ -54,8 +54,35 @@ const routes = {
       link: "/categorias",
     },
     {
-      name: "Editar categoría",
+      name: "Modificar categoría",
+      // Está mal
       link: "/categorias/editar",
+    },
+  ],
+  productos: [
+    {
+      name: "Productos",
+      link: "/productos",
+    },
+  ],
+  productoscrear: [
+    {
+      name: "Productos",
+      link: "/productos",
+    },
+    {
+      name: "Crear producto",
+      link: "/productos/crear",
+    },
+  ],
+  productosmodificar: [
+    {
+      name: "Productos",
+      link: "/productos",
+    },
+    {
+      name: "Editar producto",
+      link: "/productos/editar",
     },
   ],
 };
