@@ -29,7 +29,9 @@ import { useForm } from "react-hook-form";
 import * as z from "zod";
 import Link from "next/link";
 import { useState } from "react";
-import { productSchema } from "@/lib/zod-schemas";
+import { productSchema, productSchemaType } from "@/lib/zod-schemas";
+import { createProduct } from "@/lib/actions";
+import { toast } from "sonner";
 
 export default function CreateForm({
   categories,
@@ -45,7 +47,7 @@ export default function CreateForm({
     resolver: zodResolver(productSchema),
     defaultValues: {
       categoryId: undefined,
-      description: "",
+      name: "",
       size: "",
       supplierId: undefined,
       price: undefined,
@@ -53,18 +55,22 @@ export default function CreateForm({
   });
 
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof productSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+  async function onSubmit(values: productSchemaType) {
+    setIsPending(true);
+    const response = await createProduct(values);
+    if (response?.error) {
+      toast.error(response.error);
+      setIsPending(false);
+      return;
+    }
+    toast.success("Producto creada");
+    form.reset();
+    setIsPending(false);
   }
   return (
     <FormContainer>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-          {/* This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers. */}
-          {/* Select cateory */}
           <FormField
             control={form.control}
             name="categoryId"
@@ -98,7 +104,7 @@ export default function CreateForm({
           />
           <FormField
             control={form.control}
-            name="description"
+            name="name"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Descripción</FormLabel>

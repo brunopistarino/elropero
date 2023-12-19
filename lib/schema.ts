@@ -20,6 +20,7 @@ export const Products = pgTable(
     id: serial("id").primaryKey(),
     name: text("name").notNull(),
     price: integer("price").notNull(),
+    size: text("size"),
     categoryId: integer("categoryId")
       .references(() => Categories.id)
       .notNull(),
@@ -29,6 +30,7 @@ export const Products = pgTable(
     createdAt: timestamp("createdAt").defaultNow().notNull(),
     soldAt: timestamp("soldAt"),
     returnedAt: timestamp("returnedAt"),
+    paidAt: timestamp("paidAt"),
   }
   // (products) => {
   //   return {

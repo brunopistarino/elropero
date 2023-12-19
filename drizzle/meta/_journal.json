@@ -36,6 +36,20 @@
       "when": 1701539735343,
       "tag": "0004_sudden_vapor",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1702996577114,
+      "tag": "0005_powerful_sharon_ventura",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1703000778069,
+      "tag": "0006_good_puck",
+      "breakpoints": true
     }
   ]
 }

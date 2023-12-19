@@ -1,0 +1,1 @@
+ALTER TABLE "elropero_Products" ADD COLUMN "paidAt" timestamp;

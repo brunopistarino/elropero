@@ -2,10 +2,14 @@
 
 import { revalidatePath } from "next/cache";
 import { db } from "./drizzle";
-import { Categories } from "./schema";
+import { Categories, Products } from "./schema";
 import { redirect } from "next/navigation";
 import { eq } from "drizzle-orm";
-import { categorySchema, categorySchemaType } from "./zod-schemas";
+import {
+  categorySchema,
+  categorySchemaType,
+  productSchema,
+} from "./zod-schemas";
 
 // export async function createCategory(formData: FormData) {
 //   "use server";
@@ -31,6 +35,8 @@ export async function createCategory(newCategory: unknown) {
     });
     return { error: errorMesaage };
   }
+
+  // Insert into database
   try {
     await db.insert(Categories).values(result.data);
   } catch (err) {
@@ -75,4 +81,28 @@ export async function deleteCategory(id: number) {
   }
 
   revalidatePath("/categorias");
+}
+
+export async function createProduct(newProduct: unknown) {
+  // Server-side validation
+  const result = productSchema.safeParse(newProduct);
+  if (!result.success) {
+    let errorMesaage = "";
+    result.error.issues.forEach((issue) => {
+      errorMesaage += issue.message + "\n";
+    });
+    return { error: errorMesaage };
+  }
+
+  console.log(result.data);
+
+  // Insert into database
+  try {
+    await db.insert(Products).values(result.data);
+  } catch (err) {
+    return { error: String(err) };
+  }
+
+  revalidatePath("/productos");
+  redirect("/productos");
 }

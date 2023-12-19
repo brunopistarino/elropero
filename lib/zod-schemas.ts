@@ -10,7 +10,7 @@ export const categorySchema = z.object({
 });
 
 export const productSchema = z.object({
-  description: z
+  name: z
     .string()
     .min(1, {
       message: "Por favor escriba una descripción.",
