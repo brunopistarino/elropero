@@ -18,28 +18,44 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+import { ArrowUpDown, MoreHorizontal } from "lucide-react";
 
 import type { CategoryTable } from "./table";
+import { DataTableColumnHeader } from "@/components/data-table-column-header";
 
 export const columns: ColumnDef<CategoryTable>[] = [
   {
     accessorKey: "id",
-    header: "Código",
+    // header: "Código",
+    // header: ({ column }) => {
+    //   return (
+    //     <Button
+    //       variant="ghost"
+    //       onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+    //     >
+    //       Cógido
+    //       <ArrowUpDown className="ml-2 h-4 w-4" />
+    //     </Button>
+    //   );
+    // },
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Código" />
+    ),
   },
   {
     accessorKey: "name",
-    header: "Nombre",
+    // header: "Nombre",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Nombre" />
+    ),
   },
   {
     accessorKey: "count",
-    header: "Productos",
+    // header: "Productos",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Productos" />
+    ),
   },
-  // {
-  //   accessorKey: "productCount",
-  //   header: "Productos",
-  //   cell: ({ row }) => 30,
-  //   // cell: ({ row }) => <span>{row.original.products.length}</span>,
-  // },
   {
     id: "actions",
     cell: ({ row }) => (

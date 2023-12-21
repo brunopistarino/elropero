@@ -83,6 +83,10 @@ export default async function Page() {
     <>
       <div className="flex justify-between">
         <h1 className="font-semibold text-3xl">Productos</h1>
+        <p>
+          no se actualizaa bien cuando cambias algo (habria que poner nostore o
+          algo mejor)
+        </p>
         <Link
           href="/productos/crear"
           className={cn(buttonVariants(), "gap-1 px-3 font-semibold")}

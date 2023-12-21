@@ -50,29 +50,6 @@ export default function Page() {
   }
   return (
     <>
-      <div className="bg-background p-6 rounded-md border flex flex-col gap-5">
-        <div className="flex items-center justify-between">
-          <p className="font-semibold text-lg">Ventas</p>
-          <Button variant="outline">Ver reporte</Button>
-        </div>
-        <Tabs defaultValue="account">
-          <TabsList>
-            <TabsTrigger value="12months">12 meses</TabsTrigger>
-            <TabsTrigger value="3months">3 meses</TabsTrigger>
-            <TabsTrigger value="30days">30 días</TabsTrigger>
-            <TabsTrigger value="7days">7 días</TabsTrigger>
-            <TabsTrigger value="24days">24 horas</TabsTrigger>
-          </TabsList>
-          {/* <TabsContent value="account">
-            Make changes to your account here.
-          </TabsContent> */}
-          <TabsContent value="password">Change your password here.</TabsContent>
-        </Tabs>
-        <Chart />
-        <MoneyChart />
-
-        {/* <img src="/chart.svg" alt="" /> */}
-      </div>
       <div className="flex gap-4">
         <SmallCard
           icon={<Shirt />}
@@ -92,6 +69,43 @@ export default function Page() {
           description="al listado de categorías"
           href="/categorias/crear"
         />
+      </div>
+      <div className="bg-background p-6 rounded-md border flex flex-col gap-5">
+        <div className="flex items-center justify-between">
+          <p className="font-semibold text-lg">Ventas</p>
+          <Button variant="outline">Ver reporte</Button>
+        </div>
+        <Tabs defaultValue="account">
+          <TabsList>
+            <TabsTrigger value="12months">12 meses</TabsTrigger>
+            <TabsTrigger value="3months">3 meses</TabsTrigger>
+            <TabsTrigger value="30days">30 días</TabsTrigger>
+            <TabsTrigger value="7days">7 días</TabsTrigger>
+            <TabsTrigger value="24days">24 horas</TabsTrigger>
+          </TabsList>
+          {/* <TabsContent value="account">
+            Make changes to your account here.
+          </TabsContent> */}
+          {/* <TabsContent value="password">Change your password here.</TabsContent> */}
+        </Tabs>
+        <Chart />
+
+        {/* <img src="/chart.svg" alt="" /> */}
+      </div>
+      <div className="bg-background p-6 pl-0 rounded-md border flex flex-col gap-8">
+        <div className="flex justify-between">
+          <p className="font-semibold text-lg pl-6">Ingresos / Egresos</p>
+          <Tabs defaultValue="24days">
+            <TabsList>
+              <TabsTrigger value="12months">12 meses</TabsTrigger>
+              <TabsTrigger value="6months">6 meses</TabsTrigger>
+              <TabsTrigger value="30days">30 días</TabsTrigger>
+              <TabsTrigger value="7days">7 días</TabsTrigger>
+              <TabsTrigger value="24days">24 horas</TabsTrigger>
+            </TabsList>
+          </Tabs>
+        </div>
+        <MoneyChart />
       </div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">

@@ -13,6 +13,13 @@ export default function Breadcrumbs() {
       <p className="font-semibold text-3xl text-muted-foreground">
         {actualRoute.map((route, x) => (
           <span key={x}>
+            {/* {actualRoute.length - 1 !== x ? (
+              <Link href={route.link} className="hover:underline">
+                {route.name}
+              </Link>
+            ) : (
+              <span className="text-foreground">{route.name}</span>
+            )} */}
             <Link
               href={route.link}
               className={cn(
