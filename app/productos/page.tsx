@@ -6,81 +6,83 @@ import Link from "next/link";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Categories, Products, Suppliers } from "@/lib/schema";
+import { eq } from "drizzle-orm";
 
-async function getData(): Promise<Payment[]> {
-  // Fetch data from your API here.
-  return [
-    {
-      id: "1",
-      status: "available",
-      date: new Date(),
-      category: "Remera",
-      description: "Remera de algodón",
-      size: "S",
-      proveedora: "Mariaa",
-      prize: 100,
-    },
-    {
-      id: "2",
-      status: "returned",
-      date: new Date(),
-      category: "Remera",
-      description: "Remera de algodón",
-      size: "S",
-      proveedora: "Maria",
-      prize: 100,
-    },
-    {
-      id: "3",
-      status: "sold",
-      date: new Date(),
-      category: "Remera",
-      description: "Remera de algodón",
-      size: "S",
-      proveedora: "Maria",
-      prize: 100,
-    },
-    {
-      id: "4",
-      status: "available",
-      date: new Date(),
-      category: "Remera",
-      description: "Remera de algodón",
-      size: "S",
-      proveedora: "Maria",
-      prize: 100,
-    },
-    {
-      id: "5",
-      status: "available",
-      date: new Date(),
-      category: "Remera",
-      description: "Remera de algodón",
-      size: "S",
-      proveedora: "Maria",
-      prize: 100,
-    },
-    {
-      id: "6",
-      status: "available",
-      date: new Date(),
-      category: "Remera",
-      description: "Remera de algodón",
-      size: "S",
-      proveedora: "Maria",
-      prize: 100,
-    },
-  ];
-}
+// async function getData(): Promise<Payment[]> {}
+
+export type ProductTable = {
+  id: (typeof Products.$inferSelect)["id"];
+  name: (typeof Products.$inferSelect)["name"];
+  price: (typeof Products.$inferSelect)["price"];
+  size: (typeof Products.$inferSelect)["size"];
+  category: (typeof Categories.$inferSelect)["name"] | null;
+  supplier: (typeof Suppliers.$inferSelect)["name"] | null;
+  createdAt: (typeof Products.$inferSelect)["createdAt"];
+};
 
 export default async function Page() {
-  const data = await getData();
+  // const data = await getData();
+  const data: ProductTable[] = await db
+    .select({
+      id: Products.id,
+      name: Products.name,
+      price: Products.price,
+      size: Products.size,
+      category: Categories.name,
+      supplier: Suppliers.name,
+      createdAt: Products.createdAt,
+    })
+    .from(Products)
+    .leftJoin(Categories, eq(Products.categoryId, Categories.id))
+    .leftJoin(Suppliers, eq(Products.supplierId, Suppliers.id));
+  // const data = await db.query.Products.findMany({
+  //   with: {
+  //     category: true,
+  //     supplier: true,
+  //   },
+  // });
+
+  // const data = await db.query.Products.findMany({
+  //   with: {
+  //     category: true,
+  //     supplier: true,
+  //   },
+  //   extras: {
+  //     categoryName: (products, { ref }) => ref(products.category.name),
+  //     supplierName: (products, { ref }) => ref(products.supplier.name),
+  //   },
+  // });
+
+  // const data = await db.query.Products.findMany({
+  //   columns: {
+  //     id: true,
+  //     name: true,
+  //     price: true,
+  //     size: true,
+  //     categoryId: true,
+  //     supplierId: true,
+  //     createdAt: true,
+  //     soldAt: true,
+  //     returnedAt: true,
+  //     paidAt: true,
+  //   },
+  //   with: {
+  //     category: {
+  //       columns: { name: true },
+  //     },
+  //     supplier: {
+  //       columns: { name: true },
+  //     },
+  //   },
+  // });
+
+  console.log(data);
 
   return (
     <>
       <div className="flex justify-between">
         <h1 className="font-semibold text-3xl">Productos</h1>
-        {/* <NewProduct categories={cateories} suppliers={suppliers} /> */}
         <Link
           href="/productos/crear"
           className={cn(buttonVariants(), "gap-1 px-3 font-semibold")}

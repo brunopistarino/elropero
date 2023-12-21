@@ -44,7 +44,7 @@ const routes = {
       link: "/categorias",
     },
     {
-      name: "Crear categoría",
+      name: "Agregar categoría",
       link: "/categorias/crear",
     },
   ],
@@ -71,7 +71,7 @@ const routes = {
       link: "/productos",
     },
     {
-      name: "Crear producto",
+      name: "Agregar producto",
       link: "/productos/crear",
     },
   ],
@@ -83,6 +83,22 @@ const routes = {
     {
       name: "Editar producto",
       link: "/productos/editar",
+    },
+  ],
+  proveedoras: [
+    {
+      name: "Proveedoras",
+      link: "/proveedoras",
+    },
+  ],
+  proveedorascrear: [
+    {
+      name: "Proveedoras",
+      link: "/proveedoras",
+    },
+    {
+      name: "Agregar proveedora",
+      link: "/proveedoras/crear",
     },
   ],
 };

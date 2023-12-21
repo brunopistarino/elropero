@@ -29,12 +29,22 @@ export type Payment = {
   status: "available" | "sold" | "returned";
 };
 
-export const columns: ColumnDef<Payment>[] = [
+import type { ProductTable } from "./page";
+
+export const columns: ColumnDef<ProductTable>[] = [
   {
-    accessorKey: "",
+    accessorKey: "id",
+    header: "Código",
+  },
+  {
+    accessorKey: "createdAt",
     header: "Fecha Ingreso",
     cell: ({ row }) => {
-      return <span>{new Date().toJSON().slice(0, 10)}</span>;
+      // const date: Date = row.getValue("createdAt");
+      // return date;
+      // console.log(date);
+      return (row.getValue("createdAt") as Date).toJSON().slice(0, 10);
+      // return <span>{new Date().toJSON().slice(0, 10)}</span>;
     },
   },
   {
@@ -42,7 +52,7 @@ export const columns: ColumnDef<Payment>[] = [
     header: "Categoría",
   },
   {
-    accessorKey: "description",
+    accessorKey: "name",
     header: "Descripción",
   },
   {
@@ -50,46 +60,50 @@ export const columns: ColumnDef<Payment>[] = [
     header: "Talle",
   },
   {
-    accessorKey: "proveedora",
+    accessorKey: "supplier",
     header: "Proveedora",
   },
   {
-    accessorKey: "prize",
+    accessorKey: "price",
     header: "Precio",
     cell: ({ row }) => {
-      return <span>$ {row.getValue("prize")}</span>;
+      // return <span>$ {row.getValue("price")}</span>;
+      return new Intl.NumberFormat("es-AR", {
+        style: "currency",
+        currency: "ARS",
+      }).format(row.getValue("price"));
     },
   },
-  {
-    accessorKey: "status",
-    header: "Estado",
-    cell: ({ row }) => {
-      const status: string = row.getValue("status");
+  // {
+  //   accessorKey: "status",
+  //   header: "Estado",
+  //   cell: ({ row }) => {
+  //     const status: string = row.getValue("status");
 
-      return (
-        <div className="flex items-center">
-          {status === "available" && (
-            <>
-              <CheckCircle2 className="mr-2 h-4 w-4 text-muted-foreground" />
-              Disponible
-            </>
-          )}
-          {status === "sold" && (
-            <>
-              <XCircle className="mr-2 h-4 w-4 text-muted-foreground" />
-              Vendido
-            </>
-          )}
-          {status === "returned" && (
-            <>
-              <AlertCircle className="mr-2 h-4 w-4 text-muted-foreground" />
-              Devuelto
-            </>
-          )}
-        </div>
-      );
-    },
-  },
+  //     return (
+  //       <div className="flex items-center">
+  //         {status === "available" && (
+  //           <>
+  //             <CheckCircle2 className="mr-2 h-4 w-4 text-muted-foreground" />
+  //             Disponible
+  //           </>
+  //         )}
+  //         {status === "sold" && (
+  //           <>
+  //             <XCircle className="mr-2 h-4 w-4 text-muted-foreground" />
+  //             Vendido
+  //           </>
+  //         )}
+  //         {status === "returned" && (
+  //           <>
+  //             <AlertCircle className="mr-2 h-4 w-4 text-muted-foreground" />
+  //             Devuelto
+  //           </>
+  //         )}
+  //       </div>
+  //     );
+  //   },
+  // },
   {
     id: "actions",
     cell: ({ row }) => (

@@ -1,68 +1,31 @@
-import { Button } from "@/components/ui/button";
-import { Payment, columns } from "./columns";
+import { buttonVariants } from "@/components/ui/button";
+import { columns } from "./columns";
 import { DataTable } from "./data-table";
 import { Plus } from "lucide-react";
-import { NewCustomer } from "./new-customer";
-
-async function getData(): Promise<Payment[]> {
-  // Fetch data from your API here.
-  return [
-    {
-      id: "728ed52f",
-      name: "Mariana Pérez",
-      amount: 100,
-      status: "2",
-      email: "m@example.com",
-    },
-    {
-      id: "628bd41a",
-      name: "Juan García",
-      amount: 75,
-      status: "5",
-      email: "juan@example.com",
-    },
-    {
-      id: "932ac72c",
-      name: "Luisa Rodríguez",
-      amount: 150,
-      status: "1",
-      email: "luisa@example.com",
-    },
-    {
-      id: "831de39b",
-      name: "Carlos López",
-      amount: 120,
-      status: "3",
-      email: "carlos@example.com",
-    },
-    {
-      id: "523bf48d",
-      name: "Elena Fernández",
-      amount: 90,
-      status: "7",
-      email: "elena@example.com",
-    },
-    {
-      id: "439ce57a",
-      name: "Pedro Ramirez",
-      amount: 200,
-      status: "10",
-      email: "pedro@example.com",
-    },
-    // ...
-  ];
-}
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import Breadcrumbs from "@/components/breadcrumbs";
+import { db } from "@/lib/drizzle";
+import { Suppliers } from "@/lib/schema";
 
 export default async function Page() {
-  const data = await getData();
+  const suppliers = await db.select().from(Suppliers).orderBy(Suppliers.name);
 
   return (
     <>
       <div className="flex justify-between">
-        <p className="font-semibold text-3xl">Proveedoras</p>
-        <NewCustomer />
+        <Breadcrumbs />
+        <p>(agregar el botón de whatsapp que te arme el mensaje)</p>
+        <Link
+          href="/proveedoras/crear"
+          className={cn(buttonVariants(), "gap-1 px-3 font-semibold")}
+        >
+          <Plus />
+          <p>Nueva proveedora</p>
+        </Link>
+        {/* <NewCustomer /> */}
       </div>
-      <DataTable columns={columns} data={data} />
+      <DataTable columns={columns} data={suppliers} />
     </>
   );
 }

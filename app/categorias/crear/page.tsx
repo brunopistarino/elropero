@@ -39,7 +39,7 @@ export default function Page() {
       setIsPending(false);
       return;
     }
-    toast.success("Categoría creada");
+    toast.success("Categoría agregada");
     form.reset();
     setIsPending(false);
   }

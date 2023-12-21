@@ -1,7 +1,6 @@
 "use client";
 
 import { Button, buttonVariants } from "@/components/ui/button";
-import { Category } from "@/lib/schema";
 import { ColumnDef } from "@tanstack/react-table";
 import { Pencil, Trash } from "lucide-react";
 import { DataTableRowActions } from "./data-table-row-actions";
@@ -20,21 +19,27 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 
-export const columns: ColumnDef<Category>[] = [
+import type { CategoryTable } from "./table";
+
+export const columns: ColumnDef<CategoryTable>[] = [
   {
     accessorKey: "id",
-    header: "Id",
+    header: "Código",
   },
   {
     accessorKey: "name",
     header: "Nombre",
   },
   {
-    accessorKey: "productCount",
+    accessorKey: "count",
     header: "Productos",
-    cell: ({ row }) => 30,
-    // cell: ({ row }) => <span>{row.original.products.length}</span>,
   },
+  // {
+  //   accessorKey: "productCount",
+  //   header: "Productos",
+  //   cell: ({ row }) => 30,
+  //   // cell: ({ row }) => <span>{row.original.products.length}</span>,
+  // },
   {
     id: "actions",
     cell: ({ row }) => (

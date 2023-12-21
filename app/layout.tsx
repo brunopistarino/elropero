@@ -33,7 +33,10 @@ export default function RootLayout({
           {/* <TopSidebar /> */}
           <Toaster richColors />
           <Sidebar />
-          <div className="min-h-[100dvh] bg-gray-100 dark:bg-black w-full px-4 md:px-8 overflow-y-auto">
+          <div
+            className="min-h-[100dvh] bg-gray-100 dark:bg-black w-full px-4 md:px-8 overflow-y-auto"
+            style={{ scrollbarGutter: "stable" }}
+          >
             <main className="flex flex-col max-w-7xl w-full mx-auto gap-8 pt-8 pb-12">
               {children}
             </main>

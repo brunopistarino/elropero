@@ -13,24 +13,18 @@ import {
   Trash,
 } from "lucide-react";
 import { ColumnDef } from "@tanstack/react-table";
+import type { Supplier } from "@/lib/schema";
 
-// This type is used to define the shape of our data.
-// You can use a Zod schema here if you want.
-export type Payment = {
-  id: string;
-  name: string;
-  amount: number;
-  // status: "pending" | "processing" | "success" | "failed";
-  status: string;
-  email: string;
-};
-
-export const columns: ColumnDef<Payment>[] = [
+export const columns: ColumnDef<Supplier>[] = [
   {
-    accessorKey: "",
+    accessorKey: "id",
+    header: "Código",
+  },
+  {
+    accessorKey: "createdAt",
     header: "Fecha Alta",
     cell: ({ row }) => {
-      return <span>{new Date().toJSON().slice(0, 10)}</span>;
+      return (row.getValue("createdAt") as Date).toJSON().slice(0, 10);
     },
   },
   {
@@ -38,31 +32,37 @@ export const columns: ColumnDef<Payment>[] = [
     header: "Nombre",
   },
   {
-    accessorKey: "",
+    accessorKey: "phone",
     header: "Celular",
     cell: ({ row }) => {
-      return <a href="">3401 409416</a>;
+      const phone: string = row.getValue("phone");
+      return (
+        <a
+          target="_blank"
+          referrerPolicy="no-referrer"
+          href={`https://wa.me/549${phone}`}
+          className="hover:underline underline-offset-2"
+        >
+          {phone}
+        </a>
+      );
     },
   },
   {
-    accessorKey: "status",
-    header: "P. Vendidos",
+    accessorKey: "dni",
+    header: "DNI",
   },
   {
-    accessorKey: "status",
-    header: "P. Disponibles",
+    accessorKey: "address",
+    header: "Dirección",
   },
-  {
-    accessorKey: "status",
-    header: "Pagos pendientes",
-  },
-  {
-    accessorKey: "amount",
-    header: "Saldo",
-    cell: ({ row }) => {
-      return <span>$ {row.getValue("amount")}</span>;
-    },
-  },
+  // {
+  //   accessorKey: "amount",
+  //   header: "Saldo",
+  //   cell: ({ row }) => {
+  //     return <span>$ {row.getValue("amount")}</span>;
+  //   },
+  // },
   {
     id: "actions",
     cell: ({ row }) => (

@@ -33,12 +33,17 @@ import { productSchema, productSchemaType } from "@/lib/zod-schemas";
 import { createProduct } from "@/lib/actions";
 import { toast } from "sonner";
 
+interface SelectData {
+  id: number;
+  name: string;
+}
+
 export default function CreateForm({
   categories,
   suppliers,
 }: {
-  categories: Category[];
-  suppliers: Supplier[];
+  categories: SelectData[];
+  suppliers: SelectData[];
 }) {
   const [isPending, setIsPending] = useState(false);
 
@@ -63,7 +68,7 @@ export default function CreateForm({
       setIsPending(false);
       return;
     }
-    toast.success("Producto creada");
+    toast.success("Producto agregado");
     form.reset();
     setIsPending(false);
   }
@@ -172,16 +177,18 @@ export default function CreateForm({
                 <div className="flex gap-2">
                   <Input
                     disabled
-                    value={`Ropero: $${new Intl.NumberFormat("es-AR").format(
-                      field.value / 2
-                    )}`}
+                    value={`Ropero: ${new Intl.NumberFormat("es-AR", {
+                      style: "currency",
+                      currency: "ARS",
+                    }).format(field.value / 2)}`}
                     className="font-semibold disabled:opacity-70"
                   />
                   <Input
                     disabled
-                    value={`Proveedora: $${new Intl.NumberFormat(
-                      "es-AR"
-                    ).format(field.value / 2)}`}
+                    value={`Proveedora: ${new Intl.NumberFormat("es-AR", {
+                      style: "currency",
+                      currency: "ARS",
+                    }).format(field.value / 2)}`}
                     className="font-semibold disabled:opacity-70"
                   />
                 </div>

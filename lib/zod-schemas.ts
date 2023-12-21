@@ -29,5 +29,19 @@ export const productSchema = z.object({
   supplierId: z.coerce.number(),
 });
 
+export const supplierSchema = z.object({
+  name: z
+    .string()
+    .min(1, {
+      message: "Por favor escriba un nombre.",
+    })
+    .max(255),
+  dni: z.string().max(255).optional(),
+  address: z.string().max(255).optional(),
+  phone: z.string().max(255).optional(),
+  email: z.string().max(255).optional(),
+});
+
 export type categorySchemaType = z.infer<typeof categorySchema>;
 export type productSchemaType = z.infer<typeof productSchema>;
+export type supplierSchemaType = z.infer<typeof supplierSchema>;
