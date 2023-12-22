@@ -3,7 +3,6 @@
 import { Button, buttonVariants } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 import { Pencil, Trash } from "lucide-react";
-import { DataTableRowActions } from "./data-table-row-actions";
 import { TooltipWrapper } from "@/components/tooltip-wrapper";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -57,7 +56,7 @@ export const columns: ColumnDef<CategoryTable>[] = [
     ),
   },
   {
-    id: "actions",
+    id: "Acciones",
     cell: ({ row }) => (
       // <DataTableRowActions row={row} />
       <div className="flex opacity-0 group-hover:opacity-100 text-muted-foreground justify-end">

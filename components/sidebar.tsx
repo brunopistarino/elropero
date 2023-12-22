@@ -60,7 +60,10 @@ export default function Sidebar() {
       >
         <div className="flex items-center gap-4">
           {/* <LogoIcon className="h-9 w-7" /> */}
-          <p className="text-2xl font-bold">Dashboard</p>
+          <p className="text-2xl">
+            <span>EL</span>
+            <span className="font-bold">ROPERO</span>
+          </p>
         </div>
         <Button onClick={handleIsOpen} variant={"ghost"} size={"icon"}>
           {isOpen ? <X /> : <Menu />}

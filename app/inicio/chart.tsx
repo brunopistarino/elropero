@@ -12,51 +12,51 @@ import {
 const data = [
   {
     name: "Jan",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: Math.floor(Math.random() * 500) + 100,
   },
   {
     name: "Feb",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: Math.floor(Math.random() * 500) + 100,
   },
   {
     name: "Mar",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: Math.floor(Math.random() * 500) + 100,
   },
   {
     name: "Apr",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: Math.floor(Math.random() * 500) + 100,
   },
   {
     name: "May",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: Math.floor(Math.random() * 500) + 100,
   },
   {
     name: "Jun",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: Math.floor(Math.random() * 500) + 100,
   },
   {
     name: "Jul",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: Math.floor(Math.random() * 500) + 100,
   },
   {
     name: "Aug",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: Math.floor(Math.random() * 500) + 100,
   },
   {
     name: "Sep",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: Math.floor(Math.random() * 500) + 100,
   },
   {
     name: "Oct",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: Math.floor(Math.random() * 500) + 100,
   },
   {
     name: "Nov",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: Math.floor(Math.random() * 500) + 100,
   },
   {
     name: "Dec",
-    total: Math.floor(Math.random() * 5000) + 1000,
+    total: Math.floor(Math.random() * 500) + 100,
   },
 ];
 
@@ -76,10 +76,28 @@ export default function Chart() {
           fontSize={12}
           tickLine={false}
           axisLine={false}
-          tickFormatter={(value) => `$${value}`}
+          // tickFormatter={(value) => `$${value}`}
         />
-        <Tooltip />
-        <Bar dataKey="total" fill="#adfa1d" radius={[4, 4, 0, 0]} />
+        <Tooltip
+          cursor={{ fill: "var(--theme-primary)", opacity: 0.25 }}
+          content={({ active, payload, label }) => {
+            if (active && payload && payload.length) {
+              return (
+                <div className="rounded-lg border bg-background p-2 shadow-sm">
+                  <div className="flex flex-col">
+                    <span className="text-[0.70rem] uppercase text-muted-foreground">
+                      {label}
+                    </span>
+                    <span className="font-bold">{payload[0].value}</span>
+                  </div>
+                </div>
+              );
+            }
+
+            return null;
+          }}
+        />
+        <Bar dataKey="total" fill="#16A34A" radius={[4, 4, 0, 0]} />
       </BarChart>
     </ResponsiveContainer>
   );

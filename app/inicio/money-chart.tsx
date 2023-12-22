@@ -84,17 +84,19 @@ export default function MoneyChart() {
                     <div className="grid grid-cols-2 gap-2">
                       <div className="flex flex-col">
                         <span className="text-[0.70rem] uppercase text-muted-foreground">
-                          Egresos
+                          Ingresos
                         </span>
-                        <span className="font-bold text-muted-foreground">
-                          ${payload[0].value}
+                        <span className="font-bold text-[#16A34A]">
+                          ${payload[1].value}
                         </span>
                       </div>
                       <div className="flex flex-col">
                         <span className="text-[0.70rem] uppercase text-muted-foreground">
-                          Ingresos
+                          Egresos
                         </span>
-                        <span className="font-bold">${payload[1].value}</span>
+                        <span className="font-bold text-[#E11D48]">
+                          ${payload[0].value}
+                        </span>
                       </div>
                     </div>
                   </div>

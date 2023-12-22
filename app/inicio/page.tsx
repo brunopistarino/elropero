@@ -50,6 +50,14 @@ export default function Page() {
   }
   return (
     <>
+      {/* un texto que digga buenos dias, buenas tarde o buenas noces dependiendo de la hora */}
+      <h1 className="font-semibold text-3xl">
+        {new Date().getHours() < 12
+          ? "Buenos días"
+          : new Date().getHours() < 18
+          ? "Buenas tardes"
+          : "Buenas noches"}
+      </h1>
       <div className="flex gap-4">
         <SmallCard
           icon={<Shirt />}
@@ -70,24 +78,20 @@ export default function Page() {
           href="/categorias/crear"
         />
       </div>
-      <div className="bg-background p-6 rounded-md border flex flex-col gap-5">
-        <div className="flex items-center justify-between">
+      <div className="bg-background p-6 pl-0 rounded-md border flex flex-col gap-8">
+        <div className="flex items-center pl-6 justify-between">
           <p className="font-semibold text-lg">Ventas</p>
-          <Button variant="outline">Ver reporte</Button>
+          <Tabs defaultValue="account">
+            <TabsList>
+              <TabsTrigger value="12months">12 meses</TabsTrigger>
+              <TabsTrigger value="3months">3 meses</TabsTrigger>
+              <TabsTrigger value="30days">30 días</TabsTrigger>
+              <TabsTrigger value="7days">7 días</TabsTrigger>
+              <TabsTrigger value="24days">24 horas</TabsTrigger>
+            </TabsList>
+            {/* <TabsContent value="password">Change your password here.</TabsContent> */}
+          </Tabs>
         </div>
-        <Tabs defaultValue="account">
-          <TabsList>
-            <TabsTrigger value="12months">12 meses</TabsTrigger>
-            <TabsTrigger value="3months">3 meses</TabsTrigger>
-            <TabsTrigger value="30days">30 días</TabsTrigger>
-            <TabsTrigger value="7days">7 días</TabsTrigger>
-            <TabsTrigger value="24days">24 horas</TabsTrigger>
-          </TabsList>
-          {/* <TabsContent value="account">
-            Make changes to your account here.
-          </TabsContent> */}
-          {/* <TabsContent value="password">Change your password here.</TabsContent> */}
-        </Tabs>
         <Chart />
 
         {/* <img src="/chart.svg" alt="" /> */}
@@ -107,44 +111,7 @@ export default function Page() {
         </div>
         <MoneyChart />
       </div>
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-          <FormField
-            control={form.control}
-            name="username"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Username</FormLabel>
-                <FormControl>
-                  <Input placeholder="shadcn" {...field} />
-                </FormControl>
-                <FormDescription>
-                  This is your public display name.
-                </FormDescription>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Email</FormLabel>
-                <FormControl>
-                  <Input placeholder="shadcn" {...field} />
-                </FormControl>
-                <FormDescription>
-                  This is your public display name.
-                </FormDescription>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <Button type="submit">Submit</Button>
-        </form>
-      </Form>
-      <Chart />
+      {/* <Chart /> */}
     </>
   );
 }

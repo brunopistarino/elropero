@@ -68,7 +68,13 @@ export default async function Page() {
           //   </div>
           //   <div className="h-4 w-10 bg-slate-300 mt-4"></div>
           // </div>
-          <div className="animate-pulse md:rounded-md w-full h-96 bg-muted-foreground/20" />
+          <div className="flex flex-col gap-4 animate-pulse">
+            <div className="flex justify-between gap-3">
+              <div className="rounded-md w-full max-w-sm h-10 bg-muted-foreground/20" />
+              <div className="rounded-md w-full max-w-[125px] h-10 bg-muted-foreground/20" />
+            </div>
+            <div className="md:rounded-md w-full h-96 bg-muted-foreground/20" />
+          </div>
           // <div
           //   role="status"
           //   className="space-y-8 animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center"
