@@ -58,7 +58,7 @@ export function DataTable<TData, TValue>({
   });
 
   return (
-    <div className="flex flex-col gap-4 rounded-md border">
+    <div className="flex flex-col gap-4 md:rounded-md border-y md:border bg-background">
       <div className="flex gap-3 p-4 pb-0">
         <Input
           placeholder="Buscar por nombre..."
@@ -72,7 +72,7 @@ export function DataTable<TData, TValue>({
         <DataTableViewOptions table={table} />
       </div>
 
-      <div className="md:rounded-md border-y md:border bg-background mx-[-16px] md:mx-0">
+      <div className="mx-[-16px] md:mx-0 border-t">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
