@@ -1,4 +1,4 @@
-import { Payment, columns } from "./columns";
+import { columns } from "./columns";
 import { DataTable } from "./data-table";
 import { NewProduct } from "./new-product";
 import { db } from "@/lib/drizzle";
@@ -7,7 +7,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Categories, Products, Suppliers } from "@/lib/schema";
-import { eq } from "drizzle-orm";
+import { eq, isNull } from "drizzle-orm";
 
 // async function getData(): Promise<Payment[]> {}
 
@@ -35,7 +35,8 @@ export default async function Page() {
     })
     .from(Products)
     .leftJoin(Categories, eq(Products.categoryId, Categories.id))
-    .leftJoin(Suppliers, eq(Products.supplierId, Suppliers.id));
+    .leftJoin(Suppliers, eq(Products.supplierId, Suppliers.id))
+    .where(isNull(Products.soldAt));
   // const data = await db.query.Products.findMany({
   //   with: {
   //     category: true,

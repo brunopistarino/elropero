@@ -34,20 +34,6 @@ import MoneyChart from "./money-chart";
 import React from "react";
 
 export default function Page() {
-  // 1. Define your form.
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      username: "",
-    },
-  });
-
-  // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
-  }
   return (
     <>
       {/* un texto que digga buenos dias, buenas tarde o buenas noces dependiendo de la hora */}

@@ -54,7 +54,7 @@ export default function Sidebar() {
   return (
     <>
       <nav
-        className={`flex md:hidden sticky items-center justify-between h-[71px] top-0 right-0 left-0 px-6 bg-white dark:bg-black ${
+        className={`flex md:hidden sticky items-center justify-between h-[71px] top-0 right-0 left-0 px-6 bg-white dark:bg-black z-50 ${
           !isOpen && "border-b"
         }`}
       >

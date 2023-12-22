@@ -50,7 +50,8 @@ export function DataTableColumnHeader<TData, TValue>({
               <ArrowUpIcon className="ml-2 h-4 w-4" />
             ) : (
               //   <CaretSortIcon className="ml-2 h-4 w-4" />
-              <ChevronsUpDown className="ml-2 h-4 w-4" />
+              // <ChevronsUpDown className="ml-2 h-4 w-4" />
+              <></>
             )}
           </Button>
         </DropdownMenuTrigger>

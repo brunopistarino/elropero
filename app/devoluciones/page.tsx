@@ -1,3 +1,3 @@
 export default function Page() {
-  return <p>Devoluciones</p>;
+  return <h1 className="font-semibold text-3xl">Devoluciones</h1>;
 }

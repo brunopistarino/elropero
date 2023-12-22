@@ -75,13 +75,13 @@ export async function updateCategory(id: number, updatedCategory: unknown) {
 export async function deleteCategory(id: number) {
   try {
     await db.delete(Categories).where(eq(Categories.id, id));
-    console.log("Category deleted");
   } catch (err) {
     console.error(err);
     return { error: String(err) };
   }
 
   revalidatePath("/categorias");
+  redirect("/categorias");
 }
 
 export async function createProduct(newProduct: unknown) {
@@ -100,6 +100,22 @@ export async function createProduct(newProduct: unknown) {
   // Insert into database
   try {
     await db.insert(Products).values(result.data);
+  } catch (err) {
+    return { error: String(err) };
+  }
+
+  revalidatePath("/productos");
+  redirect("/productos");
+}
+
+export async function markProductAsSold(id: number) {
+  try {
+    await db
+      .update(Products)
+      .set({
+        soldAt: new Date(),
+      })
+      .where(eq(Products.id, id));
   } catch (err) {
     return { error: String(err) };
   }

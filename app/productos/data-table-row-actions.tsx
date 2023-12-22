@@ -1,22 +1,11 @@
 "use client";
 
-import { MoreHorizontal, PencilLine, Trash2 } from "lucide-react";
 import { Row } from "@tanstack/react-table";
 
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+
+import { DollarSign, RefreshCcw, Pencil, Trash } from "lucide-react";
+import { markProductAsSold } from "@/lib/actions";
 
 // import { labels } from "../data/data";
 // import { taskSchema } from "../data/schema";
@@ -28,34 +17,34 @@ interface DataTableRowActionsProps<TData> {
 export function DataTableRowActions<TData>({
   row,
 }: DataTableRowActionsProps<TData>) {
-  //   const task = taskSchema.parse(row.original);
+  // const task = taskSchema.parse(row.original);
+  const id: number = row.getValue("id");
+
+  const handleSellSubmit = () => {
+    console.log("Sell", id);
+    markProductAsSold(id);
+  };
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button
-          variant="ghost"
-          className="flex h-8 w-8 p-0 data-[state=open]:bg-muted ml-auto"
-        >
-          <MoreHorizontal className="h-4 w-4" />
-          <span className="sr-only">Open menu</span>
+    <div className="flex opacity-0 group-hover:opacity-100 text-muted-foreground">
+      <form action={handleSellSubmit}>
+        <Button variant="ghost" className="flex h-8 w-8 p-0 ml-auto">
+          <DollarSign size={16} />
+          <span className="sr-only">Marcar producto como vendido</span>
         </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-[160px]">
-        <DropdownMenuItem>Marcar vendido</DropdownMenuItem>
-        <DropdownMenuItem>Marcar devuelto</DropdownMenuItem>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem>
-          Editar
-          <PencilLine size={16} className="text-muted-foreground ml-auto" />
-          {/* <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut> */}
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          Eliminar
-          <Trash2 size={16} className="text-muted-foreground ml-auto" />
-          {/* <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut> */}
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+      </form>
+      <Button variant="ghost" className="flex h-8 w-8 p-0">
+        <RefreshCcw size={16} />
+        <span className="sr-only">Marcar producto como devuelto</span>
+      </Button>
+      <Button variant="ghost" className="flex h-8 w-8 p-0">
+        <Pencil size={16} />
+        <span className="sr-only">Modificar producto</span>
+      </Button>
+      <Button variant="ghost" className="flex h-8 w-8 p-0">
+        <Trash size={16} />
+        <span className="sr-only">Eliminar producto</span>
+      </Button>
+    </div>
   );
 }
