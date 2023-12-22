@@ -17,7 +17,7 @@ import {
   DialogFooter,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { ChevronDown, ChevronUp, Menu, X, Settings } from "lucide-react";
+import { Menu, X, Settings } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { ThemeButton } from "@/components/theme-button";
 

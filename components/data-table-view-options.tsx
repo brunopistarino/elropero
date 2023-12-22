@@ -12,7 +12,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
-import { Eye } from "lucide-react";
+import { SlidersHorizontal } from "lucide-react";
 
 interface DataTableViewOptionsProps<TData> {
   table: Table<TData>;
@@ -26,7 +26,7 @@ export function DataTableViewOptions<TData>({
       <DropdownMenuTrigger asChild>
         <Button variant="outline" className="ml-auto hidden lg:flex">
           {/* <MixerHorizontalIcon className="mr-2 h-4 w-4" /> */}
-          <Eye className="mr-2 h-4 w-4" />
+          <SlidersHorizontal className="mr-2 h-4 w-4" />
           Columnas
         </Button>
       </DropdownMenuTrigger>

@@ -58,8 +58,8 @@ export function DataTable<TData, TValue>({
   });
 
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex gap-3">
+    <div className="flex flex-col gap-4 rounded-md border">
+      <div className="flex gap-3 p-4 pb-0">
         <Input
           placeholder="Buscar por nombre..."
           value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
