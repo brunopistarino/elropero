@@ -2,8 +2,11 @@ import Breadcrumbs from "@/components/breadcrumbs";
 import CreateForm from "./create-form";
 import { db } from "@/lib/drizzle";
 import { Categories, Suppliers } from "@/lib/schema";
+import { unstable_noStore as noStore } from "next/cache";
 
 export default async function Page() {
+  noStore();
+
   const cateories = await db
     .select({
       id: Categories.id,

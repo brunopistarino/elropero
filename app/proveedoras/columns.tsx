@@ -14,26 +14,35 @@ import {
 } from "lucide-react";
 import { ColumnDef } from "@tanstack/react-table";
 import type { Supplier } from "@/lib/schema";
+import { DataTableColumnHeader } from "@/components/data-table-column-header";
 
 export const columns: ColumnDef<Supplier>[] = [
   {
     accessorKey: "id",
-    header: "Código",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Código" />
+    ),
   },
   {
     accessorKey: "createdAt",
-    header: "Fecha Alta",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Fecha Alta" />
+    ),
     cell: ({ row }) => {
       return (row.getValue("createdAt") as Date).toJSON().slice(0, 10);
     },
   },
   {
     accessorKey: "name",
-    header: "Nombre",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Nombre" />
+    ),
   },
   {
     accessorKey: "phone",
-    header: "Celular",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Celular" />
+    ),
     cell: ({ row }) => {
       const phone: string = row.getValue("phone");
       return (
@@ -50,19 +59,16 @@ export const columns: ColumnDef<Supplier>[] = [
   },
   {
     accessorKey: "dni",
-    header: "DNI",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="DNI" />
+    ),
   },
   {
     accessorKey: "address",
-    header: "Dirección",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Dirección" />
+    ),
   },
-  // {
-  //   accessorKey: "amount",
-  //   header: "Saldo",
-  //   cell: ({ row }) => {
-  //     return <span>$ {row.getValue("amount")}</span>;
-  //   },
-  // },
   {
     id: "actions",
     cell: ({ row }) => (

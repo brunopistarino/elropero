@@ -8,6 +8,7 @@ import { Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Categories, Products, Suppliers } from "@/lib/schema";
 import { eq, isNull } from "drizzle-orm";
+import { unstable_noStore as noStore } from "next/cache";
 
 // async function getData(): Promise<Payment[]> {}
 
@@ -22,6 +23,7 @@ export type ProductTable = {
 };
 
 export default async function Page() {
+  noStore();
   // const data = await getData();
   const data: ProductTable[] = await db
     .select({

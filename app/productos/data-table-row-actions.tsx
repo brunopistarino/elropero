@@ -27,8 +27,8 @@ export function DataTableRowActions<TData>({
 
   return (
     <div className="flex opacity-0 group-hover:opacity-100 text-muted-foreground">
-      <form action={handleSellSubmit}>
-        <Button variant="ghost" className="flex h-8 w-8 p-0 ml-auto">
+      <form action={handleSellSubmit} className="ml-auto">
+        <Button variant="ghost" className="flex h-8 w-8 p-0">
           <DollarSign size={16} />
           <span className="sr-only">Marcar producto como vendido</span>
         </Button>

@@ -7,8 +7,10 @@ import { cn } from "@/lib/utils";
 import Breadcrumbs from "@/components/breadcrumbs";
 import { db } from "@/lib/drizzle";
 import { Suppliers } from "@/lib/schema";
+import { unstable_noStore as noStore } from "next/cache";
 
 export default async function Page() {
+  noStore();
   const suppliers = await db.select().from(Suppliers).orderBy(Suppliers.name);
 
   return (

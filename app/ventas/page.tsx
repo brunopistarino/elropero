@@ -3,6 +3,7 @@ import { Categories, Products, Suppliers } from "@/lib/schema";
 import { eq, isNotNull } from "drizzle-orm";
 import { DataTable } from "./data-table";
 import { columns } from "./columns";
+import { unstable_noStore as noStore } from "next/cache";
 
 export type ProductTable = {
   id: (typeof Products.$inferSelect)["id"];
@@ -15,6 +16,7 @@ export type ProductTable = {
 };
 
 export default async function Page() {
+  noStore();
   const data: ProductTable[] = await db
     .select({
       id: Products.id,
@@ -31,11 +33,8 @@ export default async function Page() {
     .where(isNotNull(Products.soldAt));
   return (
     <>
-      <h1 className="font-semibold text-3xl">Ventas</h1>
-      <div>
-        {data.map((product) => (
-          <p key={product.id}>{product.name}</p>
-        ))}
+      <div className="h-10">
+        <h1 className="font-semibold text-3xl">Ventas</h1>
       </div>
       <DataTable columns={columns} data={data} />
     </>

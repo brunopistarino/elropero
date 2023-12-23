@@ -72,7 +72,7 @@ export default function Sidebar() {
       <nav
         className={`${
           isOpen ? "flex fixed top-[71px] bottom-0 w-full" : "hidden"
-        } w-[280px] z-50 shrink-0 flex-col justify-between md:flex overflow-y-auto border-r dark:border-[#242424] bg-white dark:bg-black`}
+        } w-60 lg:w-64 xl:w-72 z-50 shrink-0 flex-col justify-between md:flex overflow-y-auto border-r dark:border-[#242424] bg-white dark:bg-black`}
       >
         <div className="flex flex-col gap-6 pt-2 md:pt-8">
           <Link

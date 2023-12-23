@@ -124,6 +124,22 @@ export async function markProductAsSold(id: number) {
   redirect("/productos");
 }
 
+export async function markProductAsUnsold(id: number) {
+  try {
+    await db
+      .update(Products)
+      .set({
+        soldAt: null,
+      })
+      .where(eq(Products.id, id));
+  } catch (err) {
+    return { error: String(err) };
+  }
+
+  revalidatePath("/ventas");
+  redirect("/ventas");
+}
+
 export async function createSupplier(newSupplier: unknown) {
   // Server-side validation
   const result = supplierSchema.safeParse(newSupplier);
