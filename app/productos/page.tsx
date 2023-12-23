@@ -7,7 +7,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Categories, Products, Suppliers } from "@/lib/schema";
-import { eq, isNull } from "drizzle-orm";
+import { eq, isNull, and } from "drizzle-orm";
 import { unstable_noStore as noStore } from "next/cache";
 
 // async function getData(): Promise<Payment[]> {}
@@ -38,7 +38,7 @@ export default async function Page() {
     .from(Products)
     .leftJoin(Categories, eq(Products.categoryId, Categories.id))
     .leftJoin(Suppliers, eq(Products.supplierId, Suppliers.id))
-    .where(isNull(Products.soldAt));
+    .where(and(isNull(Products.soldAt), isNull(Products.returnedAt)));
   // const data = await db.query.Products.findMany({
   //   with: {
   //     category: true,
@@ -86,10 +86,6 @@ export default async function Page() {
     <>
       <div className="flex justify-between">
         <h1 className="font-semibold text-3xl">Productos</h1>
-        <p>
-          no se actualizaa bien cuando cambias algo (habria que poner nostore o
-          algo mejor)
-        </p>
         <Link
           href="/productos/crear"
           className={cn(buttonVariants(), "gap-1 px-3 font-semibold")}

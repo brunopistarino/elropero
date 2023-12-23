@@ -140,6 +140,38 @@ export async function markProductAsUnsold(id: number) {
   redirect("/ventas");
 }
 
+export async function markProductAsReturned(id: number) {
+  try {
+    await db
+      .update(Products)
+      .set({
+        returnedAt: new Date(),
+      })
+      .where(eq(Products.id, id));
+  } catch (err) {
+    return { error: String(err) };
+  }
+
+  revalidatePath("/productos");
+  redirect("/productos");
+}
+
+export async function markProductAsUnreturned(id: number) {
+  try {
+    await db
+      .update(Products)
+      .set({
+        returnedAt: null,
+      })
+      .where(eq(Products.id, id));
+  } catch (err) {
+    return { error: String(err) };
+  }
+
+  revalidatePath("/devoluciones");
+  redirect("/devoluciones");
+}
+
 export async function createSupplier(newSupplier: unknown) {
   // Server-side validation
   const result = supplierSchema.safeParse(newSupplier);
