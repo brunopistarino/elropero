@@ -32,6 +32,22 @@ import { useState } from "react";
 import { productSchema, productSchemaType } from "@/lib/zod-schemas";
 import { createProduct } from "@/lib/actions";
 import { toast } from "sonner";
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+} from "@/components/ui/command";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { Check, ChevronsUpDown } from "lucide-react";
+import { ScrollArea } from "@/components/ui/scroll-area";
+
+import { cn } from "@/lib/utils";
 
 interface SelectData {
   id: number;
@@ -46,6 +62,8 @@ export default function CreateForm({
   suppliers: SelectData[];
 }) {
   const [isPending, setIsPending] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState("");
 
   // 1. Define your form.
   const form = useForm<z.infer<typeof productSchema>>({
@@ -76,6 +94,49 @@ export default function CreateForm({
     <FormContainer>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+          {/* <Popover open={open} onOpenChange={setOpen}>
+            <PopoverTrigger asChild>
+              <Button
+                variant="outline"
+                role="combobox"
+                aria-expanded={open}
+                className="w-[200px] justify-between"
+              >
+                {value
+                  ? categories.find((category) => category.id === value)?.name
+                  : "Select framework..."}
+                <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-[200px] p-0">
+              <Command className="h-80">
+                <CommandInput placeholder="Search framework..." />
+                <CommandEmpty>No framework found.</CommandEmpty>
+                <ScrollArea>
+                  <CommandGroup>
+                    {categories.map((category) => (
+                      <CommandItem
+                        key={category.id}
+                        value={category.id}
+                        onSelect={(currentValue) => {
+                          setValue(currentValue === value ? "" : currentValue);
+                          setOpen(false);
+                        }}
+                      >
+                        <Check
+                          className={cn(
+                            "mr-2 h-4 w-4",
+                            value === category.id ? "opacity-100" : "opacity-0"
+                          )}
+                        />
+                        {category.name}
+                      </CommandItem>
+                    ))}
+                  </CommandGroup>
+                </ScrollArea>
+              </Command>
+            </PopoverContent>
+          </Popover> */}
           <FormField
             control={form.control}
             name="categoryId"
