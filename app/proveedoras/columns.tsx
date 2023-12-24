@@ -1,17 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  AlertCircle,
-  Check,
-  CheckCircle2,
-  DollarSign,
-  MoreHorizontal,
-  XCircle,
-  RefreshCcw,
-  Pencil,
-  Trash,
-} from "lucide-react";
+import { DollarSign, Pencil, Trash } from "lucide-react";
 import { ColumnDef } from "@tanstack/react-table";
 import type { Supplier } from "@/lib/schema";
 import { DataTableColumnHeader } from "@/components/data-table-column-header";
@@ -70,7 +60,7 @@ export const columns: ColumnDef<Supplier>[] = [
     ),
   },
   {
-    id: "actions",
+    id: "acciones",
     cell: ({ row }) => (
       // <Button
       //   variant="ghost"
@@ -81,11 +71,11 @@ export const columns: ColumnDef<Supplier>[] = [
       // </Button>
       // <DataTableRowActions row={row} />
       <div className="flex opacity-0 group-hover:opacity-100 text-muted-foreground">
-        <Button variant="ghost" className="flex h-8 w-8 p-0 ml-auto">
+        {/* <Button variant="ghost" className="flex h-8 w-8 p-0 ml-auto">
           <DollarSign size={16} />
           <span className="sr-only">Pagar saldo</span>
-        </Button>
-        <Button variant="ghost" className="flex h-8 w-8 p-0">
+        </Button> */}
+        <Button variant="ghost" className="flex h-8 w-8 p-0 ml-auto">
           <Pencil size={16} />
           <span className="sr-only">Modificar proveedora</span>
         </Button>
