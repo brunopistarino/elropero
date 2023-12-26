@@ -10,6 +10,7 @@ import { count, eq, gt, and, isNull, isNotNull, sum, sql } from "drizzle-orm";
 
 import { SaldosTable, columns } from "./columns";
 import { DataTable } from "./data-table";
+import Breadcrumbs from "@/components/breadcrumbs";
 
 export default async function Page() {
   noStore();
@@ -67,10 +68,10 @@ export default async function Page() {
   return (
     <>
       <div className="flex flex-col gap-4">
-        <h1 className="text-3xl font-semibold">Pagos pendientes</h1>
+        <Breadcrumbs />
         <div className="grid md:grid-cols-3 gap-6">
           <div className="flex flex-col w-full p-6 rounded-md border gap-2 bg-background">
-            <p>Clientes</p>
+            <p>Proveedoras</p>
             <p className="text-4xl font-semibold">{data.length}</p>
           </div>
           <div className="flex flex-col w-full p-6 rounded-md border gap-2 bg-background">

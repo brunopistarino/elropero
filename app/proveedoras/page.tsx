@@ -17,7 +17,6 @@ export default async function Page() {
     <>
       <div className="flex justify-between">
         <Breadcrumbs />
-        <p>(agregar el botón de whatsapp que te arme el mensaje)</p>
         <Link
           href="/proveedoras/crear"
           className={cn(buttonVariants(), "gap-1 px-3 font-semibold")}

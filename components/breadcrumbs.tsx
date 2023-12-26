@@ -108,4 +108,20 @@ const routes = {
       link: "/proveedoras/crear",
     },
   ],
+  saldos: [
+    {
+      name: "Pagos pendientes",
+      link: "/saldos",
+    },
+  ],
+  saldosmensaje: [
+    {
+      name: "Pagos pendientes",
+      link: "/saldos",
+    },
+    {
+      name: "Modificar mensaje",
+      link: "/saldos/mensaje",
+    },
+  ],
 };

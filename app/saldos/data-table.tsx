@@ -24,6 +24,10 @@ import {
 } from "@/components/ui/table";
 import { DataTableViewOptions } from "@/components/data-table-view-options";
 import { Input } from "@/components/ui/input";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
+import { Pencil } from "lucide-react";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -90,7 +94,16 @@ export function DataTable<TData, TValue>({
           }
           className="max-w-sm"
         />
-        <DataTableViewOptions table={table} />
+        <div className="flex ml-auto gap-2">
+          <Link
+            href="/saldos/mensaje"
+            className={cn(buttonVariants({ variant: "outline" }), "flex gap-2")}
+          >
+            <Pencil size={16} />
+            Mensaje
+          </Link>
+          <DataTableViewOptions table={table} />
+        </div>
       </div>
 
       <div className="border-t">

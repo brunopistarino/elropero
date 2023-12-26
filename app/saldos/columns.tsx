@@ -1,7 +1,7 @@
 "use client";
 
 import { ColumnDef } from "@tanstack/react-table";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   AlertCircle,
   Check,
@@ -15,6 +15,8 @@ import {
   MessageCircle,
 } from "lucide-react";
 import { DataTableColumnHeader } from "@/components/data-table-column-header";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 export type SaldosTable = {
   id: number;
@@ -86,14 +88,43 @@ export const columns: ColumnDef<SaldosTable>[] = [
       // </Button>
       // <DataTableRowActions row={row} />
       <div className="flex opacity-0 group-hover:opacity-100 text-muted-foreground">
-        <Button variant="ghost" className="flex h-8 w-8 p-0 ml-auto">
+        <Link
+          href={`/saldos/${row.getValue("id")}`}
+          className={cn(
+            buttonVariants({ variant: "ghost" }),
+            "flex h-8 w-8 p-0 ml-auto"
+          )}
+        >
           <DollarSign size={16} />
           <span className="sr-only">Pagar saldo</span>
-        </Button>
-        <Button variant="ghost" className="flex h-8 w-8 p-0">
+        </Link>
+        <Link
+          href={`https://wa.me/${row.getValue(
+            "phone"
+          )}?text=Hola ${row.getValue(
+            "name"
+          )}, te hablo desde el ropero. Vendiste ${row.getValue(
+            "count"
+          )} productos y tenes un saldo pendiente de ${new Intl.NumberFormat(
+            "es-AR",
+            {
+              style: "currency",
+              currency: "ARS",
+            }
+          ).format(
+            row.getValue("amount") as number
+          )}. Podes pasar a cobrar los viernes por la mañana. Muchas gracias!
+            `}
+          target="_blank"
+          referrerPolicy="no-referrer"
+          className={cn(
+            buttonVariants({ variant: "ghost" }),
+            "flex h-8 w-8 p-0"
+          )}
+        >
           <MessageCircle size={16} />
           <span className="sr-only">Mandar mensaje</span>
-        </Button>
+        </Link>
       </div>
     ),
   },
