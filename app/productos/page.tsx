@@ -80,7 +80,7 @@ export default async function Page() {
   //   },
   // });
 
-  console.log(data);
+  // console.log(data);
 
   return (
     <>

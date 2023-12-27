@@ -73,6 +73,12 @@ export function DataTable<TData, TValue>({
               </TableCell>
             </TableRow>
           )}
+          <TableRow className="font-semibold">
+            <TableCell colSpan={columns.length - 1} className="h-16">
+              Total
+            </TableCell>
+            <TableCell>$ 10.000,00</TableCell>
+          </TableRow>
         </TableBody>
       </Table>
     </div>

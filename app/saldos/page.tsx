@@ -36,7 +36,7 @@ export default async function Page() {
     )
     .groupBy(Suppliers.id)
     .having(gt(sum(soldNotPaidProducts.price), 0));
-  console.log(data);
+  // console.log(data);
 
   // calculate totalAmount
   const totalAmount = data.reduce((acc, curr) => acc + curr.amount, 0);

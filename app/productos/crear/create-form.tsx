@@ -44,7 +44,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { Check, ChevronsUpDown } from "lucide-react";
+import { Check, Loader2 } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 import { cn } from "@/lib/utils";
@@ -265,7 +265,8 @@ export default function CreateForm({
               Cancelar
             </Link>
             <Button type="submit" disabled={isPending}>
-              Submit
+              {isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+              Crear
             </Button>
           </div>
         </form>

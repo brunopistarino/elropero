@@ -10,9 +10,9 @@ export default async function Home() {
       products: true,
     },
   });
-  console.log("====================================");
-  console.log(a);
-  console.log(b);
+  // console.log("====================================");
+  // console.log(a);
+  // console.log(b);
   return (
     <div className="justify-center flex items-center h-screen -mt-8 -mb-12">
       <p className="text-7xl text-gray-300">

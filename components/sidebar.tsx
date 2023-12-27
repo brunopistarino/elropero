@@ -6,8 +6,9 @@ import Link from "next/link";
 // import LogoIcon from "@icons/logom.svg";
 
 import { getPages } from "@/lib/pages";
+import { usePathname } from "next/navigation";
 
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -17,13 +18,16 @@ import {
   DialogFooter,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { Menu, X, Settings } from "lucide-react";
+import { Menu, X, Settings, User2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { ThemeButton } from "@/components/theme-button";
+import { cn } from "@/lib/utils";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState<Boolean>(false);
   const [open, setOpen] = useState<String>("");
+  const pathname = usePathname();
+  const path = "/" + pathname.split("/")[1];
 
   const navItems = getPages();
 
@@ -90,53 +94,26 @@ export default function Sidebar() {
           <div className="px-6">
             <Input placeholder="Buscar" />
           </div>
-          <div className="flex flex-col gap-1 px-4 ">
+          <div className="flex flex-col gap-1 px-4">
             {navItems.map((item, x) => (
-              <div key={x} className="flex flex-col gap-2">
-                {/* {item.subItems ? (
-                  <div
-                    className="flex gap-3 pt-2 pr-3 pb-2 pl-3 hover:bg-muted/50 rounded-md cursor-pointer"
-                    onClick={() => item.subItems && handleOpen(item.name)}
-                  >
-                    {item.icon}
-                    <p className="font-semibold">{item.name}</p>
-                    <div className="ml-auto">
-                      {open === item.name ? <ChevronUp /> : <ChevronDown />}
-                    </div>
-                  </div>
-                ) : ( */}
-                <Link
-                  href={item.link}
-                  onClick={handleClose}
-                  className="flex gap-3 pt-2 pr-3 pb-2 pl-3 hover:bg-muted/50 rounded-md"
-                >
-                  {item.icon}
-                  <p className="font-semibold">{item.name}</p>
-                </Link>
-                {/* )} */}
-                {/* {item.subItems && open === item.name && (
-                  <div className="flex flex-col gap-1 pb-1">
-                    {item.subItems.map((subItem, y) => (
-                      <>
-                        {subItem.link ? (
-                          <Link
-                            key={y}
-                            href={subItem.link}
-                            onClick={handleClose}
-                            className="pt-2 pr-3 pb-2 pl-11 hover:bg-muted/50 rounded-md"
-                          >
-                            <p>{subItem.name}</p>
-                          </Link>
-                        ) : (
-                          <p className="pt-2 pr-3 pb-2 pl-11 text-muted-foreground rounded-md cursor-default">
-                            {subItem.name}
-                          </p>
-                        )}
-                      </>
-                    ))}
-                  </div>
-                )} */}
-              </div>
+              <Link
+                key={x}
+                href={item.link}
+                onClick={handleClose}
+                // className="flex gap-3 pt-2 pr-3 pb-2 pl-3 hover:bg-muted/50 rounded-md"
+                className={cn(
+                  buttonVariants({
+                    variant: path !== item.link ? "ghost" : "default",
+                    size: "default",
+                  }),
+                  "justify-start gap-2 px-2"
+                  // link.variant === "default" &&
+                  //   "dark:bg-muted dark:text-muted-foreground dark:hover:bg-muted dark:hover:text-white"
+                )}
+              >
+                {item.icon}
+                <p className="font-semibold">{item.name}</p>
+              </Link>
             ))}
           </div>
         </div>
@@ -147,9 +124,6 @@ export default function Sidebar() {
           </Button> */}
           <ThemeButton />
         </div>
-        {/* <div className="flex justify-center mb-8">
-          <ThemeButton />
-        </div> */}
         {/* <div className="px-2 py-6">
           <UserDialog>
             <div className="flex gap-3 items-center hover:bg-gray-200 rounded-md p-2 cursor-pointer">
@@ -168,26 +142,26 @@ export default function Sidebar() {
   );
 }
 
-const UserDialog = ({ children }: { children: React.ReactNode }) => (
-  <Dialog>
-    <DialogTrigger asChild>{children}</DialogTrigger>
-    <DialogContent className="sm:max-w-[425px]">
-      <DialogHeader>
-        <DialogTitle>Bruno Pistarino</DialogTitle>
-        <DialogDescription>brunopistarino@gmail.com</DialogDescription>
-      </DialogHeader>
-      <div className="grid gap-4 py-4">
-        <p>Carrera: ING. EN INFORMÁTICA - Plan 2022</p>
-        <p>Departamento Académico Rafaela</p>
-      </div>
-      <DialogFooter>
-        <Button className="w-full">Cambiar de Carrera</Button>
-        <Link href="/" className="w-full">
-          <Button className="w-full" variant="destructive">
-            Cerrar Sesión
-          </Button>
-        </Link>
-      </DialogFooter>
-    </DialogContent>
-  </Dialog>
-);
+// const UserDialog = ({ children }: { children: React.ReactNode }) => (
+//   <Dialog>
+//     <DialogTrigger asChild>{children}</DialogTrigger>
+//     <DialogContent className="sm:max-w-[425px]">
+//       <DialogHeader>
+//         <DialogTitle>Bruno Pistarino</DialogTitle>
+//         <DialogDescription>brunopistarino@gmail.com</DialogDescription>
+//       </DialogHeader>
+//       <div className="grid gap-4 py-4">
+//         <p>Carrera: ING. EN INFORMÁTICA - Plan 2022</p>
+//         <p>Departamento Académico Rafaela</p>
+//       </div>
+//       <DialogFooter>
+//         <Button className="w-full">Cambiar de Carrera</Button>
+//         <Link href="/" className="w-full">
+//           <Button className="w-full" variant="destructive">
+//             Cerrar Sesión
+//           </Button>
+//         </Link>
+//       </DialogFooter>
+//     </DialogContent>
+//   </Dialog>
+// );

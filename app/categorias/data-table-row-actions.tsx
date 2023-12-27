@@ -37,7 +37,7 @@ export function DataTableRowActions<TData>({
   async function handleDeleteSubmit() {
     //TODO: FALTA MANEJAR LOS ERRORES
     setIsPending(true);
-    console.log("Sell", id);
+    // console.log("Sell", id);
     await deleteCategory(id);
     setIsPending(false);
     setIsOpen(false);
