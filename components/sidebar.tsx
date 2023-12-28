@@ -27,7 +27,7 @@ export default function Sidebar() {
   const [isOpen, setIsOpen] = useState<Boolean>(false);
   const [open, setOpen] = useState<String>("");
   const pathname = usePathname();
-  const path = "/" + pathname.split("/")[1];
+  const path = "/" + pathname?.split("/")[1];
 
   const navItems = getPages();
 
@@ -106,7 +106,10 @@ export default function Sidebar() {
                     variant: path !== item.link ? "ghost" : "default",
                     size: "default",
                   }),
-                  "justify-start gap-2 px-2"
+                  "justify-start gap-2 px-2",
+                  // TODO: BORRAR ESTO
+                  path === item.link &&
+                    "bg-accent text-accent-foreground hover:bg-accent hover:text-accent-foreground"
                   // link.variant === "default" &&
                   //   "dark:bg-muted dark:text-muted-foreground dark:hover:bg-muted dark:hover:text-white"
                 )}
