@@ -112,7 +112,7 @@ export default function Sidebar() {
                 )}
               >
                 {item.icon}
-                <p className="font-semibold">{item.name}</p>
+                <p className="font-semibold text-base">{item.name}</p>
               </Link>
             ))}
           </div>
