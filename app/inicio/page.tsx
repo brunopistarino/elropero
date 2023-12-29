@@ -66,23 +66,41 @@ export default function Page() {
           />
         </div>
       </div>
-      <div className="bg-background p-6 pl-0 rounded-md border flex flex-col gap-8">
-        <div className="flex items-center pl-6 justify-between">
-          <p className="font-semibold text-lg">Ventas</p>
-          <Tabs defaultValue="account">
-            <TabsList>
-              <TabsTrigger value="12months">12 meses</TabsTrigger>
-              <TabsTrigger value="3months">3 meses</TabsTrigger>
-              <TabsTrigger value="30days">30 días</TabsTrigger>
-              <TabsTrigger value="7days">7 días</TabsTrigger>
-              <TabsTrigger value="24days">24 horas</TabsTrigger>
-            </TabsList>
-            {/* <TabsContent value="password">Change your password here.</TabsContent> */}
-          </Tabs>
-        </div>
-        <Chart />
+      <div className="flex gap-4">
+        <div className="bg-background p-6 pl-0 rounded-md border flex flex-col gap-8 w-full">
+          <div className="flex items-center pl-6 justify-between">
+            <p className="font-semibold text-lg">Ventas</p>
+            <Tabs defaultValue="12months">
+              <TabsList>
+                <TabsTrigger value="12months">12 meses</TabsTrigger>
+                <TabsTrigger value="3months">3 meses</TabsTrigger>
+                <TabsTrigger value="30days">30 días</TabsTrigger>
+                <TabsTrigger value="7days">7 días</TabsTrigger>
+                <TabsTrigger value="24days">24 horas</TabsTrigger>
+              </TabsList>
+              {/* <TabsContent value="password">Change your password here.</TabsContent> */}
+            </Tabs>
+          </div>
+          <Chart />
 
-        {/* <img src="/chart.svg" alt="" /> */}
+          {/* <img src="/chart.svg" alt="" /> */}
+        </div>
+        <div className="flex flex-col gap-4 whitespace-nowrap">
+          <div className="bg-background p-6 rounded-md border flex flex-col gap-2 h-full justify-between">
+            <p className="whitespadce-nowrap text-muted-foreground">
+              Ventas de hoy
+            </p>
+            <p className="font-semibold text-3xl whitespadce-nowrap">4</p>
+          </div>
+          <div className="bg-background p-6 rounded-md border flex flex-col gap-2 h-full justify-between">
+            <p className="whitespace-nowdrap text-muted-foreground">
+              Ganancias de hoy
+            </p>
+            <p className="font-semibold text-3xl whitespacde-nowrap">
+              $ 45.950,00
+            </p>
+          </div>
+        </div>
       </div>
       <div className="bg-background p-6 pl-0 rounded-md border flex flex-col gap-8">
         <div className="flex justify-between">

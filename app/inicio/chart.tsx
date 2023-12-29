@@ -89,6 +89,12 @@ export default function Chart() {
                       {label}
                     </span>
                     <span className="font-bold">{payload[0].value}</span>
+                    <span className="font-bold">
+                      {new Intl.NumberFormat("es-AR", {
+                        style: "currency",
+                        currency: "ARS",
+                      }).format((payload[0].value as number) * 1524)}
+                    </span>
                   </div>
                 </div>
               );
