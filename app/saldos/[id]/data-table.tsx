@@ -31,6 +31,12 @@ export function DataTable<TData, TValue>({
     getCoreRowModel: getCoreRowModel(),
   });
 
+  const totalPrice =
+    table
+      .getRowModel()
+      .rows.filter((row) => row.getIsSelected())
+      .reduce((acc, curr) => acc + (curr.getValue("price") as number), 0) / 2;
+
   return (
     <div className="flex flex-col gap-4 md:rounded-md border-y md:border bg-background -mx-4 md:mx-0">
       <Table>
@@ -77,7 +83,12 @@ export function DataTable<TData, TValue>({
             <TableCell colSpan={columns.length - 1} className="h-16">
               Total
             </TableCell>
-            <TableCell>$ 10.000,00</TableCell>
+            <TableCell>
+              {new Intl.NumberFormat("es-AR", {
+                style: "currency",
+                currency: "ARS",
+              }).format(totalPrice)}
+            </TableCell>
           </TableRow>
         </TableBody>
       </Table>

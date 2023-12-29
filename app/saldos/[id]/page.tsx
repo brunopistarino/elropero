@@ -57,7 +57,7 @@ export default async function Page({ params }: { params: { id: number } }) {
       </div> */}
       {/* <DataTableDemo /> */}
       <DataTable columns={columns} data={soldNotPaidProducts} />
-      <Button className="ml-auto gap-1 font-semibold">
+      <Button className="ml-auto gap-1 font-semibold px-3">
         <DollarSign size={16} />
         Pagar
       </Button>

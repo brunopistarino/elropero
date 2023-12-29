@@ -23,19 +23,9 @@ export function getPages() {
       link: "/saldos",
     },
     {
-      name: "Proveedoras",
-      icon: <User2 />,
-      link: "/proveedoras",
-    },
-    {
       name: "Productos",
       icon: <Shirt />,
       link: "/productos",
-    },
-    {
-      name: "Categorías",
-      icon: <Book />,
-      link: "/categorias",
     },
     {
       name: "Ventas",
@@ -46,6 +36,16 @@ export function getPages() {
       name: "Devoluciones",
       icon: <RefreshCcw />,
       link: "/devoluciones",
+    },
+    {
+      name: "Proveedoras",
+      icon: <User2 />,
+      link: "/proveedoras",
+    },
+    {
+      name: "Categorías",
+      icon: <Book />,
+      link: "/categorias",
     },
   ];
 }
