@@ -6,6 +6,8 @@ import { notFound } from "next/navigation";
 import { DataTableDemo } from "./data-table2";
 import { DataTable } from "./data-table";
 import { columns } from "./columns";
+import { Button } from "@/components/ui/button";
+import { DollarSign } from "lucide-react";
 
 export default async function Page({ params }: { params: { id: number } }) {
   const id = params.id;
@@ -34,12 +36,18 @@ export default async function Page({ params }: { params: { id: number } }) {
 
   return (
     <>
-      <p className="font-semibold text-3xl text-muted-foreground">
-        <Link href="/saldos" className="hover:underline">
-          Pagos pendientes
-        </Link>{" "}
-        / <span className="text-foreground">{supplier.name}</span>
-      </p>
+      <div className="flex gap-4 justify-between">
+        <p className="font-semibold text-3xl text-muted-foreground">
+          <Link href="/saldos" className="hover:underline">
+            Pagos pendientes
+          </Link>{" "}
+          / <span className="text-foreground">{supplier.name}</span>
+        </p>
+        {/* <Button className="ml-auto gap-1 font-semibold">
+          <DollarSign size={16} />
+          Pagar
+        </Button> */}
+      </div>
       {/* <div>
         {soldNotPaidProducts.map((product) => (
           <p key={product.id}>
@@ -49,6 +57,10 @@ export default async function Page({ params }: { params: { id: number } }) {
       </div> */}
       {/* <DataTableDemo /> */}
       <DataTable columns={columns} data={soldNotPaidProducts} />
+      <Button className="ml-auto gap-1 font-semibold">
+        <DollarSign size={16} />
+        Pagar
+      </Button>
     </>
   );
 }

@@ -84,7 +84,9 @@ export function DataTableRowActions<TData>({
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel>Cancelar</AlertDialogCancel>
+            <AlertDialogCancel onClick={() => setIsOpen(false)}>
+              Cancelar
+            </AlertDialogCancel>
             <form action={handleDeleteSubmit}>
               <Button variant="destructive" disabled={isPending}>
                 Eliminar

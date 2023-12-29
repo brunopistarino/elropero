@@ -36,33 +36,35 @@ import React from "react";
 export default function Page() {
   return (
     <>
-      {/* un texto que digga buenos dias, buenas tarde o buenas noces dependiendo de la hora */}
-      <h1 className="font-semibold text-3xl">
-        {new Date().getHours() < 12
-          ? "Buenos días"
-          : new Date().getHours() < 18
-          ? "Buenas tardes"
-          : "Buenas noches"}
-      </h1>
-      <div className="flex gap-4">
-        <SmallCard
-          icon={<Shirt />}
-          title="Agregar producto"
-          description="al listado de productos"
-          href="/productos/crear"
-        />
-        <SmallCard
-          icon={<User2 />}
-          title="Agregar proveedora"
-          description="al listado de preveedoras"
-          href="/proveedoras/crear"
-        />
-        <SmallCard
-          icon={<Book />}
-          title="Agregar categoría"
-          description="al listado de categorías"
-          href="/categorias/crear"
-        />
+      {/* un texto que diga buenos dias, buenas tarde o buenas noces dependiendo de la hora */}
+      <div className="flex flex-col gap-4">
+        <h1 className="font-semibold text-3xl">
+          {new Date().getHours() < 12
+            ? "Buenos días"
+            : new Date().getHours() < 18
+            ? "Buenas tardes"
+            : "Buenas noches"}
+        </h1>
+        <div className="flex gap-4">
+          <SmallCard
+            icon={<Shirt />}
+            title="Agregar producto"
+            description="al listado de productos"
+            href="/productos/crear"
+          />
+          <SmallCard
+            icon={<User2 />}
+            title="Agregar proveedora"
+            description="al listado de preveedoras"
+            href="/proveedoras/crear"
+          />
+          <SmallCard
+            icon={<Book />}
+            title="Agregar categoría"
+            description="al listado de categorías"
+            href="/categorias/crear"
+          />
+        </div>
       </div>
       <div className="bg-background p-6 pl-0 rounded-md border flex flex-col gap-8">
         <div className="flex items-center pl-6 justify-between">
