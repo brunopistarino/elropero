@@ -69,7 +69,7 @@ export default async function Page() {
     <>
       <div className="flex flex-col gap-4">
         <Breadcrumbs />
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
           <div className="flex flex-col w-full p-6 rounded-md border gap-2 bg-background">
             <p>Proveedoras</p>
             <p className="text-4xl font-semibold">{data.length}</p>
@@ -78,7 +78,7 @@ export default async function Page() {
             <p>Productos</p>
             <p className="text-4xl font-semibold">{totalProducts}</p>
           </div>
-          <div className="flex flex-col w-full p-6 rounded-md border gap-2 bg-background">
+          <div className="flex flex-col col-span-2 lg:col-span-1 w-full p-6 rounded-md border gap-2 bg-background overflow-x-auto">
             <p>Monto total</p>
             <p className="text-4xl font-semibold">
               {new Intl.NumberFormat("es-AR", {

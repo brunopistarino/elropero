@@ -45,7 +45,7 @@ export default function Page() {
             ? "Buenas tardes"
             : "Buenas noches"}
         </h1>
-        <div className="flex gap-4">
+        <div className="flex gap-4 flex-col lg:flex-row">
           <SmallCard
             icon={<Shirt />}
             title="Agregar producto"
@@ -66,16 +66,16 @@ export default function Page() {
           />
         </div>
       </div>
-      <div className="flex gap-4">
+      <div className="flex gap-4 lg:flex-row flex-col">
         <div className="bg-background p-6 pl-0 rounded-md border flex flex-col gap-8 w-full">
           <div className="flex items-center pl-6 justify-between">
             <p className="font-semibold text-lg">Ventas</p>
             <Tabs defaultValue="12months">
               <TabsList>
                 <TabsTrigger value="12months">12 meses</TabsTrigger>
-                <TabsTrigger value="3months">3 meses</TabsTrigger>
+                {/* <TabsTrigger value="3months">3 meses</TabsTrigger> */}
                 <TabsTrigger value="30days">30 días</TabsTrigger>
-                <TabsTrigger value="7days">7 días</TabsTrigger>
+                {/* <TabsTrigger value="7days">7 días</TabsTrigger> */}
                 <TabsTrigger value="24days">24 horas</TabsTrigger>
               </TabsList>
               {/* <TabsContent value="password">Change your password here.</TabsContent> */}
@@ -85,20 +85,18 @@ export default function Page() {
 
           {/* <img src="/chart.svg" alt="" /> */}
         </div>
-        <div className="flex flex-col gap-4 whitespace-nowrap">
+        <div className="grid grid-cols-1 sm:grid-cols-3 lg:flex lg:flex-col gap-4 whitespace-nowrap">
           <div className="bg-background p-6 rounded-md border flex flex-col gap-2 h-full justify-between">
             <p className="whitespadce-nowrap text-muted-foreground">
               Ventas de hoy
             </p>
             <p className="font-semibold text-3xl whitespadce-nowrap">4</p>
           </div>
-          <div className="bg-background p-6 rounded-md border flex flex-col gap-2 h-full justify-between">
+          <div className="bg-background p-6 rounded-md border flex flex-col gap-2 h-full justify-between sm:col-span-2">
             <p className="whitespace-nowdrap text-muted-foreground">
               Ganancias de hoy
             </p>
-            <p className="font-semibold text-3xl whitespacde-nowrap">
-              $ 45.950,00
-            </p>
+            <p className="font-semibold text-3xl">$ 45.950,00</p>
           </div>
         </div>
       </div>
@@ -108,9 +106,9 @@ export default function Page() {
           <Tabs defaultValue="24days">
             <TabsList>
               <TabsTrigger value="12months">12 meses</TabsTrigger>
-              <TabsTrigger value="6months">6 meses</TabsTrigger>
+              {/* <TabsTrigger value="6months">6 meses</TabsTrigger> */}
               <TabsTrigger value="30days">30 días</TabsTrigger>
-              <TabsTrigger value="7days">7 días</TabsTrigger>
+              {/* <TabsTrigger value="7days">7 días</TabsTrigger> */}
               <TabsTrigger value="24days">24 horas</TabsTrigger>
             </TabsList>
           </Tabs>
@@ -135,7 +133,7 @@ function SmallCard({
 }) {
   return (
     <Link
-      className="bg-background p-5 border flex gap-3 rounded-lg w-full group"
+      className="bg-background p-5 border flex gap-3 rounded-lg w-full group items-start"
       href={href}
     >
       <div className="border p-3 rounded-md group-hover:bg-border">{icon}</div>
