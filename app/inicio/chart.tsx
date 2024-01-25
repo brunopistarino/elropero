@@ -75,7 +75,7 @@ const months = [
   "Diciembre",
 ];
 
-export default function Chart({ data }) {
+export default function Chart({ data }: { data: any[] }) {
   // const dataWithInts = data.map((item) => ({
   //   ...item,
   //   total_revenue: Math.floor(item.total_revenue),
