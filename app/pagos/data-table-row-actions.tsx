@@ -4,11 +4,11 @@ import { Row } from "@tanstack/react-table";
 
 import { Button } from "@/components/ui/button";
 
-import { DollarSign, Loader2, X } from "lucide-react";
-import { markProductAsUnsold } from "@/lib/actions";
+import { Loader2, X } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import { useForm } from "react-hook-form";
+import { markProductAsUnpaid } from "@/lib/actions";
 
 interface DataTableRowActionsProps<TData> {
   row: Row<TData>;
@@ -21,9 +21,9 @@ export function DataTableRowActions<TData>({
   const form = useForm();
   const id: number = row.getValue("id");
 
-  async function handleUnsellSubmit() {
+  async function handleUnpaidSubmit() {
     setIsPending(true);
-    const response = await markProductAsUnsold(id);
+    const response = await markProductAsUnpaid(id);
     if (response?.error) {
       toast.error(response.error);
       setIsPending(false);
@@ -35,7 +35,7 @@ export function DataTableRowActions<TData>({
 
   return (
     <form
-      onSubmit={form.handleSubmit(handleUnsellSubmit)}
+      onSubmit={form.handleSubmit(handleUnpaidSubmit)}
       className="ml-auto opacity-0 group-hover:opacity-100"
     >
       <Button
@@ -48,7 +48,7 @@ export function DataTableRowActions<TData>({
         ) : (
           <X size={16} />
         )}
-        <span className="sr-only">Cancelar venta</span>
+        <span className="sr-only">Cancelar pago</span>
       </Button>
     </form>
   );

@@ -7,7 +7,7 @@ import { unstable_noStore as noStore } from "next/cache";
 export default async function Page() {
   noStore();
 
-  const cateories = await db
+  const categories = await db
     .select({
       id: Categories.id,
       name: Categories.name,
@@ -26,7 +26,7 @@ export default async function Page() {
   return (
     <>
       <Breadcrumbs />
-      <CreateForm categories={cateories} suppliers={suppliers} />
+      <CreateForm categories={categories} suppliers={suppliers} />
     </>
   );
 }

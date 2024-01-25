@@ -7,13 +7,13 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Categories, Products, Suppliers } from "@/lib/schema";
-import { eq, isNull, and } from "drizzle-orm";
+import { eq, isNull, and, desc, sql } from "drizzle-orm";
 import { unstable_noStore as noStore } from "next/cache";
 
 // async function getData(): Promise<Payment[]> {}
 
 export type ProductTable = {
-  id: (typeof Products.$inferSelect)["id"];
+  id: String;
   name: (typeof Products.$inferSelect)["name"];
   price: (typeof Products.$inferSelect)["price"];
   size: (typeof Products.$inferSelect)["size"];
@@ -27,7 +27,7 @@ export default async function Page() {
   // const data = await getData();
   const data: ProductTable[] = await db
     .select({
-      id: Products.id,
+      id: sql<String>`CAST(${Products.id} AS VARCHAR)`,
       name: Products.name,
       price: Products.price,
       size: Products.size,
@@ -38,7 +38,8 @@ export default async function Page() {
     .from(Products)
     .leftJoin(Categories, eq(Products.categoryId, Categories.id))
     .leftJoin(Suppliers, eq(Products.supplierId, Suppliers.id))
-    .where(and(isNull(Products.soldAt), isNull(Products.returnedAt)));
+    .where(and(isNull(Products.soldAt), isNull(Products.returnedAt)))
+    .orderBy(desc(Products.createdAt));
   // const data = await db.query.Products.findMany({
   //   with: {
   //     category: true,

@@ -19,14 +19,23 @@ export const productSchema = z.object({
   // price: z.number().min(1, {
   //   message: "Por favor introduzca un precio.",
   // }),
-  price: z.coerce.number().min(1, {
-    message: "Por favor introduzca un precio.",
-  }),
+  price: z.coerce
+    .number({ invalid_type_error: "Por favor introduzca un precio." })
+    .min(1, {
+      message: "El precio debe ser mayor a 0.",
+    }),
   size: z.string().max(255).optional(),
   // categoryId: z.number(),
-  categoryId: z.coerce.number(),
+  categoryId: z.coerce.number({
+    invalid_type_error: "Por favor elija una categoría.",
+  }),
   // supplierId: z.number(),
-  supplierId: z.coerce.number(),
+  supplierId: z.coerce.number({
+    invalid_type_error: "Por favor elija una proveedora.",
+  }),
+  businessProfitPercentage: z.coerce.number().min(0).max(100),
+  businessProfit: z.coerce.number(),
+  supplierProfit: z.coerce.number(),
 });
 
 export const supplierSchema = z.object({

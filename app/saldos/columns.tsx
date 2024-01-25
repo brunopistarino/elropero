@@ -73,20 +73,12 @@ export const columns: ColumnDef<SaldosTable>[] = [
       return new Intl.NumberFormat("es-AR", {
         style: "currency",
         currency: "ARS",
-      }).format(row.getValue("amount") as number);
+      }).format((row.getValue("amount") as number) / 100);
     },
   },
   {
     id: "acciones",
     cell: ({ row }) => (
-      // <Button
-      //   variant="ghost"
-      //   className="flex h-8 w-8 p-0 data-[state=open]:bg-muted"
-      // >
-      //   <MoreHorizontal className="h-4 w-4" />
-      //   <span className="sr-only">Open menu</span>
-      // </Button>
-      // <DataTableRowActions row={row} />
       <div className="flex opacity-0 group-hover:opacity-100 text-muted-foreground">
         <Link
           href={`/saldos/${row.getValue("id")}`}
@@ -112,8 +104,8 @@ export const columns: ColumnDef<SaldosTable>[] = [
               currency: "ARS",
             }
           ).format(
-            row.getValue("amount") as number
-          )}. Podes pasar a cobrar los viernes por la mañana. Muchas gracias!
+            (row.getValue("amount") as number) / 100
+          )}. Podes pasar a cobrar los viernes por la mañana.
             `}
           target="_blank"
           referrerPolicy="no-referrer"

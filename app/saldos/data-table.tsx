@@ -95,13 +95,13 @@ export function DataTable<TData, TValue>({
           className="max-w-sm"
         />
         <div className="flex ml-auto gap-2">
-          <Link
+          {/* <Link
             href="/saldos/mensaje"
             className={cn(buttonVariants({ variant: "outline" }), "flex gap-2")}
           >
             <Pencil size={16} />
             Mensaje
-          </Link>
+          </Link> */}
           <DataTableViewOptions table={table} />
         </div>
       </div>

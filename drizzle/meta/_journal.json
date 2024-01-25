@@ -50,6 +50,34 @@
       "when": 1703000778069,
       "tag": "0006_good_puck",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "5",
+      "when": 1705796214408,
+      "tag": "0007_reflective_excalibur",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "5",
+      "when": 1706123748191,
+      "tag": "0008_nebulous_lady_deathstrike",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "5",
+      "when": 1706123784226,
+      "tag": "0009_supreme_jack_murdock",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "5",
+      "when": 1706124906319,
+      "tag": "0010_aspiring_black_bird",
+      "breakpoints": true
     }
   ]
 }

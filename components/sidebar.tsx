@@ -91,9 +91,9 @@ export default function Sidebar() {
               <span className="font-bold">ROPERO</span>
             </p>
           </Link>
-          <div className="px-6">
+          {/* <div className="px-6">
             <Input placeholder="Buscar" />
-          </div>
+          </div> */}
           <div className="flex flex-col gap-1 px-4">
             {navItems.map((item, x) => (
               <Link
@@ -120,7 +120,7 @@ export default function Sidebar() {
             ))}
           </div>
         </div>
-        <div className="px-4 mb-8 mx-auto">
+        <div className="px-4 mb-8 ">
           {/* <Button className="gap-2 w-full justify-start" variant={"ghost"}>
             <Settings />
             Configuración
@@ -144,27 +144,3 @@ export default function Sidebar() {
     </>
   );
 }
-
-// const UserDialog = ({ children }: { children: React.ReactNode }) => (
-//   <Dialog>
-//     <DialogTrigger asChild>{children}</DialogTrigger>
-//     <DialogContent className="sm:max-w-[425px]">
-//       <DialogHeader>
-//         <DialogTitle>Bruno Pistarino</DialogTitle>
-//         <DialogDescription>brunopistarino@gmail.com</DialogDescription>
-//       </DialogHeader>
-//       <div className="grid gap-4 py-4">
-//         <p>Carrera: ING. EN INFORMÁTICA - Plan 2022</p>
-//         <p>Departamento Académico Rafaela</p>
-//       </div>
-//       <DialogFooter>
-//         <Button className="w-full">Cambiar de Carrera</Button>
-//         <Link href="/" className="w-full">
-//           <Button className="w-full" variant="destructive">
-//             Cerrar Sesión
-//           </Button>
-//         </Link>
-//       </DialogFooter>
-//     </DialogContent>
-//   </Dialog>
-// );

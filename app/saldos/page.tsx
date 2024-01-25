@@ -6,7 +6,17 @@ import { AlignJustify, LayoutGrid, List } from "lucide-react";
 import { db } from "@/lib/drizzle";
 import { Categories, Products, Suppliers } from "@/lib/schema";
 import { unstable_noStore as noStore } from "next/cache";
-import { count, eq, gt, and, isNull, isNotNull, sum, sql } from "drizzle-orm";
+import {
+  count,
+  eq,
+  gt,
+  and,
+  isNull,
+  isNotNull,
+  sum,
+  sql,
+  desc,
+} from "drizzle-orm";
 
 import { SaldosTable, columns } from "./columns";
 import { DataTable } from "./data-table";
@@ -27,7 +37,7 @@ export default async function Page() {
       name: Suppliers.name,
       phone: Suppliers.phone,
       count: count(soldNotPaidProducts.id),
-      amount: sql<number>`cast(sum(${soldNotPaidProducts.price}) as int) / 2`,
+      amount: sql<number>`cast(sum(${soldNotPaidProducts.supplierProfit}) as int)`,
     })
     .from(Suppliers)
     .leftJoin(
@@ -35,7 +45,7 @@ export default async function Page() {
       eq(soldNotPaidProducts.supplierId, Suppliers.id)
     )
     .groupBy(Suppliers.id)
-    .having(gt(sum(soldNotPaidProducts.price), 0));
+    .having(gt(sum(soldNotPaidProducts.supplierProfit), 0));
   // console.log(data);
 
   // calculate totalAmount
@@ -84,7 +94,7 @@ export default async function Page() {
               {new Intl.NumberFormat("es-AR", {
                 style: "currency",
                 currency: "ARS",
-              }).format(totalAmount)}
+              }).format(totalAmount / 100)}
             </p>
           </div>
         </div>

@@ -6,8 +6,6 @@ import { notFound } from "next/navigation";
 import { DataTableDemo } from "./data-table2";
 import { DataTable } from "./data-table";
 import { columns } from "./columns";
-import { Button } from "@/components/ui/button";
-import { DollarSign } from "lucide-react";
 
 export default async function Page({ params }: { params: { id: number } }) {
   const id = params.id;
@@ -57,10 +55,6 @@ export default async function Page({ params }: { params: { id: number } }) {
       </div> */}
       {/* <DataTableDemo /> */}
       <DataTable columns={columns} data={soldNotPaidProducts} />
-      <Button className="ml-auto gap-1 font-semibold px-3">
-        <DollarSign size={16} />
-        Pagar
-      </Button>
     </>
   );
 }

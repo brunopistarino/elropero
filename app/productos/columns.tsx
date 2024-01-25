@@ -66,7 +66,7 @@ export const columns: ColumnDef<ProductTable>[] = [
       return new Intl.NumberFormat("es-AR", {
         style: "currency",
         currency: "ARS",
-      }).format(row.getValue("price"));
+      }).format((row.getValue("price") as number) / 100);
     },
   },
   // {

@@ -1,10 +1,14 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { DollarSign, Pencil, Trash } from "lucide-react";
 import { ColumnDef } from "@tanstack/react-table";
 import type { Supplier } from "@/lib/schema";
 import { DataTableColumnHeader } from "@/components/data-table-column-header";
+import { TooltipWrapper } from "@/components/tooltip-wrapper";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { DataTableRowActions } from "./data-table-row-actions";
 
 export const columns: ColumnDef<Supplier>[] = [
   {
@@ -60,30 +64,13 @@ export const columns: ColumnDef<Supplier>[] = [
     ),
   },
   {
-    id: "acciones",
-    cell: ({ row }) => (
-      // <Button
-      //   variant="ghost"
-      //   className="flex h-8 w-8 p-0 data-[state=open]:bg-muted"
-      // >
-      //   <MoreHorizontal className="h-4 w-4" />
-      //   <span className="sr-only">Open menu</span>
-      // </Button>
-      // <DataTableRowActions row={row} />
-      <div className="flex opacity-0 group-hover:opacity-100 text-muted-foreground">
-        {/* <Button variant="ghost" className="flex h-8 w-8 p-0 ml-auto">
-          <DollarSign size={16} />
-          <span className="sr-only">Pagar saldo</span>
-        </Button> */}
-        <Button variant="ghost" className="flex h-8 w-8 p-0 ml-auto">
-          <Pencil size={16} />
-          <span className="sr-only">Modificar proveedora</span>
-        </Button>
-        <Button variant="ghost" className="flex h-8 w-8 p-0">
-          <Trash size={16} />
-          <span className="sr-only">Eliminar proveedora</span>
-        </Button>
-      </div>
+    accessorKey: "email",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Email" />
     ),
+  },
+  {
+    id: "acciones",
+    cell: ({ row }) => <DataTableRowActions row={row} />,
   },
 ];

@@ -14,30 +14,25 @@ import { drizzle } from "drizzle-orm/vercel-postgres";
 
 const pgTable = pgTableCreator((name) => `elropero_${name}`);
 
-export const Products = pgTable(
-  "Products",
-  {
-    id: serial("id").primaryKey(),
-    name: text("name").notNull(),
-    price: integer("price").notNull(),
-    size: text("size"),
-    categoryId: integer("categoryId")
-      .references(() => Categories.id)
-      .notNull(),
-    supplierId: integer("supplierId")
-      .references(() => Suppliers.id)
-      .notNull(),
-    createdAt: timestamp("createdAt").defaultNow().notNull(),
-    soldAt: timestamp("soldAt"),
-    returnedAt: timestamp("returnedAt"),
-    paidAt: timestamp("paidAt"),
-  }
-  // (products) => {
-  //   return {
-  //     uniqueIdx: uniqueIndex("unique_idx").on(products.name),
-  //   };
-  // }
-);
+export const Products = pgTable("Products", {
+  id: serial("id").primaryKey(),
+  name: text("name").notNull(),
+  price: integer("price").notNull(),
+  size: text("size"),
+  categoryId: integer("categoryId")
+    .references(() => Categories.id)
+    .notNull(),
+  supplierId: integer("supplierId")
+    .references(() => Suppliers.id)
+    .notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  soldAt: timestamp("soldAt"),
+  returnedAt: timestamp("returnedAt"),
+  paidAt: timestamp("paidAt"),
+  businessProfitPercentage: integer("businessProfitPercentage").notNull(),
+  businessProfit: integer("businessProfit").notNull(),
+  supplierProfit: integer("supplierProfit").notNull(),
+});
 
 export const ProductsRelations = relations(Products, ({ one }) => ({
   category: one(Categories, {
@@ -59,7 +54,7 @@ export const Categories = pgTable(
   },
   (categories) => {
     return {
-      uniqueIdx: uniqueIndex("unique_idx").on(categories.name),
+      uniqueIdx: uniqueIndex("categories_unique_idx").on(categories.name),
     };
   }
 );
@@ -81,7 +76,7 @@ export const Suppliers = pgTable(
   },
   (suppliers) => {
     return {
-      uniqueIdx: uniqueIndex("unique_idx").on(suppliers.name),
+      uniqueIdx: uniqueIndex("suppliers_unique_idx").on(suppliers.name),
     };
   }
 );

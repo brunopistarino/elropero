@@ -52,13 +52,13 @@ export const columns: ColumnDef<Payment>[] = [
     header: "Descripción",
   },
   {
-    accessorKey: "price",
+    accessorKey: "supplierProfit",
     header: "Monto",
     cell: ({ row }) => {
       return new Intl.NumberFormat("es-AR", {
         style: "currency",
         currency: "ARS",
-      }).format((row.getValue("price") as number) / 2);
+      }).format((row.getValue("supplierProfit") as number) / 100);
     },
   },
 ];

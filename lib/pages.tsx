@@ -1,6 +1,7 @@
 import {
   Book,
   ClipboardList,
+  DollarSign,
   Home,
   Pencil,
   RefreshCcw,
@@ -18,14 +19,19 @@ export function getPages() {
       link: "/inicio",
     },
     {
+      name: "Productos",
+      icon: <Shirt />,
+      link: "/productos",
+    },
+    {
       name: "Saldos",
       icon: <WalletCards />,
       link: "/saldos",
     },
     {
-      name: "Productos",
-      icon: <Shirt />,
-      link: "/productos",
+      name: "Pagos",
+      icon: <DollarSign />,
+      link: "/pagos",
     },
     {
       name: "Ventas",

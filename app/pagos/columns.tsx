@@ -1,15 +1,16 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 
-import type { ProductTable } from "./page";
-import { DataTableColumnHeader } from "@/components/data-table-column-header";
-import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
-import { DataTableRowActions } from "./data-table-row-actions";
-// import { DataTableRowActions } from "./data-table-row-actions";
+// This type is used to define the shape of our data.
+// You can use a Zod schema here if you want.
 
-export const columns: ColumnDef<ProductTable>[] = [
+import type { PaymentsTable } from "./page";
+import { DataTableColumnHeader } from "@/components/data-table-column-header";
+import { DataTableRowActions } from "./data-table-row-actions";
+
+export const columns: ColumnDef<PaymentsTable>[] = [
   {
     accessorKey: "id",
     header: ({ column }) => (
@@ -17,16 +18,12 @@ export const columns: ColumnDef<ProductTable>[] = [
     ),
   },
   {
-    accessorKey: "returnedAt",
+    accessorKey: "paidAt",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Fecha Devolución" />
+      <DataTableColumnHeader column={column} title="Fecha Pago" />
     ),
     cell: ({ row }) => {
-      // const date: Date = row.getValue("createdAt");
-      // return date;
-      // console.log(date);
-      return (row.getValue("returnedAt") as Date).toJSON().slice(0, 10);
-      // return <span>{new Date().toJSON().slice(0, 10)}</span>;
+      return (row.getValue("paidAt") as Date).toJSON().slice(0, 10);
     },
   },
   {
@@ -56,17 +53,17 @@ export const columns: ColumnDef<ProductTable>[] = [
   {
     accessorKey: "price",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Precio" />
+      <DataTableColumnHeader column={column} title="Monto" />
     ),
     cell: ({ row }) => {
-      return new Intl.NumberFormat("es-AR", {
+      return `- ${new Intl.NumberFormat("es-AR", {
         style: "currency",
         currency: "ARS",
-      }).format((row.getValue("price") as number) / 100);
+      }).format((row.getValue("price") as number) / 2)}`;
     },
   },
   {
-    id: "acciones",
+    id: "actions",
     cell: ({ row }) => <DataTableRowActions row={row} />,
   },
 ];

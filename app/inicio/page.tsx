@@ -1,19 +1,9 @@
-"use client";
+// "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
-const formSchema = z.object({
-  username: z
-    .string()
-    .min(2, {
-      message: "Username must be at least 2 characters.",
-    })
-    .max(50),
-  email: z.string().email(),
-});
 
 import { Book, Package2, Shirt, User2 } from "lucide-react";
 
@@ -32,8 +22,43 @@ import Link from "next/link";
 import Chart from "./chart";
 import MoneyChart from "./money-chart";
 import React from "react";
+import TodayInfo from "./today-info";
+import { isNotNull, sql } from "drizzle-orm";
+import { Products } from "@/lib/schema";
+import { db } from "@/lib/drizzle";
 
-export default function Page() {
+export default async function Page() {
+  const query = sql`
+  WITH MonthSequence AS (
+    SELECT generate_series(
+      current_date - interval '11 months',
+      current_date,
+      interval '1 month'
+    )::date AS month
+  )
+  
+  SELECT
+    EXTRACT(YEAR FROM ms.month) AS sale_year,
+    EXTRACT(MONTH FROM ms.month) AS sale_month,
+    TO_CHAR(ms.month, 'Month') AS month_name,
+    COALESCE(COUNT(ep."soldAt"), 0) AS total_sold,
+    COALESCE(SUM(ep.price), 0) AS total_revenue
+  FROM
+    MonthSequence ms
+  LEFT JOIN
+    "elropero_Products" ep
+  ON
+    EXTRACT(YEAR FROM ep."soldAt") = EXTRACT(YEAR FROM ms.month)
+    AND EXTRACT(MONTH FROM ep."soldAt") = EXTRACT(MONTH FROM ms.month)
+  GROUP BY
+    sale_year, sale_month, month_name
+  ORDER BY
+    sale_year, sale_month;
+`;
+
+  const result = await db.execute(query);
+
+  console.log(result.rows);
   return (
     <>
       {/* un texto que diga buenos dias, buenas tarde o buenas noces dependiendo de la hora */}
@@ -67,8 +92,8 @@ export default function Page() {
         </div>
       </div>
       <div className="flex gap-4 lg:flex-row flex-col">
-        <div className="bg-background p-6 pl-0 rounded-md border flex flex-col gap-8 w-full">
-          <div className="flex items-center pl-6 justify-between">
+        <div className="bg-background p-6 px-0 rounded-md border flex flex-col gap-8 w-full">
+          <div className="flex items-center px-6 justify-between">
             <p className="font-semibold text-lg">Ventas</p>
             <Tabs defaultValue="12months">
               <TabsList>
@@ -81,11 +106,11 @@ export default function Page() {
               {/* <TabsContent value="password">Change your password here.</TabsContent> */}
             </Tabs>
           </div>
-          <Chart />
+          <Chart data={result.rows} />
 
           {/* <img src="/chart.svg" alt="" /> */}
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 lg:flex lg:flex-col gap-4 whitespace-nowrap">
+        {/* <div className="grid grid-cols-1 sm:grid-cols-3 lg:flex lg:flex-col gap-4 whitespace-nowrap">
           <div className="bg-background p-6 rounded-md border flex flex-col gap-2 h-full justify-between">
             <p className="whitespadce-nowrap text-muted-foreground">
               Ventas de hoy
@@ -98,7 +123,8 @@ export default function Page() {
             </p>
             <p className="font-semibold text-3xl">$ 45.950,00</p>
           </div>
-        </div>
+        </div> */}
+        <TodayInfo />
       </div>
       <div className="bg-background p-6 pl-0 rounded-md border flex flex-col gap-8">
         <div className="flex justify-between">

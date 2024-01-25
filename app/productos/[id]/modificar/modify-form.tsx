@@ -19,7 +19,7 @@ import * as z from "zod";
 import Link from "next/link";
 import { useState } from "react";
 import { productSchema, productSchemaType } from "@/lib/zod-schemas";
-import { createProduct } from "@/lib/actions";
+import { createProduct, updateProduct } from "@/lib/actions";
 import { toast } from "sonner";
 import {
   Command,
@@ -38,34 +38,39 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 import { cn } from "@/lib/utils";
 import { Slider } from "@/components/ui/slider";
+import { Product } from "@/lib/schema";
 
 interface SelectData {
   id: number;
   name: string;
 }
 
-export default function CreateForm({
+export default function ModifyForm({
   categories,
   suppliers,
+  product,
 }: {
   categories: SelectData[];
   suppliers: SelectData[];
+  product: Product;
 }) {
   const [isPending, setIsPending] = useState(false);
   const [categoryOpen, setCategoryOpen] = useState(false);
   const [supplierOpen, setSupplierOpen] = useState(false);
-  const [profit, setProfit] = useState<number>(50);
+  const [profit, setProfit] = useState<number>(
+    product.businessProfitPercentage
+  );
 
   // 1. Define your form.
   const form = useForm<z.infer<typeof productSchema>>({
     resolver: zodResolver(productSchema),
     defaultValues: {
-      categoryId: undefined,
-      name: "",
-      size: "",
-      supplierId: undefined,
-      price: undefined,
-      businessProfitPercentage: 50,
+      categoryId: product.categoryId,
+      name: product.name,
+      size: product.size ?? "",
+      supplierId: product.supplierId,
+      price: product.price / 100,
+      businessProfitPercentage: product.businessProfitPercentage,
       businessProfit: 0,
       supplierProfit: 0,
     },
@@ -81,13 +86,13 @@ export default function CreateForm({
     console.log(values);
 
     setIsPending(true);
-    const response = await createProduct(values);
+    const response = await updateProduct(product.id, values);
     if (response?.error) {
       toast.error(response.error);
       setIsPending(false);
       return;
     }
-    toast.success("Producto agregado");
+    toast.success("Producto modificado");
     // form.reset();
     setIsPending(false);
   }
@@ -308,7 +313,7 @@ export default function CreateForm({
             </Link>
             <Button type="submit" disabled={isPending}>
               {isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-              Crear
+              Modificar
             </Button>
           </div>
         </form>

@@ -22,9 +22,10 @@ export default function Breadcrumbs() {
             )} */}
             <Link
               href={route.link}
+              tabIndex={-1}
               className={cn(
                 x === actualRoute.length - 1
-                  ? "text-foreground"
+                  ? "text-foreground hover:cursor-default"
                   : "hover:underline"
               )}
             >
@@ -62,8 +63,7 @@ const routes = {
     },
     {
       name: "Modificar categoría",
-      // Está mal
-      link: "/categorias/editar",
+      link: "",
     },
   ],
   productos: [
@@ -88,8 +88,8 @@ const routes = {
       link: "/productos",
     },
     {
-      name: "Editar producto",
-      link: "/productos/editar",
+      name: "Modificar producto",
+      link: "",
     },
   ],
   proveedoras: [
@@ -108,6 +108,16 @@ const routes = {
       link: "/proveedoras/crear",
     },
   ],
+  proveedorasmodificar: [
+    {
+      name: "Proveedoras",
+      link: "/proveedoras",
+    },
+    {
+      name: "Modificar proveedora",
+      link: "",
+    },
+  ],
   saldos: [
     {
       name: "Pagos pendientes",
@@ -122,6 +132,12 @@ const routes = {
     {
       name: "Modificar mensaje",
       link: "/saldos/mensaje",
+    },
+  ],
+  pagos: [
+    {
+      name: "Pagos",
+      link: "/pagos",
     },
   ],
 };

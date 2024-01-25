@@ -61,12 +61,20 @@ export function DataTable<TData, TValue>({
     <div className="flex flex-col gap-4 md:rounded-md border-y md:border bg-background -mx-4 md:mx-0">
       <div className="flex gap-3 p-4 pb-0">
         <Input
+          placeholder="Buscar por códio..."
+          value={(table.getColumn("id")?.getFilterValue() as string) ?? ""}
+          onChange={(event) => {
+            table.getColumn("id")?.setFilterValue(event.target.value);
+          }}
+          className="max-w-[160px]"
+        />
+        <Input
           placeholder="Buscar por descripción..."
           value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
-          onChange={(event) =>
-            table.getColumn("name")?.setFilterValue(event.target.value)
-          }
-          className="max-w-sm"
+          onChange={(event) => {
+            table.getColumn("name")?.setFilterValue(event.target.value);
+          }}
+          className="max-w-xs"
         />
         <DataTableViewOptions table={table} />
       </div>
