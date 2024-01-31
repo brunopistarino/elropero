@@ -1,6 +1,5 @@
 import { columns } from "./columns";
 import { DataTable } from "./data-table";
-import { NewProduct } from "./new-product";
 import { db } from "@/lib/drizzle";
 import Link from "next/link";
 import { Button, buttonVariants } from "@/components/ui/button";
