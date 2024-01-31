@@ -37,34 +37,9 @@ export function DataTable<TData, TValue>({
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnVisibility, setColumnVisibility] =
     React.useState<VisibilityState>({});
-  // const [columnVisibility, setColumnVisibility] =
-  //   React.useState<VisibilityState>(
-  //     JSON.parse(
-  //       window.localStorage.getItem("columnVisibilityCategories") ?? "{}"
-  //     )
-  //   );
-
-  // const [columnVisibility, setColumnVisibility] =
-  //   React.useState<VisibilityState>(() => {
-  //     const storedVisibility = localStorage.getItem(
-  //       "columnVisibilityCategories"
-  //     );
-  //     return storedVisibility ? JSON.parse(storedVisibility) : {};
-  //   });
-
-  // React.useEffect(() => {
-  //   localStorage.setItem(
-  //     "columnVisibilityCategories",
-  //     JSON.stringify(columnVisibility)
-  //   );
-  // }, [columnVisibility]);
-
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
   );
-
-  // const [columnVisibility, setColumnVisibility] =
-  //   useLocalStorage<VisibilityState>("darkTheme", {});
 
   const table = useReactTable({
     data,
@@ -102,7 +77,7 @@ export function DataTable<TData, TValue>({
           onChange={(event) =>
             table.getColumn("name")?.setFilterValue(event.target.value)
           }
-          className="max-w-sm"
+          className="max-w-xs"
         />
         <DataTableViewOptions table={table} />
       </div>
@@ -151,7 +126,7 @@ export function DataTable<TData, TValue>({
                   colSpan={columns.length}
                   className="h-24 text-center"
                 >
-                  Sin resultados.
+                  Sin categorías.
                 </TableCell>
               </TableRow>
             )}

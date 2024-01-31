@@ -51,7 +51,7 @@ export const columns: ColumnDef<PaymentsTable>[] = [
     ),
   },
   {
-    accessorKey: "price",
+    accessorKey: "supplierProfit",
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Monto" />
     ),
@@ -59,7 +59,7 @@ export const columns: ColumnDef<PaymentsTable>[] = [
       return `- ${new Intl.NumberFormat("es-AR", {
         style: "currency",
         currency: "ARS",
-      }).format((row.getValue("price") as number) / 2)}`;
+      }).format((row.getValue("supplierProfit") as number) / 100)}`;
     },
   },
   {

@@ -41,18 +41,9 @@ export function DataTable<TData, TValue>({
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnVisibility, setColumnVisibility] =
     React.useState<VisibilityState>({});
-  // const [columnVisibility, setColumnVisibility] =
-  //   React.useState<VisibilityState>(
-  //     JSON.parse(
-  //       window.localStorage.getItem("columnVisibilityCategories") ?? "{}"
-  //     )
-  //   );
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
   );
-
-  // const [columnVisibility, setColumnVisibility] =
-  //   useLocalStorage<VisibilityState>("darkTheme", {});
 
   const table = useReactTable({
     data,
@@ -70,18 +61,16 @@ export function DataTable<TData, TValue>({
     },
   });
 
-  // React.useEffect(() => {
-  //   setColumnVisibility(
-  //     JSON.parse(window.localStorage.getItem("columnVisibility") ?? "{}")
-  //   );
-  // }, []);
+  const key = "columnVisibilityPendingPayments";
+  React.useEffect(() => {
+    setColumnVisibility(JSON.parse(window.localStorage.getItem(key) ?? "{}"));
+  }, []);
 
-  // React.useEffect(() => {
-  //   window.localStorage.setItem(
-  //     "columnVisibilityCategories",
-  //     JSON.stringify(columnVisibility)
-  //   );
-  // }, [columnVisibility]);
+  React.useEffect(() => {
+    if (Object.keys(columnVisibility).length !== 0) {
+      window.localStorage.setItem(key, JSON.stringify(columnVisibility));
+    }
+  }, [columnVisibility]);
 
   return (
     <div className="flex flex-col gap-4 md:rounded-md border-y md:border bg-background -mx-4 md:mx-0">
@@ -92,7 +81,7 @@ export function DataTable<TData, TValue>({
           onChange={(event) =>
             table.getColumn("name")?.setFilterValue(event.target.value)
           }
-          className="max-w-sm"
+          className="max-w-xs"
         />
         <div className="flex ml-auto gap-2">
           {/* <Link

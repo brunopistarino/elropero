@@ -1,11 +1,19 @@
 import { db } from "@/lib/drizzle";
-import { Products, Suppliers } from "@/lib/schema";
+import { Categories, Products, Suppliers } from "@/lib/schema";
 import { eq, isNotNull, isNull, and } from "drizzle-orm";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { DataTableDemo } from "./data-table2";
 import { DataTable } from "./data-table";
 import { columns } from "./columns";
+
+export type SupplierSaldoTable = {
+  id: (typeof Products.$inferSelect)["id"];
+  category: (typeof Categories.$inferSelect)["name"] | null;
+  name: (typeof Products.$inferSelect)["name"];
+  size: (typeof Products.$inferSelect)["size"];
+  soldAt: (typeof Products.$inferSelect)["soldAt"];
+  supplierProfit: (typeof Products.$inferSelect)["supplierProfit"];
+};
 
 export default async function Page({ params }: { params: { id: number } }) {
   const id = params.id;
@@ -17,9 +25,17 @@ export default async function Page({ params }: { params: { id: number } }) {
     .where(eq(Suppliers.id, id))
     .limit(1);
 
-  const soldNotPaidProducts = await db
-    .select()
+  const soldNotPaidProducts: SupplierSaldoTable[] = await db
+    .select({
+      id: Products.id,
+      category: Categories.name,
+      name: Products.name,
+      size: Products.size,
+      soldAt: Products.soldAt,
+      supplierProfit: Products.supplierProfit,
+    })
     .from(Products)
+    .leftJoin(Categories, eq(Products.categoryId, Categories.id))
     .where(
       and(
         isNotNull(Products.soldAt),

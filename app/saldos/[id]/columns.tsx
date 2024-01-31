@@ -2,23 +2,9 @@
 
 import { Checkbox } from "@/components/ui/checkbox";
 import { ColumnDef } from "@tanstack/react-table";
+import { SupplierSaldoTable } from "./page";
 
-// This type is used to define the shape of our data.
-// You can use a Zod schema here if you want.
-export type Payment = {
-  size: string | null;
-  name: string;
-  id: number;
-  price: number;
-  categoryId: number;
-  supplierId: number;
-  createdAt: Date;
-  soldAt: Date | null;
-  returnedAt: Date | null;
-  paidAt: Date | null;
-};
-
-export const columns: ColumnDef<Payment>[] = [
+export const columns: ColumnDef<SupplierSaldoTable>[] = [
   {
     id: "select",
     header: ({ table }) => (
@@ -48,8 +34,23 @@ export const columns: ColumnDef<Payment>[] = [
     header: "Código",
   },
   {
+    accessorKey: "soldAt",
+    header: "Fecha Venta",
+    cell: ({ row }) => {
+      return (row.getValue("soldAt") as Date).toJSON().slice(0, 10);
+    },
+  },
+  {
+    accessorKey: "category",
+    header: "Categoría",
+  },
+  {
     accessorKey: "name",
     header: "Descripción",
+  },
+  {
+    accessorKey: "size",
+    header: "Talle",
   },
   {
     accessorKey: "supplierProfit",

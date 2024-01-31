@@ -41,6 +41,17 @@ export function DataTable<TData, TValue>({
     []
   );
 
+  const key = "columnVisibilitySuppliers";
+  React.useEffect(() => {
+    setColumnVisibility(JSON.parse(window.localStorage.getItem(key) ?? "{}"));
+  }, []);
+
+  React.useEffect(() => {
+    if (Object.keys(columnVisibility).length !== 0) {
+      window.localStorage.setItem(key, JSON.stringify(columnVisibility));
+    }
+  }, [columnVisibility]);
+
   const table = useReactTable({
     data,
     columns,
@@ -66,7 +77,7 @@ export function DataTable<TData, TValue>({
           onChange={(event) =>
             table.getColumn("name")?.setFilterValue(event.target.value)
           }
-          className="max-w-sm"
+          className="max-w-xs"
         />
         <DataTableViewOptions table={table} />
       </div>
@@ -115,7 +126,7 @@ export function DataTable<TData, TValue>({
                   colSpan={columns.length}
                   className="h-24 text-center"
                 >
-                  Sin resultados.
+                  Sin proveedoras.
                 </TableCell>
               </TableRow>
             )}

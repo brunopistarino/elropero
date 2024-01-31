@@ -20,6 +20,8 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { deleteCategory } from "@/lib/actions";
 import { useState } from "react";
+import { toast } from "sonner";
+import { useForm } from "react-hook-form";
 
 interface DataTableRowActionsProps<TData> {
   row: Row<TData>;
@@ -32,13 +34,19 @@ export function DataTableRowActions<TData>({
   const [isOpen, setIsOpen] = useState(false);
   const [isPending, setIsPending] = useState(false);
 
+  const form = useForm();
+
   const id: number = row.getValue("id");
 
   async function handleDeleteSubmit() {
-    //TODO: FALTA MANEJAR LOS ERRORES
     setIsPending(true);
-    // console.log("Sell", id);
-    await deleteCategory(id);
+    const response = await deleteCategory(id);
+    if (response?.error) {
+      toast.error(response.error);
+      setIsPending(false);
+      return;
+    }
+    toast.success("Categoría eliminada");
     setIsPending(false);
     setIsOpen(false);
   }
@@ -87,7 +95,7 @@ export function DataTableRowActions<TData>({
             <AlertDialogCancel onClick={() => setIsOpen(false)}>
               Cancelar
             </AlertDialogCancel>
-            <form action={handleDeleteSubmit}>
+            <form onSubmit={form.handleSubmit(handleDeleteSubmit)}>
               <Button variant="destructive" disabled={isPending}>
                 Eliminar
               </Button>

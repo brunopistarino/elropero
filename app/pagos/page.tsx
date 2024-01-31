@@ -19,11 +19,11 @@ import { columns } from "./columns";
 export type PaymentsTable = {
   id: String;
   name: (typeof Products.$inferSelect)["name"];
-  price: (typeof Products.$inferSelect)["price"];
   size: (typeof Products.$inferSelect)["size"];
   category: (typeof Categories.$inferSelect)["name"] | null;
   supplier: (typeof Suppliers.$inferSelect)["name"] | null;
   paidAt: (typeof Products.$inferSelect)["paidAt"];
+  supplierProfit: (typeof Products.$inferSelect)["supplierProfit"];
 };
 
 export default async function Page() {
@@ -31,11 +31,11 @@ export default async function Page() {
     .select({
       id: sql<String>`CAST(${Products.id} AS VARCHAR)`,
       name: Products.name,
-      price: Products.price,
       size: Products.size,
       category: Categories.name,
       supplier: Suppliers.name,
       paidAt: Products.paidAt,
+      supplierProfit: Products.supplierProfit,
     })
     .from(Products)
     .leftJoin(Categories, eq(Products.categoryId, Categories.id))

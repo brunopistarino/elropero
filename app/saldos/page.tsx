@@ -46,7 +46,6 @@ export default async function Page() {
     )
     .groupBy(Suppliers.id)
     .having(gt(sum(soldNotPaidProducts.supplierProfit), 0));
-  // console.log(data);
 
   // calculate totalAmount
   const totalAmount = data.reduce((acc, curr) => acc + curr.amount, 0);
@@ -99,23 +98,7 @@ export default async function Page() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-4">
-        {/* <div className="flex gap-3">
-          <Input placeholder="Buscar" />
-          <Tabs defaultValue="account">
-            <TabsList className="bg-background border">
-              <TabsTrigger value="account">
-                <LayoutGrid size={20} />
-              </TabsTrigger>
-              <TabsTrigger value="password">
-                <AlignJustify size={20} />
-              </TabsTrigger>
-            </TabsList>
-          </Tabs>
-          <Button variant={"outline"}>Filtros</Button>
-        </div> */}
-        <DataTable columns={columns} data={data} />
-      </div>
+      <DataTable columns={columns} data={data} />
     </>
   );
 }

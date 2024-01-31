@@ -57,6 +57,17 @@ export function DataTable<TData, TValue>({
     },
   });
 
+  const key = "columnVisibilityProducts";
+  React.useEffect(() => {
+    setColumnVisibility(JSON.parse(window.localStorage.getItem(key) ?? "{}"));
+  }, []);
+
+  React.useEffect(() => {
+    if (Object.keys(columnVisibility).length !== 0) {
+      window.localStorage.setItem(key, JSON.stringify(columnVisibility));
+    }
+  }, [columnVisibility]);
+
   return (
     <div className="flex flex-col gap-4 md:rounded-md border-y md:border bg-background -mx-4 md:mx-0">
       <div className="flex gap-3 p-4 pb-0">

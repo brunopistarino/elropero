@@ -13,7 +13,6 @@ export default async function TodayInfo() {
     })
     .from(Products)
     .where(gte(Products.soldAt, today));
-  console.log(data);
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 lg:flex lg:flex-col gap-4 whitespace-nowrap">
       <div className="bg-background p-6 rounded-md border flex flex-col gap-2 h-full justify-between">
