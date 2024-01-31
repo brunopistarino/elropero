@@ -15,6 +15,7 @@ import {
 import { Categories, Products, Suppliers } from "@/lib/schema";
 import { DataTable } from "./data-table";
 import { columns } from "./columns";
+import { unstable_noStore as noStore } from "next/cache";
 
 export type PaymentsTable = {
   id: String;
@@ -27,6 +28,7 @@ export type PaymentsTable = {
 };
 
 export default async function Page() {
+  noStore();
   const pagos: PaymentsTable[] = await db
     .select({
       id: sql<String>`CAST(${Products.id} AS VARCHAR)`,
