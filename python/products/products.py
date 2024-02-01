@@ -3,7 +3,12 @@ import pandas as pd
 import json
 from datetime import datetime
 
-def convert_csv_to_json(csv_filename, json_filename):
+def load_json(file_path):
+    with open(file_path, 'r', encoding='utf-8') as json_file:
+        data = json.load(json_file)
+    return data
+
+def convert_csv_to_json(csv_filename, json_filename, categories_filename, suppliers_filename):
     # Get the current script's directory
     script_directory = os.path.dirname(os.path.realpath(__file__))
 
@@ -11,13 +16,29 @@ def convert_csv_to_json(csv_filename, json_filename):
     csv_path = os.path.join(script_directory, csv_filename)
 
     # Read CSV file into a DataFrame
-    df = pd.read_csv(csv_path)
+    df = pd.read_csv(csv_path, encoding='utf-8')
 
-    # Convert 'Fecha Alta' column to datetime
+    # Convert 'Fecha Ingreso' column to datetime
     df['Fecha Ingreso'] = pd.to_datetime(df['Fecha Ingreso'], errors='coerce')
 
-    # Fill missing 'Fecha Alta' values with the previous row's value
+    # Fill missing 'Fecha Ingreso' values with the previous row's value
     df['Fecha Ingreso'] = df['Fecha Ingreso'].fillna(method='ffill')
+
+    # Load category and supplier data from JSON files
+    categories_data = load_json(os.path.join(script_directory, categories_filename))
+    suppliers_data = load_json(os.path.join(script_directory, suppliers_filename))
+
+    # Create a dictionary to map category names to their corresponding ids
+    category_id_map = {category['name'].lower(): category['id'] for category in categories_data}
+
+    # Create a dictionary to map supplier names to their corresponding ids
+    supplier_id_map = {supplier['name'].lower(): supplier['id'] for supplier in suppliers_data}
+
+    # Default categoryId when no matching category is found
+    default_category_id = 198
+
+    # Default supplierId when no matching supplier is found
+    default_supplier_id = 2060
 
     # Convert DataFrame to a list of dictionaries
     data_list = df.to_dict(orient='records')
@@ -28,20 +49,23 @@ def convert_csv_to_json(csv_filename, json_filename):
         if record['Estado'] != 'Disponible':
             continue
 
+        # Get categoryId based on 'Tipo Articulo' (Category) name
+        category_name = str(record['Tipo Articulo']).lower()
+        category_id = category_id_map.get(category_name, default_category_id)
+
+        # Get supplierId based on 'Proveedora' (Supplier) name
+        supplier_name = str(record['Proveedora']).lower()
+        supplier_id = supplier_id_map.get(supplier_name, default_supplier_id)
+
         transformed_record = {
-            # 'id': record['DNI'],  # You can customize the id generation logic
-            # 'name': record['Nombre y Apellido'],
-            # 'dni': str(record['DNI']) if not pd.isna(record['DNI']) else None,
-            # 'address': record['Dirección'] if not pd.isna(record['Dirección']) else None,
-            # 'phone': str(record['Celular']) if not pd.isna(record['Celular']) else None,
-            # 'email': record['email'] if not pd.isna(record['email']) else None,
-            # 'name': record['Codigo Articulo'] if not pd.isna(record['Codigo Articulo']) else None,
             'name': str(record['Codigo Articulo']) + " - " + str(record['Descripción']) if not pd.isna(record['Codigo Articulo']) else None,
             'price': int(record['Importe Venta'].replace(" ", "").replace("$", "").replace(",", "")) * 100 if not pd.isna(record['Importe Venta']) else None,
             'size': record['Talle'] if not pd.isna(record['Talle']) else None,
             'businessProfitPercentage': 50,
             'businessProfit': int(record['Ganancia Ropero'].replace(" ", "").replace("$", "").replace(",", "")) * 100 if not pd.isna(record['Ganancia Ropero']) else None,
             'supplierProfit': int(record['Ganancia Proveedora'].replace(" ", "").replace("$", "").replace(",", "")) * 100 if not pd.isna(record['Ganancia Proveedora']) else None,
+            'categoryId': category_id,
+            'supplierId': supplier_id,
             'createdAt': record['Fecha Ingreso'].isoformat() if not pd.isna(record['Fecha Ingreso']) else None
         }
 
@@ -59,5 +83,7 @@ def convert_csv_to_json(csv_filename, json_filename):
 
 if __name__ == "__main__":
     csv_filename = "products.csv"  # Replace with your CSV file's name
-    json_filename = "products.json"       # Replace with your desired output file's name
-    convert_csv_to_json(csv_filename, json_filename)
+    json_filename = "products.json"  # Replace with your desired output file's name
+    categories_filename = "elropero_Categories.json"  # Replace with your Categories JSON file's name
+    suppliers_filename = "elropero_Suppliers.json"  # Replace with your Suppliers JSON file's name
+    convert_csv_to_json(csv_filename, json_filename, categories_filename, suppliers_filename)

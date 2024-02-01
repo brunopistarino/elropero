@@ -19,6 +19,10 @@ def convert_csv_to_json(csv_filename, json_filename):
     # Fill missing 'Fecha Alta' values with the previous row's value
     df['Fecha Alta'] = df['Fecha Alta'].fillna(method='ffill')
 
+    # Process phone numbers: add "3492" to the start if 6 characters long, and remove "-"
+    df['Celular'] = df['Celular'].apply(lambda x: "3492" + str(x) if pd.notna(x) and len(str(x)) == 6 else str(x))
+    df['Celular'] = df['Celular'].str.replace("-", "")  # Remove "-"
+
     # Convert DataFrame to a list of dictionaries
     data_list = df.to_dict(orient='records')
 
@@ -49,5 +53,5 @@ def convert_csv_to_json(csv_filename, json_filename):
 
 if __name__ == "__main__":
     csv_filename = "suppliers.csv"  # Replace with your CSV file's name
-    json_filename = "suppliers.json"       # Replace with your desired output file's name
+    json_filename = "suppliers.json"  # Replace with your desired output file's name
     convert_csv_to_json(csv_filename, json_filename)

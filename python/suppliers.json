@@ -1,20 +1,20 @@
 [
   {
-    "name": "PECHU GALVÁN",
-    "dni": "29804417",
+    "name": "PECHU GALV\u00c1N",
+    "dni": "29804417.0",
     "address": "Bolivia 256 ",
-    "phone": "3492-316366",
+    "phone": "3492316366",
     "createdAt": "2022-03-05T00:00:00"
   },
   {
     "name": "MARCELA FARIAS",
-    "phone": "3492-618495",
+    "phone": "3492618495",
     "email": "Marce.ferrari50@gmail.com",
     "createdAt": "2022-10-31T00:00:00"
   },
   {
     "name": "PAULA GARCIA",
-    "phone": "297-5935034",
+    "phone": "2975935034",
     "createdAt": "2022-10-31T00:00:00"
   },
   {
@@ -72,39 +72,47 @@
   },
   {
     "name": "PAULA MARCUZZI",
+    "phone": "nan",
     "email": "paulamarcuzzi79@gmail.com",
     "createdAt": "2022-11-03T00:00:00"
   },
   {
     "name": "FLORENCIA SPADARO",
+    "phone": "nan",
     "email": "florenciaspadaro2@gmail.com",
     "createdAt": "2022-11-03T00:00:00"
   },
   {
     "name": "LORENA BENITES",
+    "phone": "nan",
     "createdAt": "2022-11-04T00:00:00"
   },
   {
     "name": "LILIANA BENITES",
+    "phone": "nan",
     "createdAt": "2022-11-04T00:00:00"
   },
   {
     "name": "NOEL GIORGIS",
+    "phone": "nan",
     "email": "marianoel2011@live.con.ar",
     "createdAt": "2022-11-05T00:00:00"
   },
   {
     "name": "ALEJANDRA TIRABOSCHI",
+    "phone": "nan",
     "email": "alejandratiraboschi@yahoo.com.ar",
     "createdAt": "2022-11-05T00:00:00"
   },
   {
     "name": "MARCELA LUNA",
+    "phone": "nan",
     "email": "marluz_luna@hotmail.com",
     "createdAt": "2022-11-05T00:00:00"
   },
   {
     "name": "MARIA LOVERA",
+    "phone": "nan",
     "email": "Marialovera1304@gmail.com",
     "createdAt": "2022-11-05T00:00:00"
   },
@@ -120,24 +128,29 @@
   },
   {
     "name": "MARINA BUSTOS",
+    "phone": "nan",
     "email": "marib-33@live.com",
     "createdAt": "2022-11-06T00:00:00"
   },
   {
     "name": "MELINA GUIDETTI",
+    "phone": "nan",
     "email": "melik44@hotmail.com",
     "createdAt": "2022-11-06T00:00:00"
   },
   {
     "name": "NATALIA DALMASSO",
+    "phone": "nan",
     "createdAt": "2022-11-06T00:00:00"
   },
   {
     "name": "PAULA ALMENDRA",
+    "phone": "nan",
     "createdAt": "2022-11-06T00:00:00"
   },
   {
     "name": "SOL VASALLO",
+    "phone": "nan",
     "email": "ma.solvassallo@gmail.com",
     "createdAt": "2022-11-06T00:00:00"
   },
@@ -148,10 +161,12 @@
   },
   {
     "name": "LUJAN MAYO",
+    "phone": "nan",
     "createdAt": "2022-11-06T00:00:00"
   },
   {
     "name": "MILENA SANTIANO",
+    "phone": "nan",
     "email": "milenasantiano@yahoo.com.ar",
     "createdAt": "2022-11-06T00:00:00"
   },
@@ -168,15 +183,18 @@
   },
   {
     "name": "ANA  LAURA ESPINOSA",
+    "phone": "nan",
     "email": "analauraesp@hotmail.com",
     "createdAt": "2022-11-06T00:00:00"
   },
   {
     "name": "CECILIA BARUCHELLI",
+    "phone": "nan",
     "createdAt": "2022-11-06T00:00:00"
   },
   {
     "name": "LILIANA TOMAS",
+    "phone": "nan",
     "email": "liliana.b.tomas@gmail.com",
     "createdAt": "2022-11-07T00:00:00"
   },
@@ -198,6 +216,7 @@
   },
   {
     "name": "AGOSTINA MOREL",
+    "phone": "nan",
     "createdAt": "2022-11-08T00:00:00"
   },
   {
@@ -208,6 +227,7 @@
   },
   {
     "name": "VALERIA ZENCLUSSEN",
+    "phone": "nan",
     "createdAt": "2022-11-08T00:00:00"
   },
   {
@@ -216,11 +236,8 @@
     "createdAt": "2022-11-08T00:00:00"
   },
   {
-    "name": "MAURA LEIVA",
-    "createdAt": "2022-11-08T00:00:00"
-  },
-  {
     "name": "MONICA MARTINI",
+    "phone": "nan",
     "createdAt": "2022-11-08T00:00:00"
   },
   {
@@ -235,16 +252,19 @@
   },
   {
     "name": "MELISA AGOSTINI",
+    "phone": "nan",
     "email": "melisaagostini86@gmail.com",
     "createdAt": "2022-11-09T00:00:00"
   },
   {
     "name": "GISEL BARBERIS",
+    "phone": "nan",
     "email": "gisel7923@hotmail.com",
     "createdAt": "2022-11-09T00:00:00"
   },
   {
     "name": "MARIELA MARTINOSWKI",
+    "phone": "nan",
     "email": "marielameinardi@gmail.com",
     "createdAt": "2022-11-10T00:00:00"
   },
@@ -255,6 +275,7 @@
   },
   {
     "name": "CLAUDINA CHIAVASSA",
+    "phone": "nan",
     "createdAt": "2022-11-10T00:00:00"
   },
   {
@@ -265,67 +286,82 @@
   },
   {
     "name": "ANTONELLA SANTI",
+    "phone": "nan",
     "email": "Anto.santi@hotmail.com",
     "createdAt": "2022-11-10T00:00:00"
   },
   {
     "name": "FLAVIA MANASSERO",
+    "phone": "nan",
     "email": "flash_manassero@hotmail.com",
     "createdAt": "2022-11-10T00:00:00"
   },
   {
     "name": "VICTORIA FURIOL",
+    "phone": "nan",
     "createdAt": "2022-11-10T00:00:00"
   },
   {
     "name": "LUCIANA MOLINA",
+    "phone": "nan",
     "email": "luci81molina@gmail.com",
     "createdAt": "2022-11-10T00:00:00"
   },
   {
     "name": "BRENDA AGUIRRE",
+    "phone": "nan",
     "email": "brenfaguirre@gmail.com",
     "createdAt": "2022-11-10T00:00:00"
   },
   {
     "name": "FLORENCIA FONTANINI",
+    "phone": "nan",
     "createdAt": "2022-11-10T00:00:00"
   },
   {
     "name": "SANDRA MOLINA",
+    "phone": "nan",
     "createdAt": "2022-11-11T00:00:00"
   },
   {
     "name": "SOLEDAD MORCILLO",
+    "phone": "nan",
     "email": "soledad.morcillo38@gmail.com",
     "createdAt": "2022-11-11T00:00:00"
   },
   {
     "name": "ANDREA OLIVIER",
+    "phone": "nan",
     "createdAt": "2022-11-11T00:00:00"
   },
   {
     "name": "PRISCILA ",
+    "phone": "nan",
     "createdAt": "2022-11-12T00:00:00"
   },
   {
     "name": "GISELA DOMINGUEZ",
+    "phone": "nan",
     "createdAt": "2022-11-12T00:00:00"
   },
   {
     "name": "IVANA CORDOBA",
+    "phone": "nan",
     "createdAt": "2022-11-12T00:00:00"
   },
   {
     "name": "ROCIO SCALVACIO",
+    "phone": "nan",
     "createdAt": "2022-11-16T00:00:00"
   },
   {
     "name": "MARINA IMOBERDORF",
+    "phone": "nan",
     "createdAt": "2022-11-16T00:00:00"
   },
   {
     "name": "MARISA MARTI",
+    "phone": "nan",
     "createdAt": "2022-11-16T00:00:00"
   },
   {
@@ -336,6 +372,7 @@
   },
   {
     "name": "DAIANA MOSCHINO",
+    "phone": "nan",
     "createdAt": "2022-11-16T00:00:00"
   },
   {
@@ -346,6 +383,7 @@
   },
   {
     "name": "BETY ROMI",
+    "phone": "nan",
     "email": "romicardoso1@hotmail.com",
     "createdAt": "2022-11-16T00:00:00"
   },
@@ -356,106 +394,125 @@
   },
   {
     "name": "CANDELA LOZANO",
+    "phone": "nan",
     "createdAt": "2022-11-16T00:00:00"
   },
   {
     "name": "PATRICIA SACONE",
+    "phone": "nan",
     "email": "top.ten.indumentaria@gmail.com",
     "createdAt": "2022-11-17T00:00:00"
   },
   {
     "name": "LUCIA ARANCIBIA",
+    "phone": "nan",
     "createdAt": "2022-11-17T00:00:00"
   },
   {
     "name": "CARINA YAPOUR",
+    "phone": "nan",
     "createdAt": "2022-11-17T00:00:00"
   },
   {
     "name": "FLORENCIA CAMUSSO",
+    "phone": "nan",
     "createdAt": "2022-11-17T00:00:00"
   },
   {
     "name": "ALEJANDRA LASCANO",
+    "phone": "nan",
     "createdAt": "2022-11-17T00:00:00"
   },
   {
     "name": "ERICA TREJO",
+    "phone": "nan",
     "createdAt": "2022-11-17T00:00:00"
   },
   {
     "name": "MICAELA BENDER",
+    "phone": "nan",
     "email": "Micaelasoledadbender@gmail.com",
     "createdAt": "2022-11-18T00:00:00"
   },
   {
     "name": "CECILIA ALAMO",
+    "phone": "nan",
     "email": "alamoceci@gmail.com",
     "createdAt": "2022-11-18T00:00:00"
   },
   {
     "name": "LUZ RUIZ",
+    "phone": "nan",
     "createdAt": "2022-11-18T00:00:00"
   },
   {
     "name": "SILVANA CHIAPERO",
+    "phone": "nan",
     "createdAt": "2022-11-18T00:00:00"
   },
   {
     "name": "SORAYA BARETA",
+    "phone": "nan",
     "email": "sora_81@hotmail.com",
     "createdAt": "2022-11-18T00:00:00"
   },
   {
     "name": "ANDREA MAGIO",
+    "phone": "nan",
     "email": "afmagg72@hotmail.com",
     "createdAt": "2022-11-18T00:00:00"
   },
   {
     "name": "SUSANA CHIAPERO",
+    "phone": "nan",
     "email": "familiachiapero@hotmail.com",
     "createdAt": "2022-11-18T00:00:00"
   },
   {
     "name": "MARIELA ZENCKLUSSEN",
+    "phone": "nan",
     "createdAt": "2022-11-18T00:00:00"
   },
   {
     "name": "DANIELA LAMBERT",
+    "phone": "nan",
     "createdAt": "2022-11-18T00:00:00"
   },
   {
     "name": "MARIA PIA LAS HERAS",
+    "phone": "nan",
     "email": "mariapialasheras@gmail.com",
     "createdAt": "2022-11-18T00:00:00"
   },
   {
     "name": "MELI RUIZ",
+    "phone": "nan",
     "createdAt": "2022-11-21T00:00:00"
   },
   {
     "name": "LUCIANA ROVERE",
+    "phone": "nan",
     "createdAt": "2022-11-21T00:00:00"
   },
   {
     "name": "LEA",
+    "phone": "nan",
     "createdAt": "2022-11-21T00:00:00"
   },
   {
     "name": "LUCI GENTINETTA",
-    "createdAt": "2022-11-22T00:00:00"
-  },
-  {
-    "name": "CAROLINA SANCHEZ",
+    "phone": "nan",
     "createdAt": "2022-11-22T00:00:00"
   },
   {
     "name": "LILI BIANCUCCI",
+    "phone": "nan",
     "email": "lbiancucci2103@gmail.com",
     "createdAt": "2022-11-23T00:00:00"
   },
   {
     "name": "GASER HIDELMA",
+    "phone": "nan",
     "createdAt": "2022-11-23T00:00:00"
   },
   {
@@ -465,14 +522,17 @@
   },
   {
     "name": "MARCELA CAMPANINI",
+    "phone": "nan",
     "createdAt": "2022-11-25T00:00:00"
   },
   {
     "name": "NOELIA FONTANA",
+    "phone": "nan",
     "createdAt": "2022-11-25T00:00:00"
   },
   {
     "name": "MARIANA MASSONI",
+    "phone": "nan",
     "createdAt": "2022-11-26T00:00:00"
   },
   {
@@ -482,6 +542,7 @@
   },
   {
     "name": "LAURA BETTA",
+    "phone": "nan",
     "createdAt": "2022-11-26T00:00:00"
   },
   {
@@ -507,6 +568,7 @@
   },
   {
     "name": "ANDREA PIOVANO",
+    "phone": "nan",
     "email": "andreapiovano@hotmail.com",
     "createdAt": "2022-11-29T00:00:00"
   },
@@ -517,6 +579,7 @@
   },
   {
     "name": "POPI",
+    "phone": "nan",
     "email": "vallecavalie@live.com.ar",
     "createdAt": "2022-12-02T00:00:00"
   },
@@ -532,6 +595,7 @@
   },
   {
     "name": "NOELIA FARIAS",
+    "phone": "nan",
     "createdAt": "2022-12-03T00:00:00"
   },
   {
@@ -547,6 +611,7 @@
   },
   {
     "name": "FEDERICA COLOMBA",
+    "phone": "nan",
     "createdAt": "2022-12-04T00:00:00"
   },
   {
@@ -556,6 +621,7 @@
   },
   {
     "name": "MONICA LUICETTO",
+    "phone": "nan",
     "email": "monica.luisetto@gmail.com",
     "createdAt": "2022-12-04T00:00:00"
   },
@@ -572,47 +638,58 @@
   },
   {
     "name": "MAGUI",
+    "phone": "nan",
     "createdAt": "2022-12-08T00:00:00"
   },
   {
     "name": "LETICIA CRAVERO",
+    "phone": "nan",
     "createdAt": "2022-12-08T00:00:00"
   },
   {
     "name": "GISELA CATANEO",
+    "phone": "nan",
     "createdAt": "2022-12-09T00:00:00"
   },
   {
     "name": "CECILIA BERTA",
+    "phone": "nan",
     "createdAt": "2022-12-10T00:00:00"
   },
   {
     "name": "MARISA SZEWC",
+    "phone": "nan",
     "createdAt": "2022-12-10T00:00:00"
   },
   {
     "name": "MARIELA GIMENEZ",
+    "phone": "nan",
     "createdAt": "2022-12-10T00:00:00"
   },
   {
     "name": "SANDRA INGRATA",
+    "phone": "nan",
     "createdAt": "2022-12-10T00:00:00"
   },
   {
     "name": "ALEJANDRA ARNODO",
+    "phone": "nan",
     "createdAt": "2022-12-12T00:00:00"
   },
   {
     "name": "LUZ FUENTES",
+    "phone": "nan",
     "email": "marufuentes_88@hotmail.com",
     "createdAt": "2022-12-14T00:00:00"
   },
   {
     "name": "ABRIL SALTI",
+    "phone": "nan",
     "createdAt": "2022-12-14T00:00:00"
   },
   {
     "name": "IVANA MOREIRA",
+    "phone": "nan",
     "createdAt": "2022-12-14T00:00:00"
   },
   {
@@ -622,24 +699,29 @@
   },
   {
     "name": "JACKY GRANERO",
+    "phone": "nan",
     "email": "jackie05granero@gmail.com",
     "createdAt": "2022-12-14T00:00:00"
   },
   {
     "name": "ROMINA ALTAMIRANO",
+    "phone": "nan",
     "createdAt": "2022-12-14T00:00:00"
   },
   {
     "name": "GISELA RAFAELI",
+    "phone": "nan",
     "email": "giseraffaelli@gmail.com",
     "createdAt": "2022-12-14T00:00:00"
   },
   {
     "name": "JULIETA NOVELLO",
+    "phone": "nan",
     "createdAt": "2022-12-14T00:00:00"
   },
   {
     "name": "SILVIA NASSIF",
+    "phone": "nan",
     "createdAt": "2022-12-14T00:00:00"
   },
   {
@@ -649,27 +731,33 @@
   },
   {
     "name": "NOELIA TOLEDO",
+    "phone": "nan",
     "createdAt": "2022-12-14T00:00:00"
   },
   {
     "name": "CECILIA HAMMERY",
+    "phone": "nan",
     "createdAt": "2022-12-16T00:00:00"
   },
   {
     "name": "CECILIA HATEMER",
+    "phone": "nan",
     "email": "Cecihattemer@gmail.com",
     "createdAt": "2022-12-17T00:00:00"
   },
   {
     "name": "MICAELA UNGER",
+    "phone": "nan",
     "createdAt": "2022-12-17T00:00:00"
   },
   {
     "name": "ALEJANDRA OGGERO",
+    "phone": "nan",
     "createdAt": "2022-12-19T00:00:00"
   },
   {
     "name": "JULIETA FLORIO",
+    "phone": "nan",
     "createdAt": "2022-12-19T00:00:00"
   },
   {
@@ -684,6 +772,7 @@
   },
   {
     "name": "PAOLA GARETO",
+    "phone": "nan",
     "createdAt": "2022-12-20T00:00:00"
   },
   {
@@ -699,37 +788,45 @@
   },
   {
     "name": "YAMILA ERCOLE",
+    "phone": "nan",
     "createdAt": "2022-12-20T00:00:00"
   },
   {
     "name": "BETIANA GOITRE",
+    "phone": "nan",
     "createdAt": "2022-12-22T00:00:00"
   },
   {
     "name": "VIVIANA FARINOLLI",
+    "phone": "nan",
     "createdAt": "2022-12-22T00:00:00"
   },
   {
     "name": "YANINA ROATA",
+    "phone": "nan",
     "email": "yaninaroatta@hotmail.com",
     "createdAt": "2022-12-22T00:00:00"
   },
   {
     "name": "DANIELA BIAVA",
+    "phone": "nan",
     "email": "biavad@fibertel.com.ar",
     "createdAt": "2022-12-22T00:00:00"
   },
   {
     "name": "GABRIELA GALETTO",
+    "phone": "nan",
     "email": "gabigaletto@gmail.com",
     "createdAt": "2022-12-22T00:00:00"
   },
   {
     "name": "ANA LAURA GARCIA",
+    "phone": "nan",
     "createdAt": "2022-12-22T00:00:00"
   },
   {
     "name": "GEO",
+    "phone": "nan",
     "email": "giordano.inti.gob.ar",
     "createdAt": "2022-12-22T00:00:00"
   },
@@ -740,6 +837,7 @@
   },
   {
     "name": "MARIELA FRANCIA",
+    "phone": "nan",
     "email": "marielafrancia6@hotmail.com",
     "createdAt": "2022-12-26T00:00:00"
   },
@@ -751,11 +849,13 @@
   },
   {
     "name": "ROMINA SCHNIDRIG",
+    "phone": "nan",
     "email": "roschnidrig@gmail.com",
     "createdAt": "2022-12-26T00:00:00"
   },
   {
     "name": "CECILIA CAMPAGNA",
+    "phone": "nan",
     "email": "cecilia_campagna@hotmail.com",
     "createdAt": "2022-12-29T00:00:00"
   },
@@ -766,283 +866,322 @@
   },
   {
     "name": "PAOLA MENDOZA",
-    "phone": "309281",
+    "phone": "3492309281",
     "createdAt": "2022-12-29T00:00:00"
   },
   {
     "name": "NATALIA POGOLOTTI",
-    "phone": "605018",
+    "phone": "3492605018",
     "email": "natypogo@hotmail.com",
     "createdAt": "2022-12-29T00:00:00"
   },
   {
     "name": "MELISA BOIDI",
-    "phone": "637891",
+    "phone": "3492637891",
     "createdAt": "2022-12-29T00:00:00"
   },
   {
     "name": "MARCELA SPAHN",
-    "phone": "304702",
+    "phone": "3492304702",
     "createdAt": "2022-12-29T00:00:00"
   },
   {
     "name": "ANALIA MORENO",
-    "phone": "561498",
+    "phone": "3492561498",
     "email": "analiamoreno22@gmail.com",
     "createdAt": "2022-12-29T00:00:00"
   },
   {
     "name": "VANINA LAMBERT",
-    "phone": "329668",
+    "phone": "3492329668",
     "email": "vanilambert@hotmail.com",
     "createdAt": "2022-12-29T00:00:00"
   },
   {
     "name": "LILIANA JUAREZ",
+    "phone": "nan",
     "createdAt": "2022-12-29T00:00:00"
   },
   {
     "name": "AGUSTINA PERALTA",
-    "phone": "273435",
+    "phone": "3492273435",
     "createdAt": "2022-12-29T00:00:00"
   },
   {
     "name": "CAROLINA MICOLI",
+    "phone": "nan",
     "email": "Carito_micoli@hotmail.com",
     "createdAt": "2022-12-29T00:00:00"
   },
   {
     "name": "ROXANA OYOLA",
+    "phone": "nan",
     "email": "miproducciones1@gmail.com",
     "createdAt": "2022-12-29T00:00:00"
   },
   {
     "name": "FABIANA OGGERO",
-    "phone": "327956",
+    "phone": "3492327956",
     "email": "oggerofabi@gmail.com",
     "createdAt": "2022-12-29T00:00:00"
   },
   {
     "name": "ROSINA SEFFINO",
+    "phone": "nan",
     "createdAt": "2023-01-02T00:00:00"
   },
   {
     "name": "MELI AGOSTINI",
+    "phone": "nan",
     "email": "melisaagostini86@gmail.com",
     "createdAt": "2023-01-02T00:00:00"
   },
   {
     "name": "MARISA BERGESIO",
+    "phone": "nan",
     "createdAt": "2023-01-02T00:00:00"
   },
   {
     "name": "DORA YOZWIAK",
+    "phone": "nan",
     "createdAt": "2023-01-03T00:00:00"
   },
   {
     "name": "LUCI WALTER",
+    "phone": "nan",
     "createdAt": "2023-01-03T00:00:00"
   },
   {
     "name": "MAI GIRARDOTTO",
+    "phone": "nan",
     "createdAt": "2023-01-03T00:00:00"
   },
   {
     "name": "MARCELA PONGOLINI",
-    "phone": "600474",
+    "phone": "3492600474",
     "email": "mbpongolini@yahoo.com.ar",
     "createdAt": "2023-01-03T00:00:00"
   },
   {
     "name": "LUCI VANZINI",
+    "phone": "nan",
     "createdAt": "2023-01-03T00:00:00"
   },
   {
     "name": "SOFIA CARIGNANO",
+    "phone": "nan",
     "email": "scarignano7@gmail.com",
     "createdAt": "2023-01-03T00:00:00"
   },
   {
     "name": "GABRIELA FIGUEROA",
+    "phone": "nan",
     "createdAt": "2023-01-06T00:00:00"
   },
   {
     "name": "MA ANGELICA LOVERA",
+    "phone": "nan",
     "createdAt": "2023-01-06T00:00:00"
   },
   {
     "name": "MELINA BERTOLINI",
-    "phone": "517543",
+    "phone": "3492517543",
     "createdAt": "2023-01-06T00:00:00"
   },
   {
     "name": "GEORGINA FERRAUDO",
+    "phone": "nan",
     "createdAt": "2023-01-09T00:00:00"
   },
   {
     "name": "LILIAN ALQUATI",
+    "phone": "nan",
     "createdAt": "2023-01-09T00:00:00"
   },
   {
     "name": "GABRIELA ZENKLUZEN",
-    "phone": "609662",
+    "phone": "3492609662",
     "createdAt": "2023-01-09T00:00:00"
   },
   {
     "name": "MARISA SZWES",
+    "phone": "nan",
     "createdAt": "2023-01-09T00:00:00"
   },
   {
     "name": "LORENA VONMUHLINEN",
-    "phone": "411364",
+    "phone": "3492411364",
     "email": "Lola.von@hotmail.com",
     "createdAt": "2023-01-09T00:00:00"
   },
   {
     "name": "ROMINA VILLARREAL",
+    "phone": "nan",
     "email": "villarrealromina709@gmail.com",
     "createdAt": "2023-01-09T00:00:00"
   },
   {
     "name": "MARCIA LERDA",
+    "phone": "nan",
     "createdAt": "2023-01-09T00:00:00"
   },
   {
     "name": "NOELIA CAPONE",
+    "phone": "nan",
     "createdAt": "2023-01-12T00:00:00"
   },
   {
     "name": "PAOLA LEIGENER",
+    "phone": "nan",
     "createdAt": "2023-01-13T00:00:00"
   },
   {
     "name": "SULLY GRILLO",
+    "phone": "nan",
     "email": "sullygrillo@gmail.com",
     "createdAt": "2023-01-13T00:00:00"
   },
   {
     "name": "STELLA CORDOBA",
+    "phone": "nan",
     "createdAt": "2023-01-14T00:00:00"
   },
   {
     "name": "SILVANA BOSCHETTO",
+    "phone": "nan",
     "createdAt": "2023-01-16T00:00:00"
   },
   {
     "name": "ANALIA BOSCHETTO",
+    "phone": "nan",
     "createdAt": "2023-01-16T00:00:00"
   },
   {
     "name": "GIANELLA BARRA",
-    "phone": "618955",
+    "phone": "3492618955",
     "createdAt": "2023-01-17T00:00:00"
   },
   {
     "name": "MARIA BENITES",
+    "phone": "nan",
     "email": "benitezmarialidia@gmail.com",
     "createdAt": "2023-01-17T00:00:00"
   },
   {
     "name": "JESICA ENRICO",
+    "phone": "nan",
     "createdAt": "2023-01-18T00:00:00"
   },
   {
     "name": "CAROLINA TRUCCO",
+    "phone": "nan",
     "createdAt": "2023-01-18T00:00:00"
   },
   {
     "name": "MECHI CULZONI",
+    "phone": "nan",
     "createdAt": "2023-01-18T00:00:00"
   },
   {
     "name": "CECILIA TERNENGO",
+    "phone": "nan",
     "email": "ceciternengo68@gmail.com",
     "createdAt": "2023-01-19T00:00:00"
   },
   {
     "name": "MARIELA GRAMAGLIA",
+    "phone": "nan",
     "createdAt": "2023-01-20T00:00:00"
   },
   {
     "name": "MARIANA ZILO",
+    "phone": "nan",
     "createdAt": "2023-01-20T00:00:00"
   },
   {
     "name": "PATRICIA PERETTI",
+    "phone": "nan",
     "email": "dellasantapatricia@gmail.com",
     "createdAt": "2023-01-20T00:00:00"
   },
   {
     "name": "NERINA (MONI)",
+    "phone": "nan",
     "email": "Neri.gervasoni@gmail.com",
     "createdAt": "2023-01-23T00:00:00"
   },
   {
     "name": "PAULA GHILARDI",
-    "createdAt": "2023-01-23T00:00:00"
-  },
-  {
-    "name": "JULIA BARELLO",
+    "phone": "nan",
     "createdAt": "2023-01-23T00:00:00"
   },
   {
     "name": "KAREN ROCA",
+    "phone": "nan",
     "createdAt": "2023-01-23T00:00:00"
   },
   {
     "name": "DANIELA MEDINA",
+    "phone": "nan",
     "email": "danielamedina2311@hotmail.com",
     "createdAt": "2023-01-23T00:00:00"
   },
   {
     "name": "RITA FUR",
+    "phone": "nan",
     "createdAt": "2023-01-23T00:00:00"
   },
   {
     "name": "NORMA PALMIERI",
+    "phone": "nan",
     "email": "normapalmieri@hotmail.com",
     "createdAt": "2023-01-23T00:00:00"
   },
   {
     "name": "VIRGINIA BARBERIS",
+    "phone": "nan",
     "createdAt": "2023-01-23T00:00:00"
   },
   {
     "name": "ANITA RIVERO",
+    "phone": "nan",
     "email": "anita06rivero@gmail.com",
     "createdAt": "2023-01-27T00:00:00"
   },
   {
     "name": "EUGENIA HEIMANN",
+    "phone": "nan",
     "createdAt": "2023-01-27T00:00:00"
   },
   {
     "name": "GABRIELA MARZZIONI",
-    "createdAt": "2023-02-13T00:00:00"
-  },
-  {
-    "name": "PAOLA GARETO",
+    "phone": "nan",
     "createdAt": "2023-02-13T00:00:00"
   },
   {
     "name": "LEANA GUTIERREZ",
+    "phone": "nan",
     "email": "Leanaggutierrez@hotmail.com",
     "createdAt": "2023-02-13T00:00:00"
   },
   {
     "name": "LAURA RINALDI",
+    "phone": "nan",
     "createdAt": "2023-02-13T00:00:00"
   },
   {
     "name": "LEA FRANCETTI",
+    "phone": "nan",
     "createdAt": "2023-02-13T00:00:00"
   },
   {
     "name": "ELISA CULZONI",
+    "phone": "nan",
     "createdAt": "2023-02-14T00:00:00"
   },
   {
     "name": "NOELIA ULMAN",
+    "phone": "nan",
     "createdAt": "2023-02-14T00:00:00"
   },
   {
@@ -1052,125 +1191,137 @@
   },
   {
     "name": "CARINA GERBALDO",
-    "phone": "526863",
+    "phone": "3492526863",
     "createdAt": "2023-02-14T00:00:00"
   },
   {
     "name": "CORA FALCHINI",
-    "phone": "698623",
+    "phone": "3492698623",
     "email": "Cora_falchini@hotmail.com",
     "createdAt": "2023-02-14T00:00:00"
   },
   {
     "name": "NOELIA MASSA",
-    "phone": "612353",
+    "phone": "3492612353",
     "createdAt": "2023-02-14T00:00:00"
   },
   {
     "name": "MIRIAN MARASCUTT",
-    "phone": "616676",
+    "phone": "3492616676",
     "createdAt": "2023-02-16T00:00:00"
   },
   {
     "name": "IVANA MERKE",
-    "phone": "525497",
+    "phone": "3492525497",
     "createdAt": "2023-02-16T00:00:00"
   },
   {
     "name": "LAURA( KEVINGSTON)",
-    "phone": "659294",
+    "phone": "3492659294",
     "createdAt": "2023-02-17T00:00:00"
   },
   {
     "name": "LAURA KREIG",
-    "phone": "653643",
+    "phone": "3492653643",
     "email": "pilarsnk@gmail.com",
     "createdAt": "2023-02-18T00:00:00"
   },
   {
     "name": "FEDERICA BOGADO",
+    "phone": "nan",
     "email": "Federicabogado029@gmail.com",
     "createdAt": "2023-02-23T00:00:00"
   },
   {
     "name": "YANI  Y NOEL",
+    "phone": "nan",
     "createdAt": "2023-02-23T00:00:00"
   },
   {
     "name": "YAMILA VIVAS",
+    "phone": "nan",
     "createdAt": "2023-02-24T00:00:00"
   },
   {
     "name": "NATALI PAULINO",
+    "phone": "nan",
     "email": "natalipaulino931@hotmail.com",
     "createdAt": "2023-02-24T00:00:00"
   },
   {
     "name": "ANGI COHEN",
+    "phone": "nan",
     "createdAt": "2023-02-25T00:00:00"
   },
   {
     "name": "NATI ANTONIONE",
+    "phone": "nan",
     "email": "natalia.antonione@gmail.com",
     "createdAt": "2023-02-25T00:00:00"
   },
   {
     "name": "IVANA OGGERO",
+    "phone": "nan",
     "createdAt": "2023-03-03T00:00:00"
   },
   {
     "name": "CARO CHRISTIANSEN",
+    "phone": "nan",
     "createdAt": "2023-03-03T00:00:00"
   },
   {
     "name": "CAROLINA SANCHEZ",
-    "phone": "627077",
+    "phone": "3492627077",
     "createdAt": "2023-03-03T00:00:00"
   },
   {
     "name": "NATALIA DELBONO",
+    "phone": "nan",
     "email": "nataliadelbonopeluqueria@gmail.com",
     "createdAt": "2023-03-03T00:00:00"
   },
   {
     "name": "ROCIO AVALOS",
-    "phone": "414840",
+    "phone": "3492414840",
     "email": "Avak236@gmail.com",
     "createdAt": "2023-03-03T00:00:00"
   },
   {
     "name": "INES COLOMBA",
+    "phone": "nan",
     "createdAt": "2023-03-03T00:00:00"
   },
   {
     "name": "CLAUDIA NERVO",
-    "phone": "561818",
+    "phone": "3492561818",
     "email": "claudianervo2@gmail.com",
     "createdAt": "2023-03-03T00:00:00"
   },
   {
     "name": "LIA",
-    "phone": "227745",
+    "phone": "3492227745",
     "createdAt": "2023-03-03T00:00:00"
   },
   {
     "name": "BETY BESSONE",
+    "phone": "nan",
     "createdAt": "2023-03-03T00:00:00"
   },
   {
     "name": "DELFINA AIASSA",
-    "phone": "680087",
+    "phone": "3492680087",
     "email": "delfiaiassa@gmail.com",
     "createdAt": "2023-03-05T00:00:00"
   },
   {
     "name": "LUCIA LEIVA",
+    "phone": "nan",
     "email": "luci_1510@hotmail.com",
     "createdAt": "2023-03-05T00:00:00"
   },
   {
     "name": "PAOLA CONDOTTO",
-    "phone": "626471",
+    "phone": "3492626471",
     "createdAt": "2023-03-05T00:00:00"
   },
   {
@@ -1180,46 +1331,50 @@
   },
   {
     "name": "ANALIA GAYS",
-    "phone": "657633",
+    "phone": "3492657633",
     "createdAt": "2023-03-09T00:00:00"
   },
   {
     "name": "IVANA KREIG",
+    "phone": "nan",
     "email": "ivanakreig@gmail.com",
     "createdAt": "2023-03-09T00:00:00"
   },
   {
     "name": "YARI",
+    "phone": "nan",
     "createdAt": "2023-03-09T00:00:00"
   },
   {
     "name": "ALICIA RIVERO",
-    "phone": "623954",
+    "phone": "3492623954",
     "createdAt": "2023-03-09T00:00:00"
   },
   {
     "name": "LAURA BAUDINO",
-    "phone": "640859",
+    "phone": "3492640859",
     "createdAt": "2023-03-09T00:00:00"
   },
   {
     "name": "GABRIELA PISSATTI",
-    "phone": "410291",
+    "phone": "3492410291",
     "createdAt": "2023-03-10T00:00:00"
   },
   {
     "name": "ESTEFANIA HILGER",
+    "phone": "nan",
     "email": "estefaniahilgert@live.com.ar",
     "createdAt": "2023-03-10T00:00:00"
   },
   {
     "name": "ALEJANDRA ABALO",
-    "phone": "625139",
+    "phone": "3492625139",
     "email": "alejandraabalo@hotmail.com",
     "createdAt": "2023-03-12T00:00:00"
   },
   {
     "name": "GISE ALVARRAN",
+    "phone": "nan",
     "createdAt": "2023-03-12T00:00:00"
   },
   {
@@ -1229,40 +1384,44 @@
   },
   {
     "name": "FIORELLA FERREIRA",
-    "phone": "601405",
+    "phone": "3492601405",
     "createdAt": "2023-03-12T00:00:00"
   },
   {
     "name": "JESICA KUCHEN",
-    "phone": "653995",
+    "phone": "3492653995",
     "email": "J.m.kuchen@gmail.com",
     "createdAt": "2023-03-12T00:00:00"
   },
   {
     "name": "DIANA RUIZ DIAS",
+    "phone": "nan",
     "createdAt": "2023-03-12T00:00:00"
   },
   {
     "name": "CARINA AVELDA\u00d1O",
+    "phone": "nan",
     "email": "cariabeldano@gmail.com",
     "createdAt": "2023-03-12T00:00:00"
   },
   {
     "name": "LILIANA ZUBRERA",
-    "phone": "560224",
+    "phone": "3492560224",
     "createdAt": "2023-03-12T00:00:00"
   },
   {
     "name": "AGOSTINA GROSSO",
-    "phone": "645154",
+    "phone": "3492645154",
     "createdAt": "2023-03-15T00:00:00"
   },
   {
     "name": "CARLA DOMININO",
+    "phone": "nan",
     "createdAt": "2023-03-15T00:00:00"
   },
   {
     "name": "CORINA",
+    "phone": "nan",
     "email": "corina.sottocorno@gmail.com",
     "createdAt": "2023-03-15T00:00:00"
   },
@@ -1274,204 +1433,207 @@
   },
   {
     "name": "LISI COLOMBO",
-    "phone": "637008",
+    "phone": "3492637008",
     "email": "lizicolombo@hotmail.com",
     "createdAt": "2023-03-15T00:00:00"
   },
   {
     "name": "SOLEDAD COMINI",
-    "phone": "674777",
+    "phone": "3492674777",
     "email": "sole.comini.borda@gmail.com",
     "createdAt": "2023-03-15T00:00:00"
   },
   {
     "name": "ROXANA MOLINA",
-    "phone": "684607",
+    "phone": "3492684607",
     "createdAt": "2023-03-15T00:00:00"
   },
   {
     "name": "GUILLE BERGERO",
+    "phone": "nan",
     "email": "guibergero123@gmail.com",
     "createdAt": "2023-03-15T00:00:00"
   },
   {
     "name": "AGO ANDRETICH",
-    "phone": "309761",
+    "phone": "3492309761",
     "createdAt": "2023-03-23T00:00:00"
   },
   {
     "name": "VIVIANA PETERLIN",
-    "phone": "525508",
+    "phone": "3492525508",
     "createdAt": "2023-03-23T00:00:00"
   },
   {
     "name": "CARLA CAVALLIE",
+    "phone": "nan",
     "email": "carlacavalie@gmail.com",
     "createdAt": "2023-03-23T00:00:00"
   },
   {
     "name": "MIRTA GIL",
+    "phone": "nan",
     "createdAt": "2023-03-23T00:00:00"
   },
   {
     "name": "GABRIELA MAGIO",
-    "phone": "667768",
+    "phone": "3492667768",
     "createdAt": "2023-03-23T00:00:00"
   },
   {
     "name": "JULIA BARELLO",
+    "phone": "nan",
     "createdAt": "2023-03-25T00:00:00"
   },
   {
     "name": "MARTA MEDINA",
-    "createdAt": "2023-03-25T00:00:00"
-  },
-  {
-    "name": "DANIELA BIAVA",
+    "phone": "nan",
     "createdAt": "2023-03-25T00:00:00"
   },
   {
     "name": "QUECA",
+    "phone": "nan",
     "createdAt": "2023-03-25T00:00:00"
   },
   {
     "name": "ROSANA STERREN",
-    "phone": "634187",
+    "phone": "3492634187",
     "createdAt": "2023-03-25T00:00:00"
   },
   {
     "name": "COTY",
+    "phone": "nan",
     "createdAt": "2023-03-25T00:00:00"
   },
   {
     "name": "EUGENIA ROLON",
+    "phone": "nan",
     "createdAt": "2023-03-25T00:00:00"
   },
   {
     "name": "CAROLINA GIORGI",
+    "phone": "nan",
     "email": "Carogiorgi6@hotmail.com",
     "createdAt": "2023-03-29T00:00:00"
   },
   {
     "name": "BRISA AIASSA",
-    "phone": "419213",
+    "phone": "3492419213",
     "createdAt": "2023-03-29T00:00:00"
   },
   {
     "name": "CLAUDIA PANDOLFI",
+    "phone": "nan",
     "email": "cpandolfi1981@gmail.com",
     "createdAt": "2023-03-29T00:00:00"
   },
   {
     "name": "SONIA LASCANO",
-    "phone": "680460",
-    "createdAt": "2023-03-29T00:00:00"
-  },
-  {
-    "name": "NATALIA DALMASSO",
+    "phone": "3492680460",
     "createdAt": "2023-03-29T00:00:00"
   },
   {
     "name": "MARTINA RAVASIO",
-    "phone": "323150",
+    "phone": "3492323150",
     "createdAt": "2023-03-29T00:00:00"
   },
   {
     "name": "BETY",
+    "phone": "nan",
     "createdAt": "2023-03-29T00:00:00"
   },
   {
     "name": "ELENA BETT",
-    "phone": "603311",
+    "phone": "3492603311",
     "createdAt": "2023-03-29T00:00:00"
   },
   {
     "name": "STELLA DALMASSO",
+    "phone": "nan",
     "email": "stelladalmaso@gmail.com",
     "createdAt": "2023-03-29T00:00:00"
   },
   {
-    "name": "ANDREA GONZALES",
-    "createdAt": "2023-03-29T00:00:00"
-  },
-  {
     "name": "FLORENCIA BORK",
-    "phone": "664166",
+    "phone": "3492664166",
     "createdAt": "2023-04-10T00:00:00"
   },
   {
     "name": "ANTO DOMININO",
+    "phone": "nan",
     "createdAt": "2023-04-10T00:00:00"
   },
   {
     "name": "AGOSTINA GIORGIS",
+    "phone": "nan",
     "email": "Agostina_giorgis@hotmail.com",
     "createdAt": "2023-04-10T00:00:00"
   },
   {
     "name": "SILVINA ARDISSONO",
+    "phone": "nan",
     "email": "silar_milii@hotmail.com",
     "createdAt": "2023-04-10T00:00:00"
   },
   {
     "name": "JOSE BARONETTI",
+    "phone": "nan",
     "createdAt": "2023-04-13T00:00:00"
   },
   {
     "name": "MIRTHA CONIGLIO",
+    "phone": "nan",
     "createdAt": "2023-04-13T00:00:00"
   },
   {
     "name": "DANIELA CALCHA",
+    "phone": "nan",
     "email": "fliaactis@yahoo.com.ar",
     "createdAt": "2023-04-13T00:00:00"
   },
   {
     "name": "MELI PIEDICCI",
-    "phone": "561823",
+    "phone": "3492561823",
     "email": "depaolimelu@hotmail.com",
     "createdAt": "2023-04-13T00:00:00"
   },
   {
     "name": "VANESA ALASSIA",
-    "createdAt": "2023-04-13T00:00:00"
-  },
-  {
-    "name": "ROMINA SCHNIDRIG",
+    "phone": "nan",
     "createdAt": "2023-04-13T00:00:00"
   },
   {
     "name": "SOL CURA",
-    "phone": "624319",
+    "phone": "3492624319",
     "email": "solcura16@gmail.com",
     "createdAt": "2023-04-13T00:00:00"
   },
   {
     "name": "NORMA BECCHIO",
-    "phone": "683167",
+    "phone": "3492683167",
     "email": "marufuentes_88@hotmail.com",
     "createdAt": "2023-04-13T00:00:00"
   },
   {
     "name": "VALENTINA CABRAL",
-    "phone": "588609",
+    "phone": "3492588609",
     "email": "valentinatell986@gmail.com",
     "createdAt": "2023-04-13T00:00:00"
   },
   {
     "name": "ANA ZENKLUSSEN",
-    "phone": "650526",
+    "phone": "3492650526",
     "createdAt": "2023-04-13T00:00:00"
   },
   {
     "name": "LUCIA EGEL",
-    "phone": "412024",
+    "phone": "3492412024",
     "email": "lucieggel30@gmail.com",
     "createdAt": "2023-04-13T00:00:00"
   },
   {
     "name": "SAMANTA FORNI",
-    "phone": "319618",
+    "phone": "3492319618",
     "email": "samantalizforni@gmail.com",
     "createdAt": "2023-04-13T00:00:00"
   },
@@ -1483,7 +1645,7 @@
   },
   {
     "name": "LUCIA ZURVERA",
-    "phone": "303599",
+    "phone": "3492303599",
     "createdAt": "2023-04-13T00:00:00"
   },
   {
@@ -1494,27 +1656,30 @@
   },
   {
     "name": "MELINA ZENKLUSSEN",
+    "phone": "nan",
     "createdAt": "2023-04-13T00:00:00"
   },
   {
     "name": "NATALIA DOMINGUEZ",
-    "phone": "593751",
+    "phone": "3492593751",
     "email": "nataliaadominguez@hotmail.com",
     "createdAt": "2023-04-13T00:00:00"
   },
   {
     "name": "ROCIO ESBORRAZ",
+    "phone": "nan",
     "email": "rocioesborraz@gmail.com",
     "createdAt": "2023-04-13T00:00:00"
   },
   {
     "name": "NATI CORRADI",
+    "phone": "nan",
     "email": "natalia_corradi@hotmail.com",
     "createdAt": "2023-04-20T00:00:00"
   },
   {
     "name": "SILVIA PINEDA",
-    "phone": "580803",
+    "phone": "3492580803",
     "createdAt": "2023-04-20T00:00:00"
   },
   {
@@ -1525,53 +1690,57 @@
   },
   {
     "name": "JANINA PERREN",
-    "phone": "606670",
+    "phone": "3492606670",
     "createdAt": "2023-04-20T00:00:00"
   },
   {
     "name": "VIVIANA BAI",
-    "phone": "604197",
+    "phone": "3492604197",
     "createdAt": "2023-04-20T00:00:00"
   },
   {
     "name": "ROSANA ZBRUN",
-    "phone": "672525",
+    "phone": "3492672525",
     "createdAt": "2023-04-20T00:00:00"
   },
   {
     "name": "MARIELA ALBRECHT",
+    "phone": "nan",
     "createdAt": "2023-04-20T00:00:00"
   },
   {
     "name": "MARIANA FERRERO",
-    "phone": "612285",
+    "phone": "3492612285",
     "createdAt": "2023-04-20T00:00:00"
   },
   {
     "name": "SOFIA RODRIGUEZ",
-    "phone": "658984",
+    "phone": "3492658984",
     "createdAt": "2023-04-26T00:00:00"
   },
   {
     "name": "SOLEDAD GARAY",
+    "phone": "nan",
     "createdAt": "2023-04-26T00:00:00"
   },
   {
     "name": "SILVANA RAMAYO",
-    "phone": "249345",
+    "phone": "3492249345",
     "createdAt": "2023-04-26T00:00:00"
   },
   {
     "name": "FLORENCIA DEL SIGNORE",
+    "phone": "nan",
     "createdAt": "2023-04-26T00:00:00"
   },
   {
     "name": "MONICA LOPEZ",
+    "phone": "nan",
     "createdAt": "2023-04-26T00:00:00"
   },
   {
     "name": "ABELIN ROLDAN",
-    "phone": "319939",
+    "phone": "3492319939",
     "createdAt": "2023-04-26T00:00:00"
   },
   {
@@ -1580,150 +1749,170 @@
     "createdAt": "2023-04-26T00:00:00"
   },
   {
-    "name": "CLARA ACUÑA",
+    "name": "CLARA ACU\ufffdA",
+    "phone": "nan",
     "createdAt": "2023-04-29T00:00:00"
   },
   {
     "name": "LAURA PAIRONE",
+    "phone": "nan",
     "createdAt": "2023-05-01T00:00:00"
   },
   {
     "name": "CAROLINA PIZZI",
-    "phone": "307555",
+    "phone": "3492307555",
     "createdAt": "2023-05-01T00:00:00"
   },
   {
     "name": "LALI GIOVANINI",
+    "phone": "nan",
     "createdAt": "2023-05-01T00:00:00"
   },
   {
     "name": "MARITA",
+    "phone": "nan",
     "createdAt": "2023-05-01T00:00:00"
   },
   {
     "name": "VIRGINIA BESACIA",
-    "createdAt": "2023-05-01T00:00:00"
-  },
-  {
-    "name": "NOELIA ULMAN",
+    "phone": "nan",
     "createdAt": "2023-05-01T00:00:00"
   },
   {
     "name": "VANESA RULH",
+    "phone": "nan",
     "createdAt": "2023-05-01T00:00:00"
   },
   {
     "name": "VIRGINIA ANDRETICH",
+    "phone": "nan",
     "email": "virandretich@hotmail.com",
     "createdAt": "2023-05-01T00:00:00"
   },
   {
     "name": "ANA CAROSI",
+    "phone": "nan",
     "email": "anacarosi16@gmail.com",
     "createdAt": "2023-05-01T00:00:00"
   },
   {
     "name": "MARTA CRISTINA",
+    "phone": "nan",
     "createdAt": "2023-05-01T00:00:00"
   },
   {
     "name": "ELIANA NEGRO",
+    "phone": "nan",
     "createdAt": "2023-05-01T00:00:00"
   },
   {
     "name": "ARIANA RETAMOSO",
+    "phone": "nan",
     "createdAt": "2023-05-01T00:00:00"
   },
   {
     "name": "MARCELA VINCENTI",
-    "phone": "583629",
+    "phone": "3492583629",
     "createdAt": "2023-05-01T00:00:00"
   },
   {
     "name": "FLAVIA ROTELA",
+    "phone": "nan",
     "createdAt": "2023-05-01T00:00:00"
   },
   {
     "name": "LIDIA ACEBAL",
-    "phone": "305704",
+    "phone": "3492305704",
     "email": "lidiaacebalcuesta.com@gmail.com",
     "createdAt": "2023-05-01T00:00:00"
   },
   {
     "name": "CECILIA BERTERO",
+    "phone": "nan",
     "email": "cecibertero1@hotmail.com",
     "createdAt": "2023-05-01T00:00:00"
   },
   {
     "name": "CECILIA  GHILARDI",
+    "phone": "nan",
     "email": "ceciliaghilardi@hotmail.com",
     "createdAt": "2023-05-01T00:00:00"
   },
   {
     "name": "PAULA MARZIONI",
+    "phone": "nan",
     "createdAt": "2023-05-01T00:00:00"
   },
   {
     "name": "BETI CURTO",
+    "phone": "nan",
     "createdAt": "2023-05-01T00:00:00"
   },
   {
     "name": "SILVINA BOCCO",
+    "phone": "nan",
     "email": "Silvinabocco@gmail.com",
     "createdAt": "2023-05-01T00:00:00"
   },
   {
     "name": "ARIANA COLOMBA",
+    "phone": "nan",
     "email": "arianacolomba@hotmail.com",
     "createdAt": "2023-05-01T00:00:00"
   },
   {
     "name": "MARU ZILO",
+    "phone": "nan",
     "email": "zillo.mazdiseno@gmail.com",
     "createdAt": "2023-05-01T00:00:00"
   },
   {
     "name": "CAROLINA FRANCONE",
-    "phone": "523172",
+    "phone": "3492523172",
     "email": "liacosmetica@gmail.com",
     "createdAt": "2023-05-01T00:00:00"
   },
   {
     "name": "MARU FERPOZZI",
-    "phone": "599430",
+    "phone": "3492599430",
     "email": "maf19582@gmail.com",
     "createdAt": "2023-05-08T00:00:00"
   },
   {
     "name": "CIRENE ALBRECHT",
+    "phone": "nan",
     "email": "a_cirene@hotmail.com",
     "createdAt": "2023-05-10T00:00:00"
   },
   {
     "name": "FANI (FLOR)",
+    "phone": "nan",
     "createdAt": "2023-05-10T00:00:00"
   },
   {
     "name": "M. LUISA ARANCIBIA",
+    "phone": "nan",
     "createdAt": "2023-05-11T00:00:00"
   },
   {
     "name": "MIRIAN GALAVERNA",
+    "phone": "nan",
     "email": "ruppencelia@gmail.com",
     "createdAt": "2023-05-11T00:00:00"
   },
   {
     "name": "CELIA RUPPEN",
-    "phone": "338465",
+    "phone": "3492338465",
     "createdAt": "2023-05-12T00:00:00"
   },
   {
     "name": "PATRICIA MARCHETTI",
+    "phone": "nan",
     "createdAt": "2023-05-12T00:00:00"
   },
   {
     "name": "DANIELA VILLARREAL",
-    "phone": "300583",
+    "phone": "3492300583",
     "email": "dani_rafa08@hotmail.com",
     "createdAt": "2023-05-12T00:00:00"
   },
@@ -1734,28 +1923,22 @@
   },
   {
     "name": "SILVANA MICOLI",
-    "phone": "412297",
+    "phone": "3492412297",
     "createdAt": "2023-05-12T00:00:00"
   },
   {
     "name": "M. ANGELICA LOVERA",
+    "phone": "nan",
     "createdAt": "2023-05-12T00:00:00"
   },
   {
     "name": "VANINA ARDISANA",
-    "phone": "674799",
-    "createdAt": "2023-05-12T00:00:00"
-  },
-  {
-    "name": "MARU ZILO",
-    "createdAt": "2023-05-12T00:00:00"
-  },
-  {
-    "name": "NATALIA DALMASSO",
+    "phone": "3492674799",
     "createdAt": "2023-05-12T00:00:00"
   },
   {
     "name": "GUILLERMINA ZEHNDER",
+    "phone": "nan",
     "createdAt": "2023-05-12T00:00:00"
   },
   {
@@ -1765,108 +1948,107 @@
   },
   {
     "name": "VANESA CENTURION",
-    "phone": "675459",
+    "phone": "3492675459",
     "createdAt": "2023-05-12T00:00:00"
   },
   {
     "name": "ADRIANA BRIGGILER",
-    "phone": "565857",
+    "phone": "3492565857",
     "createdAt": "2023-05-12T00:00:00"
   },
   {
     "name": "CARINA LOWENSTEIN",
+    "phone": "nan",
     "createdAt": "2023-05-12T00:00:00"
   },
   {
     "name": "SUSANA ENRICO",
-    "phone": "667569",
+    "phone": "3492667569",
     "createdAt": "2023-05-12T00:00:00"
   },
   {
     "name": "ALICIA SOMAINO",
-    "phone": "621872",
+    "phone": "3492621872",
     "createdAt": "2023-05-18T00:00:00"
   },
   {
     "name": "FABIANA ROMERO",
-    "phone": "597278",
+    "phone": "3492597278",
     "createdAt": "2023-05-18T00:00:00"
   },
   {
     "name": "MELISA GHILARDI",
-    "phone": "592518",
+    "phone": "3492592518",
     "createdAt": "2023-05-18T00:00:00"
   },
   {
     "name": "ELIZABET RAMOS",
-    "phone": "672211",
+    "phone": "3492672211",
     "createdAt": "2023-05-20T00:00:00"
   },
   {
     "name": "VALENTINA PALMIERI",
-    "phone": "395107",
+    "phone": "3492395107",
     "createdAt": "2023-05-20T00:00:00"
   },
   {
     "name": "PAULA CULZONI",
-    "phone": "611554",
+    "phone": "3492611554",
     "createdAt": "2023-05-20T00:00:00"
   },
   {
     "name": "ESTELA AMWEG",
-    "phone": "575484",
+    "phone": "3492575484",
     "createdAt": "2023-05-22T00:00:00"
   },
   {
     "name": "SOLEDAD ZEHNDER",
-    "phone": "591487",
+    "phone": "3492591487",
     "createdAt": "2023-05-22T00:00:00"
   },
   {
     "name": "MARTA APPO",
-    "phone": "679144",
+    "phone": "3492679144",
     "createdAt": "2023-05-22T00:00:00"
   },
   {
     "name": "MELISA CELEGHIN",
-    "phone": "330713",
+    "phone": "3492330713",
     "createdAt": "2023-05-24T00:00:00"
   },
   {
     "name": "GUADALUPE MENDIETA",
-    "phone": "590201",
-    "createdAt": "2023-05-24T00:00:00"
-  },
-  {
-    "name": "SILVANA CHIAPERO",
+    "phone": "3492590201",
     "createdAt": "2023-05-24T00:00:00"
   },
   {
     "name": "LUISINA ALONSO",
-    "phone": "599856",
+    "phone": "3492599856",
     "createdAt": "2023-05-24T00:00:00"
   },
   {
     "name": "CARINA BATAINO",
+    "phone": "nan",
     "createdAt": "2023-05-24T00:00:00"
   },
   {
     "name": "CIRA CARUSO",
-    "phone": "339447",
+    "phone": "3492339447",
     "createdAt": "2023-05-24T00:00:00"
   },
   {
     "name": "SONIA LORENZO",
+    "phone": "nan",
     "createdAt": "2023-05-24T00:00:00"
   },
   {
     "name": "SOFIA RICO",
-    "phone": "524096",
+    "phone": "3492524096",
     "createdAt": "2023-05-26T00:00:00"
   },
   {
     "name": "CAROLINA BONINO",
-    "phone": "634052",
+    "phone": "3492634052",
     "createdAt": "2023-05-26T00:00:00"
   },
   {
@@ -1876,207 +2058,207 @@
   },
   {
     "name": "SOLE(ALEX)",
+    "phone": "nan",
     "createdAt": "2023-05-26T00:00:00"
   },
   {
     "name": "JULIA ZILLO",
+    "phone": "nan",
     "createdAt": "2023-05-26T00:00:00"
   },
   {
     "name": "GUILLE WALTER",
+    "phone": "nan",
     "createdAt": "2023-05-26T00:00:00"
   },
   {
     "name": "CAMILA MARQUEZ",
-    "phone": "610741",
+    "phone": "3492610741",
     "createdAt": "2023-05-26T00:00:00"
   },
   {
     "name": "SILVANA ALASIA",
+    "phone": "nan",
     "createdAt": "2023-05-26T00:00:00"
   },
   {
     "name": "SOFIA OLLOCO",
+    "phone": "nan",
     "createdAt": "2023-05-26T00:00:00"
   },
   {
     "name": "DELFINA RENZI",
-    "phone": "207840",
+    "phone": "3492207840",
     "createdAt": "2023-05-26T00:00:00"
   },
   {
     "name": "ELVA ZBRUN",
-    "phone": "303614",
+    "phone": "3492303614",
     "createdAt": "2023-05-26T00:00:00"
   },
   {
     "name": "NATALIA CARINELLI",
-    "phone": "684080",
-    "createdAt": "2023-05-26T00:00:00"
-  },
-  {
-    "name": "ANA TOPAZZINI",
+    "phone": "3492684080",
     "createdAt": "2023-05-26T00:00:00"
   },
   {
     "name": "MARIA REINOSO",
+    "phone": "nan",
     "createdAt": "2023-06-01T00:00:00"
   },
   {
     "name": "GRACIELA BAEZ",
-    "phone": "308059",
+    "phone": "3492308059",
     "createdAt": "2023-06-01T00:00:00"
   },
   {
     "name": "LILIANA VASANO",
-    "phone": "617395",
+    "phone": "3492617395",
     "createdAt": "2023-06-01T00:00:00"
   },
   {
     "name": "EUGENIA FASSI",
-    "phone": "205497",
+    "phone": "3492205497",
     "createdAt": "2023-06-01T00:00:00"
   },
   {
     "name": "NORA GUTIERREZ",
-    "phone": "419944",
-    "createdAt": "2023-06-05T00:00:00"
-  },
-  {
-    "name": "SOLEDAD MORCILLO",
+    "phone": "3492419944",
     "createdAt": "2023-06-05T00:00:00"
   },
   {
     "name": "JORGELINA OLIVERA",
+    "phone": "nan",
     "createdAt": "2023-06-05T00:00:00"
   },
   {
     "name": "ANALIA RIZZO",
-    "phone": "524042",
+    "phone": "3492524042",
     "createdAt": "2023-06-05T00:00:00"
   },
   {
     "name": "ABIGAIL CLAUS",
-    "phone": "564901",
+    "phone": "3492564901",
     "createdAt": "2023-06-05T00:00:00"
   },
   {
     "name": "PATRICIA TROTTI",
-    "phone": "573406",
+    "phone": "3492573406",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
     "name": "VALE MONGELO",
-    "phone": "317809",
+    "phone": "3492317809",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
     "name": "ANGI NICOLA",
+    "phone": "nan",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
     "name": "GABRIELA STRADA",
-    "phone": "635709",
-    "createdAt": "2023-06-07T00:00:00"
-  },
-  {
-    "name": "GABRIELA STRADA",
-    "phone": "635709",
+    "phone": "3492635709",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
     "name": "VALERIA BARBERIS",
-    "phone": "684148",
+    "phone": "3492684148",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
     "name": "EMILIA SCHMIT",
-    "phone": "317557",
+    "phone": "3492317557",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
     "name": "JULI ALDERETE",
+    "phone": "nan",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
     "name": "PAOLA ENRICO",
-    "phone": "525856",
+    "phone": "3492525856",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
     "name": "DELIA BURGOS",
-    "phone": "588461",
+    "phone": "3492588461",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
     "name": "JORGELINA RUBEN",
-    "phone": "221319",
+    "phone": "3492221319",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
     "name": "FER MARCUSSI",
+    "phone": "nan",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
     "name": "EUGENIA AIMARETTO",
+    "phone": "nan",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
     "name": "MARCELA GIORDANO",
+    "phone": "nan",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
     "name": "SILVIA RUIZ",
+    "phone": "nan",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
     "name": "ESTELA CARDONI",
-    "phone": "623494",
+    "phone": "3492623494",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
     "name": "ALEJANDRA GONZALEZ",
-    "phone": "639371",
+    "phone": "3492639371",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
     "name": "PAULA ZHENDER",
-    "phone": "587857",
+    "phone": "3492587857",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
     "name": "MONICA TROSSERO",
-    "phone": "516807",
+    "phone": "3492516807",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
     "name": "NOELIA JUAN",
-    "phone": "628118",
+    "phone": "3492628118",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
     "name": "CARLA FERRERO",
-    "phone": "619446",
+    "phone": "3492619446",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
     "name": "MARIA JOSE FRANCO",
-    "phone": "631842",
+    "phone": "3492631842",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
     "name": "SILVI OESQUER",
-    "phone": "529100",
+    "phone": "3492529100",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
     "name": "ROMINA MAGNI",
-    "phone": "574914",
+    "phone": "3492574914",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
     "name": "MELINA BORGOGNO",
-    "phone": "517478",
+    "phone": "3492517478",
     "createdAt": "2023-06-07T00:00:00"
   },
   {
@@ -2086,126 +2268,127 @@
   },
   {
     "name": "CECILIA ROCCA",
-    "phone": "507821",
+    "phone": "3492507821",
     "createdAt": "2023-06-15T00:00:00"
   },
   {
     "name": "BELKIS BRACCO",
-    "phone": "667512",
+    "phone": "3492667512",
     "createdAt": "2023-06-15T00:00:00"
   },
   {
     "name": "SOFIA AGUIRRE",
-    "phone": "695014",
+    "phone": "3492695014",
     "createdAt": "2023-06-15T00:00:00"
   },
   {
     "name": "VERENA ",
+    "phone": "nan",
     "createdAt": "2023-06-15T00:00:00"
   },
   {
     "name": "ROSA GODOY",
+    "phone": "nan",
     "createdAt": "2023-06-15T00:00:00"
   },
   {
     "name": "LORENA CORDOBA",
-    "phone": "215885",
+    "phone": "3492215885",
     "createdAt": "2023-06-21T00:00:00"
   },
   {
     "name": "CARINA GOROSITO",
+    "phone": "nan",
     "createdAt": "2023-06-21T00:00:00"
   },
   {
     "name": "GABRIELA ALLOCHIS",
-    "phone": "628433",
+    "phone": "3492628433",
     "createdAt": "2023-06-21T00:00:00"
   },
   {
     "name": "LUCIANA MELANO",
-    "phone": "652357",
+    "phone": "3492652357",
     "createdAt": "2023-06-21T00:00:00"
   },
   {
     "name": "VALENTINA GHILARDI",
-    "phone": "647496",
+    "phone": "3492647496",
     "createdAt": "2023-06-21T00:00:00"
   },
   {
     "name": "JULIANA OJEDA",
-    "phone": "623654",
+    "phone": "3492623654",
     "createdAt": "2023-06-21T00:00:00"
   },
   {
     "name": "VIRGINIA LISCHET",
-    "phone": "608306",
+    "phone": "3492608306",
     "createdAt": "2023-06-21T00:00:00"
   },
   {
     "name": "PATRICIA OSENDA",
+    "phone": "nan",
     "createdAt": "2023-06-21T00:00:00"
   },
   {
     "name": "SILVANA SPAGNOL",
-    "phone": "592069",
+    "phone": "3492592069",
     "createdAt": "2023-06-21T00:00:00"
   },
   {
     "name": "IVANA ANDREU",
+    "phone": "nan",
     "createdAt": "2023-06-21T00:00:00"
   },
   {
     "name": "NERE BATTAUZ",
-    "createdAt": "2023-06-21T00:00:00"
-  },
-  {
-    "name": "SILVIA CACCIA",
+    "phone": "nan",
     "createdAt": "2023-06-21T00:00:00"
   },
   {
     "name": "ANA MARQUEZ",
+    "phone": "nan",
     "createdAt": "2023-06-21T00:00:00"
   },
   {
     "name": "PATRICIA PIERANTONI",
-    "phone": "229623",
+    "phone": "3492229623",
     "createdAt": "2023-06-21T00:00:00"
   },
   {
     "name": "CAROLINA FENOGLIO",
-    "phone": "661791",
+    "phone": "3492661791",
     "createdAt": "2023-06-21T00:00:00"
   },
   {
     "name": "LAURA BOGIO ",
-    "phone": "636580",
+    "phone": "3492636580",
     "createdAt": "2023-06-21T00:00:00"
   },
   {
     "name": "SILVANA AGUILAR",
+    "phone": "nan",
     "createdAt": "2023-06-21T00:00:00"
   },
   {
     "name": "RAQUEL TRUCCO",
+    "phone": "nan",
     "createdAt": "2023-06-21T00:00:00"
   },
   {
     "name": "ELENA OLIVERA",
-    "phone": "653260",
+    "phone": "3492653260",
     "createdAt": "2023-06-21T00:00:00"
   },
   {
     "name": "ALICIA MARCELINO",
-    "phone": "320426",
-    "createdAt": "2023-06-21T00:00:00"
-  },
-  {
-    "name": "SANDRA GOITRE",
+    "phone": "3492320426",
     "createdAt": "2023-06-21T00:00:00"
   },
   {
     "name": "VALERIA HEREDIA",
-    "phone": "524484",
+    "phone": "3492524484",
     "createdAt": "2023-06-21T00:00:00"
   },
   {
@@ -2215,7 +2398,7 @@
   },
   {
     "name": "ROSANA ROSSETTI",
-    "phone": "655742",
+    "phone": "3492655742",
     "createdAt": "2023-06-21T00:00:00"
   },
   {
@@ -2230,252 +2413,257 @@
   },
   {
     "name": "SULMA TROSSERO",
-    "phone": "613760",
+    "phone": "3492613760",
     "createdAt": "2023-07-01T00:00:00"
   },
   {
     "name": "CUCU GNIEMI",
-    "phone": "679816",
-    "createdAt": "2023-07-01T00:00:00"
-  },
-  {
-    "name": "CARINA SAULO",
+    "phone": "3492679816",
     "createdAt": "2023-07-01T00:00:00"
   },
   {
     "name": "CECILIA GHILARDI",
+    "phone": "nan",
     "createdAt": "2023-07-01T00:00:00"
   },
   {
     "name": "ADRIANA FONTANETO",
-    "phone": "680281",
+    "phone": "3492680281",
     "createdAt": "2023-07-01T00:00:00"
   },
   {
     "name": "ANA LAURA ESPINOSA",
+    "phone": "nan",
     "createdAt": "2023-07-01T00:00:00"
   },
   {
     "name": "MARIELA MURIEL",
+    "phone": "nan",
     "createdAt": "2023-07-01T00:00:00"
   },
   {
     "name": "ISA MARTIN",
-    "phone": "621998",
+    "phone": "3492621998",
     "createdAt": "2023-07-01T00:00:00"
   },
   {
     "name": "ANALIA PEREZ",
+    "phone": "nan",
     "createdAt": "2023-07-05T00:00:00"
   },
   {
     "name": "YANINA ROATTA",
+    "phone": "nan",
     "createdAt": "2023-07-05T00:00:00"
   },
   {
     "name": "SILVINA BUZZI",
-    "phone": "609757",
+    "phone": "3492609757",
     "createdAt": "2023-07-05T00:00:00"
   },
   {
     "name": "NANE LELLI",
+    "phone": "nan",
     "createdAt": "2023-07-05T00:00:00"
   },
   {
     "name": "AGOSTINA MINETTI",
-    "phone": "572625",
+    "phone": "3492572625",
     "createdAt": "2023-07-06T00:00:00"
   },
   {
     "name": "VIRGINIA AYUSTE",
-    "phone": "598112",
+    "phone": "3492598112",
     "createdAt": "2023-07-06T00:00:00"
   },
   {
     "name": "PATRICIA KARLEN",
+    "phone": "nan",
     "createdAt": "2023-07-06T00:00:00"
   },
   {
     "name": "ALEJANDRINA HOLLESTEIN",
-    "phone": "589926",
+    "phone": "3492589926",
     "createdAt": "2023-07-09T00:00:00"
   },
   {
     "name": "LAURA SLAI",
-    "phone": "645229",
+    "phone": "3492645229",
     "createdAt": "2023-07-09T00:00:00"
   },
   {
     "name": "CARLA TORNAROLLI",
-    "phone": "301203",
+    "phone": "3492301203",
     "createdAt": "2023-07-09T00:00:00"
   },
   {
     "name": "FLOR MONTARSINO",
+    "phone": "nan",
     "createdAt": "2023-07-09T00:00:00"
   },
   {
     "name": "ANA BOTTO",
-    "phone": "412444",
+    "phone": "3492412444",
     "createdAt": "2023-07-12T00:00:00"
   },
   {
     "name": "ROSANA ZANIN",
+    "phone": "nan",
     "createdAt": "2023-07-12T00:00:00"
   },
   {
     "name": "ADRIANA GHIETTO",
-    "phone": "412065",
+    "phone": "3492412065",
     "createdAt": "2023-07-12T00:00:00"
   },
   {
     "name": "NORMA ROSSO",
-    "phone": "580707",
+    "phone": "3492580707",
     "createdAt": "2023-07-12T00:00:00"
   },
   {
     "name": "ELSIE ANDRENELLI",
-    "phone": "674451",
+    "phone": "3492674451",
     "createdAt": "2023-07-19T00:00:00"
   },
   {
     "name": "MARISA DACCI",
-    "phone": "613443",
+    "phone": "3492613443",
     "createdAt": "2023-07-19T00:00:00"
   },
   {
     "name": "STELLA VILLARREAL",
-    "phone": "213165",
+    "phone": "3492213165",
     "createdAt": "2023-07-19T00:00:00"
   },
   {
     "name": "CINTIA ASSELBORN",
+    "phone": "nan",
     "createdAt": "2023-07-19T00:00:00"
   },
   {
     "name": "MAGALI COPQUE",
-    "phone": "329547",
+    "phone": "3492329547",
     "createdAt": "2023-07-19T00:00:00"
   },
   {
     "name": "NATALIA MAROZZI",
-    "phone": "574506",
-    "createdAt": "2023-07-21T00:00:00"
-  },
-  {
-    "name": "SILVINA BUZZI",
+    "phone": "3492574506",
     "createdAt": "2023-07-21T00:00:00"
   },
   {
     "name": "CAROLA MONDINO",
+    "phone": "nan",
     "createdAt": "2023-07-21T00:00:00"
   },
   {
     "name": "CARINA DINTINO",
+    "phone": "nan",
     "createdAt": "2023-07-21T00:00:00"
   },
   {
     "name": "GRISELDA MAINE",
-    "phone": "652393",
+    "phone": "3492652393",
     "createdAt": "2023-07-21T00:00:00"
   },
   {
     "name": "GISELA ARANCIBIA",
-    "phone": "667255",
+    "phone": "3492667255",
     "createdAt": "2023-07-21T00:00:00"
   },
   {
     "name": "CAMILA GHEZZI",
-    "phone": "304463",
+    "phone": "3492304463",
     "createdAt": "2023-07-21T00:00:00"
   },
   {
-    "name": "VERONICA LAGRAÑA",
-    "phone": "581984",
+    "name": "VERONICA LAGRA\ufffdA",
+    "phone": "3492581984",
     "createdAt": "2023-07-24T00:00:00"
   },
   {
     "name": "VIVIANA RACCA",
-    "phone": "692385",
+    "phone": "3492692385",
     "createdAt": "2023-07-24T00:00:00"
   },
   {
     "name": "MARIELA MONTU",
-    "phone": "525687",
+    "phone": "3492525687",
     "createdAt": "2023-07-24T00:00:00"
   },
   {
     "name": "CANDELA DEMICHELIS",
-    "phone": "657499",
+    "phone": "3492657499",
     "createdAt": "2023-07-24T00:00:00"
   },
   {
     "name": "SILVINA MAINE",
-    "createdAt": "2023-07-24T00:00:00"
-  },
-  {
-    "name": "MARIANA ZILO",
+    "phone": "nan",
     "createdAt": "2023-07-24T00:00:00"
   },
   {
     "name": "EVELYN CHERRY",
-    "phone": "659983",
+    "phone": "3492659983",
     "createdAt": "2023-07-24T00:00:00"
   },
   {
     "name": "CRISTINA STORERO",
-    "phone": "410059",
+    "phone": "3492410059",
     "createdAt": "2023-07-24T00:00:00"
   },
   {
     "name": "CECILIA PLIAUZER",
+    "phone": "nan",
     "createdAt": "2023-07-24T00:00:00"
   },
   {
     "name": "MELINA ANDREO",
-    "phone": "207912",
+    "phone": "3492207912",
     "createdAt": "2023-07-29T00:00:00"
   },
   {
     "name": "ANDREA GARETO",
+    "phone": "nan",
     "createdAt": "2023-07-29T00:00:00"
   },
   {
     "name": "NELIDA TONELLI",
-    "phone": "209766",
+    "phone": "3492209766",
     "createdAt": "2023-08-01T00:00:00"
   },
   {
     "name": "MELI ANDRETICH",
+    "phone": "nan",
     "createdAt": "2023-08-01T00:00:00"
   },
   {
     "name": "MILAGROS VASQUEZ",
-    "phone": "594322",
+    "phone": "3492594322",
     "createdAt": "2023-08-01T00:00:00"
   },
   {
     "name": "NATALIA RAVASIO",
+    "phone": "nan",
     "createdAt": "2023-08-01T00:00:00"
   },
   {
     "name": "NURIA CERIO",
+    "phone": "nan",
     "createdAt": "2023-08-01T00:00:00"
   },
   {
     "name": "ANA MORANO (CARI)",
+    "phone": "nan",
     "createdAt": "2023-08-01T00:00:00"
   },
   {
     "name": "EMILCE CORDOBA",
-    "createdAt": "2023-08-01T00:00:00"
-  },
-  {
-    "name": "DELFINA RENZI",
+    "phone": "nan",
     "createdAt": "2023-08-01T00:00:00"
   },
   {
     "name": "MARA FRANCESCONI",
+    "phone": "nan",
     "createdAt": "2023-08-01T00:00:00"
   },
   {
@@ -2485,10 +2673,12 @@
   },
   {
     "name": "PETA COLOMBA",
+    "phone": "nan",
     "createdAt": "2023-08-01T00:00:00"
   },
   {
     "name": "ANALIA NOCETTE",
+    "phone": "nan",
     "createdAt": "2023-08-01T00:00:00"
   },
   {
@@ -2508,41 +2698,37 @@
   },
   {
     "name": "LIZA BARBERIS",
-    "phone": "649681",
+    "phone": "3492649681",
     "createdAt": "2023-08-10T00:00:00"
   },
   {
     "name": "SILVANA HEREDIA",
-    "phone": "278545",
+    "phone": "3492278545",
     "createdAt": "2023-08-10T00:00:00"
   },
   {
     "name": "SANDRA CORDOBA",
-    "phone": "528367",
+    "phone": "3492528367",
     "createdAt": "2023-08-12T00:00:00"
   },
   {
     "name": "MICAELA ROATTA",
-    "phone": "651264",
+    "phone": "3492651264",
     "createdAt": "2023-08-12T00:00:00"
   },
   {
     "name": "MICAELA CORSICO",
-    "phone": "671255",
+    "phone": "3492671255",
     "createdAt": "2023-08-17T00:00:00"
   },
   {
     "name": "NORMA MARENGO",
-    "phone": "691281",
+    "phone": "3492691281",
     "createdAt": "2023-08-17T00:00:00"
   },
   {
     "name": "EUGENIA NEGRO",
-    "phone": "613939",
-    "createdAt": "2023-08-19T00:00:00"
-  },
-  {
-    "name": "NATALIA POGOLOTTI",
+    "phone": "3492613939",
     "createdAt": "2023-08-19T00:00:00"
   },
   {
@@ -2557,6 +2743,7 @@
   },
   {
     "name": "LELIA CHIAPERO",
+    "phone": "nan",
     "createdAt": "2023-08-24T00:00:00"
   },
   {
@@ -2566,6 +2753,7 @@
   },
   {
     "name": "DAIANA TORRES",
+    "phone": "nan",
     "createdAt": "2023-08-24T00:00:00"
   },
   {
@@ -2575,6 +2763,7 @@
   },
   {
     "name": "GIGI LELI",
+    "phone": "nan",
     "createdAt": "2023-08-24T00:00:00"
   },
   {
@@ -2584,100 +2773,112 @@
   },
   {
     "name": "LIDIA CARDOSO",
-    "phone": "618403",
+    "phone": "3492618403",
     "createdAt": "2023-09-25T00:00:00"
   },
   {
     "name": "ELISA STICKER",
-    "phone": "600314",
+    "phone": "3492600314",
     "createdAt": "2023-09-28T00:00:00"
   },
   {
     "name": "CECILIA ARMANDO",
+    "phone": "nan",
     "createdAt": "2023-09-28T00:00:00"
   },
   {
     "name": "CARINA SAURO",
+    "phone": "nan",
     "createdAt": "2023-09-28T00:00:00"
   },
   {
     "name": "PAULA MONAY",
+    "phone": "nan",
     "createdAt": "2023-09-28T00:00:00"
   },
   {
     "name": "LAURA TRON",
-    "phone": "528948",
+    "phone": "3492528948",
     "createdAt": "2023-09-28T00:00:00"
   },
   {
     "name": "GISELA PERLO",
+    "phone": "nan",
     "createdAt": "2023-10-02T00:00:00"
   },
   {
     "name": "GISELA PERETTO",
+    "phone": "nan",
     "createdAt": "2023-10-02T00:00:00"
   },
   {
     "name": "ADELA TIONFETTI",
+    "phone": "nan",
     "createdAt": "2023-10-02T00:00:00"
   },
   {
     "name": "MARINA PEREIRA",
+    "phone": "nan",
     "createdAt": "2023-10-02T00:00:00"
   },
   {
     "name": "DANIELA CANAVESE",
-    "phone": "301547",
+    "phone": "3492301547",
     "createdAt": "2023-10-05T00:00:00"
   },
   {
     "name": "SANDRA NIETO",
+    "phone": "nan",
     "createdAt": "2023-10-05T00:00:00"
   },
   {
     "name": "MARINA TESIO",
+    "phone": "nan",
     "createdAt": "2023-10-05T00:00:00"
   },
   {
     "name": "EUGENIA LUCA",
+    "phone": "nan",
     "createdAt": "2023-10-05T00:00:00"
   },
   {
     "name": "TRINIDAD MANSO",
+    "phone": "nan",
     "createdAt": "2023-10-05T00:00:00"
   },
   {
     "name": "ROCIO DELARIVA",
-    "phone": "666048",
+    "phone": "3492666048",
     "createdAt": "2023-10-05T00:00:00"
   },
   {
     "name": "GRACIELA WILLENER",
-    "phone": "671823",
+    "phone": "3492671823",
     "createdAt": "2023-10-05T00:00:00"
   },
   {
     "name": "MARIA MANSILLA",
-    "phone": "319979",
+    "phone": "3492319979",
     "createdAt": "2023-10-05T00:00:00"
   },
   {
     "name": "ADRIANA ROCCHIA",
-    "phone": "587039",
+    "phone": "3492587039",
     "createdAt": "2023-10-19T00:00:00"
   },
   {
     "name": "NATALIA VITALONI",
-    "phone": "676239",
+    "phone": "3492676239",
     "createdAt": "2023-10-19T00:00:00"
   },
   {
     "name": "PAMELA PUGLIOTTI",
+    "phone": "nan",
     "createdAt": "2023-10-19T00:00:00"
   },
   {
     "name": "LUISINA TONON",
-    "phone": "315618",
+    "phone": "3492315618",
     "createdAt": "2023-10-19T00:00:00"
   },
   {
@@ -2687,40 +2888,37 @@
   },
   {
     "name": "NATALIA ZENKLUSSEN",
-    "phone": "223567",
+    "phone": "3492223567",
     "createdAt": "2023-10-19T00:00:00"
   },
   {
     "name": "EVA VANNAY",
-    "phone": "518180",
+    "phone": "3492518180",
     "createdAt": "2023-10-19T00:00:00"
   },
   {
-    "name": "CARINA ABELDAÑO",
+    "name": "CARINA ABELDA\u00d1O",
+    "phone": "nan",
     "createdAt": "2023-10-19T00:00:00"
   },
   {
     "name": "NATALIA WERLEN",
-    "createdAt": "2023-10-19T00:00:00"
-  },
-  {
-    "name": "CAROLINA FENOGLIO",
-    "phone": "661791",
+    "phone": "nan",
     "createdAt": "2023-10-19T00:00:00"
   },
   {
     "name": "GABRIELA KELLER",
-    "phone": "213266",
+    "phone": "3492213266",
     "createdAt": "2023-10-24T00:00:00"
   },
   {
     "name": "CLAUDIA GERBALDO",
-    "phone": "668394",
+    "phone": "3492668394",
     "createdAt": "2023-10-24T00:00:00"
   },
   {
     "name": "PAMELA BRAVO",
-    "phone": "638298",
+    "phone": "3492638298",
     "createdAt": "2023-10-24T00:00:00"
   },
   {
@@ -2730,73 +2928,72 @@
   },
   {
     "name": "HORACIO MOREL",
-    "phone": "568142",
+    "phone": "3492568142",
     "createdAt": "2023-10-24T00:00:00"
   },
   {
     "name": "SUSANA MANSUR",
-    "phone": "597877",
+    "phone": "3492597877",
     "createdAt": "2023-10-30T00:00:00"
   },
   {
     "name": "BETINA LISFCHET",
+    "phone": "nan",
     "createdAt": "2023-10-30T00:00:00"
   },
   {
     "name": "ANGELES WALKER",
-    "phone": "613540",
+    "phone": "3492613540",
     "createdAt": "2023-11-02T00:00:00"
   },
   {
     "name": "QUIQUE LOPEZ",
-    "phone": "576133",
+    "phone": "3492576133",
     "createdAt": "2023-11-02T00:00:00"
   },
   {
     "name": "MARTA WALTER",
-    "phone": "300144",
+    "phone": "3492300144",
     "createdAt": "2023-11-02T00:00:00"
   },
   {
     "name": "PATRICIA RODRIGUEZ",
-    "phone": "334560",
+    "phone": "3492334560",
     "createdAt": "2023-11-02T00:00:00"
   },
   {
     "name": "DALMA INOCENTI",
-    "phone": "646513",
+    "phone": "3492646513",
     "createdAt": "2023-11-02T00:00:00"
   },
   {
     "name": "ALEJANDRA ALASSIA",
-    "phone": "517545",
+    "phone": "3492517545",
     "createdAt": "2023-11-02T00:00:00"
   },
   {
     "name": "PAULA CALUVA",
+    "phone": "nan",
     "createdAt": "2023-11-02T00:00:00"
   },
   {
     "name": "PRI CARABALLO",
-    "phone": "685246",
-    "createdAt": "2023-11-02T00:00:00"
-  },
-  {
-    "name": "NELIDA TONELLI",
+    "phone": "3492685246",
     "createdAt": "2023-11-02T00:00:00"
   },
   {
     "name": "BETIANA LOPEZ",
+    "phone": "nan",
     "createdAt": "2023-11-02T00:00:00"
   },
   {
     "name": "PAULA CANAVESIO",
-    "phone": "564680",
+    "phone": "3492564680",
     "createdAt": "2023-11-07T00:00:00"
   },
   {
     "name": "VANINA BOSIO",
-    "phone": "320550",
+    "phone": "3492320550",
     "createdAt": "2023-11-07T00:00:00"
   },
   {
@@ -2805,114 +3002,113 @@
     "createdAt": "2023-11-07T00:00:00"
   },
   {
-    "name": "PATRICIA PIERANTONI",
-    "createdAt": "2023-11-07T00:00:00"
-  },
-  {
     "name": "MICA CARRANZA",
+    "phone": "nan",
     "createdAt": "2023-11-07T00:00:00"
   },
   {
     "name": "FERNANDA CHERUBINI",
-    "phone": "619414",
+    "phone": "3492619414",
     "createdAt": "2023-11-07T00:00:00"
   },
   {
     "name": "LARA FALCHINI",
-    "phone": "270677",
+    "phone": "3492270677",
     "createdAt": "2023-11-07T00:00:00"
   },
   {
     "name": "GISELA ALBARRAN",
+    "phone": "nan",
     "createdAt": "2023-11-07T00:00:00"
   },
   {
     "name": "SONIA ISAIA",
-    "phone": "411783",
+    "phone": "3492411783",
     "createdAt": "2023-11-07T00:00:00"
   },
   {
     "name": "ANALIA PEIRETTI",
-    "phone": "205702",
+    "phone": "3492205702",
     "createdAt": "2023-11-07T00:00:00"
   },
   {
     "name": "EUGENIA NOSS",
-    "phone": "522421",
+    "phone": "3492522421",
     "createdAt": "2023-11-07T00:00:00"
   },
   {
     "name": "ESTEFANIA WEPPLER",
-    "phone": "338533",
+    "phone": "3492338533",
     "createdAt": "2023-11-07T00:00:00"
   },
   {
     "name": "ESTELA ANDREO ",
-    "phone": "599501",
+    "phone": "3492599501",
     "createdAt": "2023-11-07T00:00:00"
   },
   {
     "name": "MARISA PICCOTTO",
-    "phone": "673257",
+    "phone": "3492673257",
     "createdAt": "2023-11-07T00:00:00"
   },
   {
     "name": "NORMA ARCE",
-    "phone": "665074",
+    "phone": "3492665074",
     "createdAt": "2023-11-07T00:00:00"
   },
   {
     "name": "NATALI MONTU",
-    "phone": "562120",
+    "phone": "3492562120",
     "createdAt": "2023-11-07T00:00:00"
   },
   {
     "name": "CARINA VERNA",
-    "phone": "566875",
+    "phone": "3492566875",
     "createdAt": "2023-11-07T00:00:00"
   },
   {
     "name": "LUISA BRUNO",
-    "phone": "641807",
+    "phone": "3492641807",
     "createdAt": "2023-11-07T00:00:00"
   },
   {
     "name": "LILIANA WALKER",
-    "phone": "672964",
+    "phone": "3492672964",
     "createdAt": "2023-11-07T00:00:00"
   },
   {
     "name": "JOSEFINA ALMENDRA",
+    "phone": "nan",
     "createdAt": "2023-11-07T00:00:00"
   },
   {
     "name": "CLAUDIA GUNZINGER",
-    "phone": "657720",
+    "phone": "3492657720",
     "createdAt": "2023-11-07T00:00:00"
   },
   {
     "name": "DANIELA ACEDO",
-    "phone": "648650",
+    "phone": "3492648650",
     "createdAt": "2023-11-07T00:00:00"
   },
   {
     "name": "CLAUDIA MOTTARD",
-    "phone": "671543",
+    "phone": "3492671543",
     "createdAt": "2023-12-02T00:00:00"
   },
   {
     "name": "MONICA KHUN",
-    "phone": "311818",
+    "phone": "3492311818",
     "createdAt": "2023-12-02T00:00:00"
   },
   {
     "name": "PILAR RODRIGUEZ",
-    "phone": "418318",
+    "phone": "3492418318",
     "createdAt": "2023-12-02T00:00:00"
   },
   {
     "name": "LAURA GROSSO",
-    "phone": "644369",
+    "phone": "3492644369",
     "createdAt": "2023-12-02T00:00:00"
   },
   {
@@ -2922,16 +3118,17 @@
   },
   {
     "name": "SOL HISCHIER",
-    "phone": "376946",
+    "phone": "3492376946",
     "createdAt": "2023-12-05T00:00:00"
   },
   {
     "name": "MELINA WALKER",
+    "phone": "nan",
     "createdAt": "2023-12-05T00:00:00"
   },
   {
     "name": "EMILCE STRICKER",
-    "phone": "612259",
+    "phone": "3492612259",
     "createdAt": "2023-12-05T00:00:00"
   },
   {
@@ -2941,131 +3138,132 @@
   },
   {
     "name": "ALICIA LOTUFFO",
-    "phone": "518376",
+    "phone": "3492518376",
     "createdAt": "2023-12-05T00:00:00"
   },
   {
     "name": "MARIANA JAIMEZ",
-    "phone": "324076",
+    "phone": "3492324076",
     "createdAt": "2023-12-05T00:00:00"
   },
   {
     "name": "ANDREA ANDERSON",
-    "phone": "669719",
+    "phone": "3492669719",
     "createdAt": "2023-12-05T00:00:00"
   },
   {
     "name": "PAULA PEREIRA",
-    "phone": "317475",
-    "createdAt": "2023-12-05T00:00:00"
-  },
-  {
-    "name": "ADRIANA ARNAUDO",
-    "phone": "3497657981",
+    "phone": "3492317475",
     "createdAt": "2023-12-05T00:00:00"
   },
   {
     "name": "VALERIA AYALA",
+    "phone": "nan",
     "createdAt": "2023-12-05T00:00:00"
   },
   {
     "name": "FIORELLA FERRARIS",
-    "phone": "601405",
+    "phone": "3492601405",
     "createdAt": "2023-12-05T00:00:00"
   },
   {
     "name": "VIVIANA SAMANIEGO",
-    "phone": "275669",
+    "phone": "3492275669",
     "createdAt": "2023-12-05T00:00:00"
   },
   {
     "name": "MERY",
+    "phone": "nan",
     "createdAt": "2023-12-05T00:00:00"
   },
   {
     "name": "EMILCE STRUMIA",
-    "phone": "692207",
+    "phone": "3492692207",
     "createdAt": "2023-12-16T00:00:00"
   },
   {
     "name": "MARIELA GAITAN",
-    "phone": "525556",
+    "phone": "3492525556",
     "createdAt": "2023-12-16T00:00:00"
   },
   {
     "name": "LORENA CISSANO",
-    "phone": "308403",
+    "phone": "3492308403",
     "createdAt": "2023-12-20T00:00:00"
   },
   {
     "name": "buscar",
+    "phone": "nan",
     "createdAt": "2023-12-20T00:00:00"
   },
   {
     "name": "MABEL CONDOTTO",
-    "phone": "574448",
+    "phone": "3492574448",
     "createdAt": "2023-12-20T00:00:00"
   },
   {
     "name": "SONIA FRANZETTI",
-    "phone": "519931",
+    "phone": "3492519931",
     "createdAt": "2023-12-20T00:00:00"
   },
   {
     "name": "LILIANA ZBRUN ",
-    "phone": "645159",
+    "phone": "3492645159",
     "createdAt": "2023-12-20T00:00:00"
   },
   {
     "name": "SILVIA GRISOLIA ",
-    "phone": "595752",
+    "phone": "3492595752",
     "createdAt": "2023-12-20T00:00:00"
   },
   {
     "name": "SILVIA GIMENEZ PIAVONI",
+    "phone": "nan",
     "createdAt": "2023-12-20T00:00:00"
   },
   {
     "name": "LILIANA CAVADINI",
-    "phone": "569984",
+    "phone": "3492569984",
     "createdAt": "2024-01-03T00:00:00"
   },
   {
     "name": "NORA ZILLO",
-    "phone": "303220",
+    "phone": "3492303220",
     "createdAt": "2024-01-03T00:00:00"
   },
   {
     "name": "FLOR GONZALEZ",
+    "phone": "nan",
     "createdAt": "2024-01-03T00:00:00"
   },
   {
     "name": "MARISA CONRADO",
+    "phone": "nan",
     "createdAt": "2024-01-03T00:00:00"
   },
   {
     "name": "VALE GALIZZI",
-    "phone": "654352",
+    "phone": "3492654352",
     "createdAt": "2024-01-03T00:00:00"
   },
   {
     "name": "AGOSTINA ISAIA",
-    "phone": "679768",
+    "phone": "3492679768",
     "createdAt": "2024-01-03T00:00:00"
   },
   {
     "name": "VIRGINIA KARLEN",
-    "phone": "603246",
+    "phone": "3492603246",
     "createdAt": "2024-01-03T00:00:00"
   },
   {
     "name": "LORENA GAGLIESI",
-    "phone": "371084",
+    "phone": "3492371084",
     "createdAt": "2024-01-16T00:00:00"
   },
   {
     "name": "VIOLETA AMBROGI",
-    "phone": "571905",
+    "phone": "3492571905",
     "createdAt": "2024-01-16T00:00:00"
   },
   {
@@ -3075,109 +3273,107 @@
   },
   {
     "name": "MELINA GIORGIS",
+    "phone": "nan",
     "createdAt": "2024-01-16T00:00:00"
   },
   {
     "name": "ZUNI ",
+    "phone": "nan",
     "createdAt": "2024-01-16T00:00:00"
   },
   {
     "name": "MARIA JULIA AMHERDT",
-    "phone": "240911",
+    "phone": "3492240911",
     "createdAt": "2024-01-16T00:00:00"
   },
   {
     "name": "LUCIA MARTINEZ ",
-    "phone": "635430",
-    "createdAt": "2024-01-16T00:00:00"
-  },
-  {
-    "name": "MARISA BERGESIO",
+    "phone": "3492635430",
     "createdAt": "2024-01-16T00:00:00"
   },
   {
     "name": "VIVIANA PERALTA",
-    "phone": "317664",
+    "phone": "3492317664",
     "createdAt": "2024-01-16T00:00:00"
   },
   {
     "name": "EMA TESTA",
-    "phone": "642666",
+    "phone": "3492642666",
     "createdAt": "2024-01-16T00:00:00"
   },
   {
     "name": "CLAUDIA RENE",
-    "phone": "699271",
+    "phone": "3492699271",
     "createdAt": "2024-01-16T00:00:00"
   },
   {
     "name": "MARCELA CAVALLERO",
-    "phone": "590493",
+    "phone": "3492590493",
     "createdAt": "2024-01-16T00:00:00"
   },
   {
     "name": "MAIRA PEIRONE ",
-    "phone": "590066",
+    "phone": "3492590066",
     "createdAt": "2024-01-16T00:00:00"
   },
   {
     "name": "GISELA CUBILLA ",
-    "phone": "321212",
+    "phone": "3492321212",
     "createdAt": "2024-01-16T00:00:00"
   },
   {
     "name": "GISELA CZAKO",
-    "phone": "410090",
+    "phone": "3492410090",
     "createdAt": "2024-01-16T00:00:00"
   },
   {
     "name": "YAZMIN UASUF",
-    "phone": "312783",
+    "phone": "3492312783",
     "createdAt": "2024-01-16T00:00:00"
   },
   {
     "name": "GUILLERMINA DELPRATO",
-    "phone": "617378",
+    "phone": "3492617378",
     "createdAt": "2024-01-16T00:00:00"
   },
   {
     "name": "MA SOLEDAD SERENO",
-    "phone": "510732",
+    "phone": "3492510732",
     "createdAt": "2024-01-16T00:00:00"
   },
   {
     "name": "MARIA VANZETTI",
-    "phone": "675623",
+    "phone": "3492675623",
     "createdAt": "2024-01-29T00:00:00"
   },
   {
     "name": "FLAVIA ARIETTO",
-    "phone": "693725",
+    "phone": "3492693725",
     "createdAt": "2024-01-29T00:00:00"
   },
   {
     "name": "FLORENCIA TABIN ",
-    "phone": "287916",
+    "phone": "3492287916",
     "createdAt": "2024-01-29T00:00:00"
   },
   {
     "name": "LUCIA MANZO",
-    "phone": "588992",
+    "phone": "3492588992",
     "createdAt": "2024-01-29T00:00:00"
   },
   {
     "name": "VALERIA FORNACIERO",
-    "phone": "677678",
+    "phone": "3492677678",
     "createdAt": "2024-01-29T00:00:00"
   },
   {
     "name": "LUCIA ZEHNDER",
-    "phone": "679542",
+    "phone": "3492679542",
     "createdAt": "2024-01-29T00:00:00"
   },
   {
     "name": "GABRIELA GAGLIESI",
-    "phone": "647920",
+    "phone": "3492647920",
     "createdAt": "2024-01-29T00:00:00"
   }
 ]
