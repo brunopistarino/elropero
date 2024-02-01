@@ -28,7 +28,7 @@ def convert_csv_to_json(csv_filename, json_filename):
         transformed_record = {
             # 'id': record['DNI'],  # You can customize the id generation logic
             'name': record['Nombre y Apellido'],
-            'dni': record['DNI'] if not pd.isna(record['DNI']) else None,
+            'dni': str(record['DNI']) if not pd.isna(record['DNI']) else None,
             'address': record['Dirección'] if not pd.isna(record['Dirección']) else None,
             'phone': str(record['Celular']) if not pd.isna(record['Celular']) else None,
             'email': record['email'] if not pd.isna(record['email']) else None,
